@@ -205,12 +205,6 @@ sass:
 
 plugins:
  - jekyll-seo-tag
- - jekyll-paginate # <-- 이 줄을 추가하세요
-
-# 페이지네이션 설정
-paginate: 6
-paginate_path: "/blog/page:num/"
-
 
 exclude : [
   "Gemfile",
@@ -223,4 +217,4 @@ exclude : [
   "lib/",
   "scripts/",
   "docker-compose.yml",
-  ]
+]
