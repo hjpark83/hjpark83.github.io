@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+{%- include head.html -%}
+
+<body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}">
+
+  {%- include header.html -%}
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+
+      {%- if jekyll.environment == 'production' and site.gtm -%}
+        {%- include gtm_body.html -%}
+      {%- endif -%}
+
+      {%- include about.html -%}
+
+      {%- if site.version == 2 -%}
+        {% for section in site.content %}
+          <div class="container {{ section.layout }}-container">
+            <button class="collapsible">
+              <h3 id="{{ section.title | slugify }}">{{ section.title }}</h3>
+            </button>
+            <div class="collapsible-content">
+              {% include {{ section.layout | prepend: "section-" | append: ".html" }} content=section.content %}
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+        {%- include v1/default.html -%}
+      {%- endif -%}
+    </div>
+  </main>
+
+  {%- include footer.html -%}
+  {% if site.darkmode == false %}
+    <script src="{{ '/assets/js/index.js' | relative_url }}"></script>
+  {% endif %}
+
+  {# 아코디언 기능을 위한 스크립트 #}
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+  </script>
+
+</body>
+</html>
