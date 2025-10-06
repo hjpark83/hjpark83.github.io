@@ -73,7 +73,7 @@ content:
         title: Graduate Project
         link: https://github.com/Capstone-SW-Project/3D-Synthesized-Space-Reconstruction-using-3DGS
         link_text: Project page
-        image: images/project_result.jpg 
+        image: images/project_result.png 
         description: | # this will include new lines to allow paragraphs
           - **Title** \
             3D Synthesized Space Reconstruction using 3D Gaussian Splatting
@@ -108,7 +108,7 @@ content:
     content:
       - layout : left
         title: Hanyang University
-        icon: images/hyu.jpeg
+        icon: images/hyu.png
         sub_title: Master's degree
         description: | # this will include new lines to allow paragraphs
           - **Major** \
@@ -119,7 +119,7 @@ content:
             Aug 2027
       - layout: left
         title: Hanyang University
-        icon: images/hyu.jpeg
+        icon: images/hyu.png
         sub_title: Bachelor's degree
         description: | # this will include new lines to allow paragraphs
           - **Major** \
@@ -158,7 +158,7 @@ content:
 
       - layout: left
         title: LG Aimers 7th
-        icon: images/lg.jpeg
+        icon: images/aimers.png
         link: https://lgaimers.ai/
         link_text: LG Aimers
         caption: 2025.7.1 - 2025.8.30
@@ -171,7 +171,7 @@ content:
 
       - layout: left
         title: LG Aimers 5th
-        icon: images/lg.jpeg
+        icon: images/aimers.png
         link: https://lgaimers.ai/
         link_text: LG Aimers
         caption: 2024.7.1 - 2024.8.30
