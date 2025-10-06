@@ -17,7 +17,6 @@ darkmode: false
 github_username:  hjpark83
 instagram_username: hjpark_83
 linkedin_username: hyunjoon83
-# orcid_username: 0000-0000-0000-0000
 
 # About Section
 # about_title: About Me
@@ -206,6 +205,12 @@ sass:
 
 plugins:
  - jekyll-seo-tag
+ - jekyll-paginate # <-- 이 줄을 추가하세요
+
+# 페이지네이션 설정
+paginate: 6
+paginate_path: "/blog/page:num/"
+
 
 exclude : [
   "Gemfile",
