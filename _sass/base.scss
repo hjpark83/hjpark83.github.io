@@ -336,6 +336,9 @@ button.collapsible.active h3::before {
 
 /* Pagination Styles */
 .pagination {
+  display: flex;
+  justify-content: center; /* << 이 부분이 중앙 정렬을 담당합니다 */
+  align-items: center;
   text-align: center;
   margin-top: 3rem;
 }
@@ -346,6 +349,7 @@ button.collapsible.active h3::before {
   text-decoration: none;
   color: #477dca;
   border-radius: 4px;
+  transition: background-color 0.2s;
 }
 .pagination span.active {
   background-color: #477dca;
