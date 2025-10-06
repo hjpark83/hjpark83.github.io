@@ -356,3 +356,33 @@ button.collapsible.active h3::before {
 .main-nav ul { padding: 0; list-style: none; display: flex; gap: 20px; }
 .main-nav a { text-decoration: none; font-weight: 500; font-size: 1.2rem; color: #555; }
 .main-nav a:hover { color: #1a73e8; }
+
+/* Blog Page Styles */
+.blog-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.blog-list li {
+  margin-bottom: 3rem; /* 포스트 사이의 간격 */
+}
+
+.blog-list h2 {
+  font-size: 2.5rem; /* 포스트 제목 글씨 크기 키움 */
+  margin-bottom: 0.5rem;
+}
+
+.blog-list h2 a {
+  text-decoration: none;
+}
+
+.blog-list p {
+  font-size: 1.6rem; /* 포스트 내용 글씨 크기 키움 */
+  margin-bottom: 0.5rem;
+  text-align: left; /* 왼쪽 정렬 */
+}
+
+.blog-list .post-date {
+  font-size: 1rem;
+  color: #888;
+}
