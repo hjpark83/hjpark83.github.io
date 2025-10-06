@@ -1,123 +1,204 @@
 # Site
-repository: Git repository where your resume will be hosted, only required if you are hosting on GitHub (eg. sproogen/modern-resume-theme)
-# favicon: Directory of your favicon (eg. images/favicon.ico)(optional)
+repository: sproogen/resume-theme
+favicon: images/favicon.ico
 
 # Content configuration version
 version: 2
 
 # Personal info
-name: Your Name
-title: Your job title
-email: Your email (optional)
-# email_title: Email (Email title override)
-phone: Your phone number (optional)
-# phone_title: Phone (Phone title override)
-website: Your website (eg. https://google.com)(optional)
-# website_title: Web (Website title override)
+name: Hyunjoon Park
+title: Computer Vision Researcher
+email: hyunjoonpark0803@gmail.com
 
 # Dark Mode (true/false/never)
 darkmode: false
 
 # Social links
-twitter_username: jekyllrb
-github_username:  jekyll
-stackoverflow_username: "00000001"
-dribbble_username: jekyll
-facebook_username: jekyll
-flickr_username: jekyll
-instagram_username: jekyll
-linkedin_username: jekyll
-xing_username: jekyll
-pinterest_username: jekyll
-youtube_username: jekyll
-orcid_username: 0000-0000-0000-0000
-googlescholar_username: D847cGsAAAAJ
-
-# Additional icon links
-additional_links:
-- title: Link name
-  icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-  url: Link url (eg. https://google.com)
-# - title: another link
-#   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-#   url: Link url (eg. https://google.com)
-
-# Google Analytics and Tag Manager
-# Using more than one of these may cause issues with reporting
-# gtm: "GTM-0000000"
-# gtag: "UA-00000000-0"
-# google_analytics: "UA-00000000-0"
+github_username:  hjpark83
+instagram_username: hjpark_83
+linkedin_username: hyunjoon83
+# orcid_username: 0000-0000-0000-0000
 
 # About Section
-# about_title: About Me (Use this to override about section title)
-about_profile_image: Directory of profile image (eg. images/profile.jpg)
+# about_title: About Me
+about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
+  Hi, my name is Hyunjoon Park and I'm researching in the field of Computer Vision \
+  Currently, I am pursuing a Master's (MS) degree in Computer Software Engineering at Hanyang University. \
+  I am a member of <a href="https://sites.google.com/view/hyu-cv">CVLab</a> at Hanyang University, under the supervision of Prof. Donghyeon Cho
 
-  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
-    - Lists
-    - Tables
-    - <a href="google.com">Links</a>
-    - Images ![alt text](/images/landscape-trees.jpg "Trees")
+  **Research Interests:**
+  - 3D Vision (3D Gaussian Splatting)
+  - 3D Human Reconstruction
+  - Video Generation
+
+  **Office**: Room 503, IT/BT Building, 222, Wangsimni-ro, Seongdong-gu, Seoul, 04763, Korea.
 
 content:
+  - title: Publications # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: 3D Synthesized Space Reconstruction using 3DGS
+        link: http://www.ipiu.or.kr/
+        link_text: Site
+        image: images/poster_ipiu.png
+        description: | # this will include new lines to allow paragraphs
+          - **Title** \
+            3DGS를 활용한 Point Cloud 합성 및 3차원 합성 공간 복원에 대한 연구
+          - **Authors** \
+            Hyunjoon Park, Donghyeon Cho (Hanyang University)
+          - **Conference** \
+            IPIU, 2025 (37th Workshop on Image Processing and Image Understanding)
+          - **Abstract** \
+            3D Gaussian Splatting (3DGS) is a novel representation for real-time rendering of 3D scenes. \
+            This paper explores the potential of 3DGS in synthesizing point clouds and reconstructing 3D synthesized spaces. \
+            We propose a method that utilizes 3DGS to generate high-quality point clouds from multi-view images and reconstructs the 3D space effectively. \
+            Experimental results demonstrate the effectiveness of our approach in producing detailed and accurate 3D representations.
+
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        border: weak  # Value of `weak` will display a weak border below this item. # Any 
-                      # other value (or no value) means no border will be displayed
-        title: Project name
-        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        link_text: Link Text
-        additional_links:
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        quote: >
-          Short overview of the project (optional)
+        title: Music to Dance Video Generation
         description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
-  - title: Experience
-    layout: list
-    content:
-      - layout: right
-        title: Company name
-        sub_title: Job title
-        caption: Date Range (eg. November 2016 - present)
-        link: Link to company (optional)
-        quote: >
-          Short description of the company (optional)
+          - **Description** \
+            3D Dance Video Generation Aligned with Music from a Single Reference Image
+          - **Team Members** \
+            > Donghyeon Cho, <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Junha Kim (Hanyang University)\
+            > Nokap Park (SK Telecom)\
+            > Sungeun Hong (Sungkyunkwan University)
+          - **Period** \
+            Feb 2025 ~ 
+      - layout: left
+        title: Graduate Project
+        link: https://github.com/Capstone-SW-Project/3D-Synthesized-Space-Reconstruction-using-3DGS
+        link_text: Project page
+        image: images/project_result.jpg 
         description: | # this will include new lines to allow paragraphs
-          Description of role
-  - title: Education
-    layout: list
-    content:
-      - layout: top-right
-        title: Institution name
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
-        quote: >
-          Short institution or course description (optional)
-        description: | # this will include new lines to allow paragraphs
-          Description of qualification
-  - title: A Little More About Me
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+          - **Title** \
+            3D Synthesized Space Reconstruction using 3D Gaussian Splatting
+          - **Supervisor** \
+            Prof. Sungyoon Lee (Hanyang University)
+          - **Team Members** \
+            > <strong style="color:#1a73e8;">Hyunjoon Park</strong> (Computer Software Engineering, Hanyang University)\
+            > Dohyeon Lim (Computer Software Engineering, Hanyang University)
+          - **Period** \
+            Feb 2024 ~ Nov 2024
+          - **Description** \
+            Synthesize a high-quality point cloud from multi-view images using 3D Gaussian Splatting (3DGS) and reconstruct the 3D synthesized space effectively.
 
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+  - title: Experience # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: HYU CVLab
+        icon: images/cvlab.png
+        link: https://sites.google.com/view/hyu-cv
+        link_text: hyu-cvlab
+        sub_title: Undergraduate Intern
+        caption: 2024.7.1 - 2025.8.31
+        description: | # this will include new lines to allow paragraphs
+            Undergraduate Intern at CVLab, Hanyang University under the supervision of Prof. Donghyeon Cho.
+            - Research on 3D Vision especially 3D Gaussian Splatting and 3D Human Reconstruction
+            - I've studied various human models such as SMPL, PIFu (Pixel-Aligned Implicit Function), and 3DGS based human reconstruction methods.
+            - Currently, I'm working on 3D dance video generation aligned with music from a single reference image. This work is in collaboration with SK Telecom and Sungkyunkwan University.
 
-# Footer
+  - title: Education # Title for the section
+    layout: list # Type of content section (list/text)  
+    content:
+      - layout : left
+        title: Hanyang University
+        icon: images/hyu.jpeg
+        sub_title: Master's degree
+        description: | # this will include new lines to allow paragraphs
+          - **Major** \
+            Computer Software Engineering
+          - **Advisor** \
+            Prof. Donghyeon Cho
+          - **Graduation (Expected)** \
+            Aug 2027
+      - layout: left
+        title: Hanyang University
+        icon: images/hyu.jpeg
+        sub_title: Bachelor's degree
+        description: | # this will include new lines to allow paragraphs
+          - **Major** \
+            Computer Software Engineering
+          - **Graduation** \
+            Aug 2025
+  
+  - title: Programs # 참석하거나 활동한 내역
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: The AI Korea 2025
+        link: https://aisociety.kr/ai-korea-2025/
+        link_text: AI Korea 2025
+        caption: 2025.8.12 - 2025.8.13
+        description: | # this will include new lines to allow paragraphs
+          - **Description** \
+            한국 정보과학회 인공지능소사이어티 주관 AI 학술대회
+          - **Activities** \
+            > Session1 : Invited Talk - AI Experts and Emerging Researchers\
+            > Session2 : Industry Session\
+            > Session3 : Pattern Recognition and Machine Learning\
+            > Session4 : AI tutorials
+      
+      - layout: left
+        title: 대한전자공학회 영상처리 여름학교
+        icon: images/ieie.png
+        link: https://www.theieie.org/events/?part=03&c_id=949
+        link_text: 영상처리 여름학교
+        caption: 2025.7.18 - 2025.7.18
+        description: | # this will include new lines to allow paragraphs
+          - **Description** \
+            영상이해/영상처리 연구회 합동 여름학교
+          - **Activities** \
+            > Lectures by Experts and Professors who research in the field of Image Processing and Computer Vision
+
+      - layout: left
+        title: LG Aimers 7th
+        icon: images/lg.jpeg
+        link: https://lgaimers.ai/
+        link_text: LG Aimers
+        caption: 2025.7.1 - 2025.8.30
+        description: | # this will include new lines to allow paragraphs
+          - **Description** \
+            LG 주관 AI 교육 프로그램
+          - **Activities** \
+            > AI Special Lectures by Experts \
+            > AI Hackerthon (Team-based) : 식음료 수요량 예측 AI 모델 개발
+
+      - layout: left
+        title: LG Aimers 5th
+        icon: images/lg.jpeg
+        link: https://lgaimers.ai/
+        link_text: LG Aimers
+        caption: 2024.7.1 - 2024.8.30
+        description: | # this will include new lines to allow paragraphs
+          - **Description** \
+            LG 주관 AI 교육 프로그램
+          - **Activities** \
+            > AI Special Lectures by Experts \
+            > AI Hackerthon (Team-based) : 이상치 탐지 모델 개발
+
+      - layout: left
+        title: NAVER Boostclass
+        icon: images/naver.png
+        link_text: NAVER AI Boostclass
+        caption: 2024.1.15 - 2024.2.27
+        description: | # this will include new lines to allow paragraphs
+          - **Description** \
+            NAVER Boostclass AI 엔지니어 기초 다지기
+          - **Activities** \
+            > AI Special Lectures by Experts
+
 footer_show_references: true
 # references_title: References on request (Override references text)
 
 # Build settings
-# theme: modern-resume-theme (Use this is you are hosting your resume yourself)
-# remote_theme: sproogen/modern-resume-theme (Use this if you are hosting your resume on GitHub)
+remote_theme: sproogen/resume-theme
 
 sass:
   sass_dir: _sass
@@ -125,16 +206,3 @@ sass:
 
 plugins:
  - jekyll-seo-tag
-
-exclude : [
-  "Gemfile",
-  "Gemfile.lock",
-  "node_modules",
-  "vendor/bundle/",
-  "vendor/cache/",
-  "vendor/gems/",
-  "vendor/ruby/",
-  "lib/",
-  "scripts/",
-  "docker-compose.yml",
-  ]
