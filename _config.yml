@@ -137,7 +137,7 @@ content:
         link: https://drive.google.com/file/d/1OzbXd8I1JNsz1dK54vlqzvmedqJ990So/view?usp=sharing
         link_text: "Certificate"
         description: | # this will include new lines to allow paragraphs
-          - **Issuing Organization** \
+          - **Organization** \
             대한상공회의소
           - **Date** \
             2022.12.14
@@ -150,7 +150,7 @@ content:
         link: https://drive.google.com/file/d/1RlHshNQEsvWiOIwXFNZCzMI1VG2Hb_2e/view?usp=sharing
         link_text: "Certificate"
         description: | # this will include new lines to allow paragraphs
-          - **Issuing Organization** \
+          - **Organization** \
             교육부 국사편찬위원회
           - **Date** \
             2019.02.15
@@ -163,6 +163,8 @@ content:
         link_text: "Certificate"
         sub_title: Test of English for International Communication
         description: | # this will include new lines to allow paragraphs
+          - **Organization** \
+            ETS (Educational Testing Service)
           - **Score** \
             910
           - **Date** \
