@@ -131,27 +131,31 @@ content:
     layout: list
     content:
       - layout: left
-        title: 컴퓨터활용능력 1급
+        title: 컴퓨터활용능력
         icon: images/kcci.jpeg
-        sub_title: Computer Specialist in Spreadsheet & Database Level 1
+        sub_title: Computer Specialist in Spreadsheet & Database
         link: https://drive.google.com/file/d/1OzbXd8I1JNsz1dK54vlqzvmedqJ990So/preview
         link_text: "Certificate"
         description: | # this will include new lines to allow paragraphs
           - **Organization** \
             대한상공회의소
+          - **Level** \
+            1급 (Level 1)
           - **Date** \
             2022.12.14
           - **Certificate ID** \
             22-K9-000125
       - layout: left
-        title: 한국사능력검정시험 1급
+        title: 한국사능력검정시험
         icon: images/history.jpeg
-        sub_title: Korean History Proficiency Test Level 1
+        sub_title: Korean History Proficiency Test
         link: https://drive.google.com/file/d/1RlHshNQEsvWiOIwXFNZCzMI1VG2Hb_2e/preview
         link_text: "Certificate"
         description: | # this will include new lines to allow paragraphs
           - **Organization** \
             교육부 국사편찬위원회
+          - **Level** \
+            1급 (Level 1)
           - **Date** \
             2019.02.15
           - **Certificate ID** \
