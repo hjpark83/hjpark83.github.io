@@ -131,11 +131,10 @@ content:
     layout: list
     content:
       - layout: left
-        title: 컴퓨터활용능력
-        icon: images/kcci.png
+        title: 컴퓨터활용능력 1급
+        icon: images/kcci.jpeg
+        sub_title: Computer Specialist in Spreadsheet & Database Level 1
         description: | # this will include new lines to allow paragraphs
-          - **Level** \
-            1급
           - **Issuing Organization** \
             대한상공회의소
           - **Date** \
@@ -143,11 +142,10 @@ content:
           - **Certificate ID** \
             22-K9-000125
       - layout: left
-        title: 한국사능력검정시험
-        icon: images/history.png
+        title: 한국사능력검정시험 1급
+        icon: images/history.jpeg
+        sub_title: Korean History Proficiency Test Level 1
         description: | # this will include new lines to allow paragraphs
-          - **Level** \
-            1급
           - **Issuing Organization** \
             교육부 국사편찬위원회
           - **Date** \
@@ -156,7 +154,8 @@ content:
             42-124437
       - layout: left
         title: TOEIC
-        icon: images/toeic.jpeg
+        icon: images/toeic.png
+        sub_title: Test of English for International Communication
         description: | # this will include new lines to allow paragraphs
           - **Score** \
             910
