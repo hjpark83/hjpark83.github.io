@@ -132,6 +132,7 @@ content:
     content:
       - layout: left
         title: 컴퓨터활용능력
+        icon: images/kcci.png
         description: | # this will include new lines to allow paragraphs
           - **Level** \
             1급
@@ -143,6 +144,7 @@ content:
             22-K9-000125
       - layout: left
         title: 한국사능력검정시험
+        icon: images/history.png
         description: | # this will include new lines to allow paragraphs
           - **Level** \
             1급
@@ -154,6 +156,7 @@ content:
             42-124437
       - layout: left
         title: TOEIC
+        icon: images/toeic.jpeg
         description: | # this will include new lines to allow paragraphs
           - **Score** \
             910
