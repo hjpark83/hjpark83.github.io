@@ -134,7 +134,7 @@ content:
         title: 컴퓨터활용능력 1급
         icon: images/kcci.jpeg
         sub_title: Computer Specialist in Spreadsheet & Database Level 1
-        link: https://drive.google.com/file/d/1OzbXd8I1JNsz1dK54vlqzvmedqJ990So/view?usp=sharing
+        link: https://drive.google.com/file/d/1OzbXd8I1JNsz1dK54vlqzvmedqJ990So/preview
         link_text: "Certificate"
         description: | # this will include new lines to allow paragraphs
           - **Organization** \
@@ -147,7 +147,7 @@ content:
         title: 한국사능력검정시험 1급
         icon: images/history.jpeg
         sub_title: Korean History Proficiency Test Level 1
-        link: https://drive.google.com/file/d/1RlHshNQEsvWiOIwXFNZCzMI1VG2Hb_2e/view?usp=sharing
+        link: https://drive.google.com/file/d/1RlHshNQEsvWiOIwXFNZCzMI1VG2Hb_2e/preview
         link_text: "Certificate"
         description: | # this will include new lines to allow paragraphs
           - **Organization** \
@@ -159,7 +159,7 @@ content:
       - layout: left
         title: TOEIC
         icon: images/toeic.png
-        link: https://drive.google.com/file/d/1Dr8cGoM3bKnsm7dYrA-WnKsqUJkE8R8W/view?usp=sharing
+        link: https://drive.google.com/file/d/1Dr8cGoM3bKnsm7dYrA-WnKsqUJkE8R8W/preview
         link_text: "Certificate"
         sub_title: Test of English for International Communication
         description: | # this will include new lines to allow paragraphs
