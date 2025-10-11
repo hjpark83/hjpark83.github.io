@@ -131,6 +131,58 @@ content:
     layout: list
     content:
       - layout: left
+        title: LG Aimers 7th
+        icon: images/aimers.png
+        link: https://drive.google.com/file/d/15UlyEhIEofXeLW7Yd7XGIuI_uEOvCCek/preview
+        link_text: LG Aimers Certificate
+        caption: 2025.7.1 - 2025.8.30
+        description: | # this will include new lines to allow paragraphs
+          - **Description** \
+            LG AI 연구원 주관 실무형 AI 교육 프로그램
+          - **Homepage** \
+            https://lgaimers.ai/
+          - **Activities** \
+            > AI Special Lectures by Experts \
+            > AI Hackerthon (Team-based) : 식음료 수요량 예측 AI 모델 개발
+      - layout: left
+        title: LG Aimers 5th
+        icon: images/aimers.png
+        link: https://drive.google.com/file/d/1JoGY5sdQYWAcOWiG0fyNd6D74n0hE0mM/preview
+        link_text: LG Aimers Certificate
+        caption: 2024.7.1 - 2024.8.30
+        description: | # this will include new lines to allow paragraphs
+          - **Description** \
+            LG AI 연구원 주관 실무형 AI 교육 프로그램
+          - **Homepage** \
+            https://lgaimers.ai/
+          - **Activities** \
+            > AI Special Lectures by Experts \
+            > AI Hackerthon (Team-based) : 이상치 탐지 모델 개발
+      - layout: left
+        title: TOEIC
+        icon: images/toeic.png
+        link: https://drive.google.com/file/d/1Dr8cGoM3bKnsm7dYrA-WnKsqUJkE8R8W/preview
+        link_text: "Certificate"
+        sub_title: Test of English for International Communication
+        description: | # this will include new lines to allow paragraphs
+          - **Organization** \
+            ETS (Educational Testing Service)
+          - **Score** \
+            910
+          - **Date** \
+            2024.02.18
+      - layout: left
+        title: NAVER Boostclass
+        icon: images/naver.png
+        link: https://drive.google.com/file/d/1YGAK9RXXVbY5krV-kNinvQQHarKgJL8f/preview
+        link_text: NAVER AI Boostclass Certificate
+        caption: 2024.1.15 - 2024.2.27
+        description: | # this will include new lines to allow paragraphs
+          - **Description** \
+            NAVER Boostclass AI 엔지니어 기초 다지기
+          - **Activities** \
+            > AI Special Lectures by Experts
+      - layout: left
         title: 컴퓨터활용능력
         icon: images/kcci.jpeg
         sub_title: Computer Specialist in Spreadsheet & Database
@@ -160,19 +212,6 @@ content:
             2019.02.15
           - **Certificate ID** \
             42-124437
-      - layout: left
-        title: TOEIC
-        icon: images/toeic.png
-        link: https://drive.google.com/file/d/1Dr8cGoM3bKnsm7dYrA-WnKsqUJkE8R8W/preview
-        link_text: "Certificate"
-        sub_title: Test of English for International Communication
-        description: | # this will include new lines to allow paragraphs
-          - **Organization** \
-            ETS (Educational Testing Service)
-          - **Score** \
-            910
-          - **Date** \
-            2024.02.18
 
   - title: Programs # 참석하거나 활동한 내역
     layout: list # Type of content section (list/text)
@@ -202,43 +241,6 @@ content:
             영상이해/영상처리 연구회 합동 여름학교
           - **Activities** \
             > Lectures by Experts and Professors who research in the field of Image Processing and Computer Vision
-
-      - layout: left
-        title: LG Aimers 7th
-        icon: images/aimers.png
-        link: https://lgaimers.ai/
-        link_text: LG Aimers
-        caption: 2025.7.1 - 2025.8.30
-        description: | # this will include new lines to allow paragraphs
-          - **Description** \
-            LG 주관 AI 교육 프로그램
-          - **Activities** \
-            > AI Special Lectures by Experts \
-            > AI Hackerthon (Team-based) : 식음료 수요량 예측 AI 모델 개발
-
-      - layout: left
-        title: LG Aimers 5th
-        icon: images/aimers.png
-        link: https://lgaimers.ai/
-        link_text: LG Aimers
-        caption: 2024.7.1 - 2024.8.30
-        description: | # this will include new lines to allow paragraphs
-          - **Description** \
-            LG 주관 AI 교육 프로그램
-          - **Activities** \
-            > AI Special Lectures by Experts \
-            > AI Hackerthon (Team-based) : 이상치 탐지 모델 개발
-
-      - layout: left
-        title: NAVER Boostclass
-        icon: images/naver.png
-        link_text: NAVER AI Boostclass
-        caption: 2024.1.15 - 2024.2.27
-        description: | # this will include new lines to allow paragraphs
-          - **Description** \
-            NAVER Boostclass AI 엔지니어 기초 다지기
-          - **Activities** \
-            > AI Special Lectures by Experts
 
 footer_show_references: true
 # references_title: References on request (Override references text)
