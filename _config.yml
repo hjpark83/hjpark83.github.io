@@ -76,15 +76,19 @@ content:
     content:
       - layout: left
         title: ACV 2025 Term Project
+        link: https://github.com/hjpark83/ACV_2025_Project
+        link_text: github
         image: images/ACV_2025.png
         description: | # this will include new lines to allow paragraphs
-          - **Abstract** \
+          - **Description** \
             Advanced Computer Vision (Prof. Soonmin Hwang) term project which held a mini-conference during semester.
           - **Title** \
             Consistent 3D Scene Editing via Semantic Geometric Feature Fields in Gaussian Splatting
+          - **Awards** \
+            Oral Presentation & Best Reviewer
           - **Period** \
             Mar 2025 ~ Jun 2025
-          - **Description** \
+          - **Abstract** \
             This project addresses the view-inconsistency and over-segmentation issues in 3DGS-based editing caused by naive 2D mask lifting. 
             We proposed a two-stage refinement pipeline—depth-aware hierarchical merging and cross-view mask matching—integrating DINOv2, LoG edges, and DPT depth. 
             Our approach transforms fragmented masks into semantically coherent global objects, enabling stable interactive editing (removal, inpainting) while maintaining high-fidelity rendering.
