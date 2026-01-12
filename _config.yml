@@ -51,8 +51,10 @@ content:
           - **Conference** \
             IPIU, 2026 (38th Workshop on Image Processing and Image Understanding)
           - **Abstract** \
-            Segment Anything Model (SAM)과 같은 2D 기반 모델을 3D로 확장할 때 발생하는 과분할 (over-segmentation)과 시점의 일관성 부족 (view inconsistency)이 여전히 핵심적인 한계로 지적되고 있다. 
-            본 연구에서는 이를 극복하기 위해 세 가지 정보를 결합하여 이러한 문제를 해결하고자 한다. 본 연구에서 제안하는 방법을 통해 3DGS의 렌더링 품질을 저하시키지 않으면서도 효과적으로 3차원 공간을 이해하고 편집할 수 있도록 기여하고자 한다.
+            본 연구는 3D Gaussian Splatting(3DGS) 환경에서 2D Foundation Model인 SAM을 활용할 때 발생하는 과분할(Over-segmentation) 및 시점 간 불일치 문제를 해결하기 위한 프레임워크를 제안하였다. 
+            SAM의 보수적인 경계 인식으로 인해 발생하는 파편화된 마스크 문제를 극복하기 위해, 본 연구는 DINOv2의 semantic embedding, LoG(Laplacian-of-Gaussian) edge detection, 그리고 DPT 기반의 monocular depth estimation을 결합한 2단계 refinement pipeline을 구축하고자 한다. 
+            1단계에서는 깊이 기반의 계층적 마스크 병합을 통해 개별 시점의 마스크를 정제하고, 2단계에서는 시점 간 특징 유사도 클러스터링을 통해 전역적으로 일관된 객체 아이덴티티를 확립하고자 하였다. 
+            이를 통해 기존 3DGS의 렌더링 품질을 유지하면서도, 시점 변화에 강건한 객체 제거 및 인페인팅 등 정교한 3D Scene Editing 기능을 실현하였다.
 
       - layout: left
         title: 3D Synthesized Space Reconstruction using 3DGS
