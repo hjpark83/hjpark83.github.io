@@ -51,10 +51,25 @@ content:
           - **Conference** \
             IPIU, 2025 (37th Workshop on Image Processing and Image Understanding)
           - **Abstract** \
-            3D Gaussian Splatting (3DGS) is a novel representation for real-time rendering of 3D scenes. \
-            This paper explores the potential of 3DGS in synthesizing point clouds and reconstructing 3D synthesized spaces. \
-            We propose a method that utilizes 3DGS to generate high-quality point clouds from multi-view images and reconstructs the 3D space effectively. \
-            Experimental results demonstrate the effectiveness of our approach in producing detailed and accurate 3D representations.
+            멀티 뷰 데이터셋으로부터 카메라 매개변수와 객체 위치를 추정하는 novel-view synthesis 기술인 3D Gaussian Splatting (3DGS)은 3차원 공간을 효과적으로 재구성하는 기술로 주목을 받고 있다. 
+            기존 연구들이 주로 novel-view synthesis에 초점이 맞춰져 있다면 Gaussian grouping에서는 SAM (Segment Anything)을 활용하여 마스크 이미지를 생성하고 이를 이용해 3DGS 학습 이후 3차원 정보에서 특정 객체를 분리할 수 있게 되어 주로 2차원 공간에서 진행이 되었던 영역을 3차원으로 확장을 시켰다는 점에서 의의가 있다. 
+            따라서 본 연구에서는 Gaussian grouping을 활용하여 3차원 공간에서 객체를 분리하고 이것을 다른 배경에 합성하여 새로운 3차원 공간을 재구성하는 것을 목표로 설정하였고 이를 통해 재구성된 3차원 공간에서의 객체 조작 및 재구성 가능성을 탐색하고 결과를 통해 이러한 접근 방식의 효율성을 검증하고자 한다.
+
+      - layout: left
+        title: Consistent 3D Scene Understanding and Overcome Limitations of 2D SAM using 3DGS
+        link: http://www.ipiu.or.kr/
+        link_text: Site
+        image: 
+        description: | # this will include new lines to allow paragraphs
+          - **Title** \
+            3DGS에서 2D SAM을 활용할 때 발생하는 한계점 극복 및 효과적인 3차원 공간 이해를 위한 방법에 관한 연구
+          - **Authors** \
+            Hyunjoon Park, Donghyeon Cho (Hanyang University)
+          - **Conference** \
+            IPIU, 2026 (38th Workshop on Image Processing and Image Understanding)
+          - **Abstract** \
+            Segment Anything Model (SAM)과 같은 2D 기반 모델을 3D로 확장할 때 발생하는 과분할 (over-segmentation)과 시점의 일관성 부족 (view inconsistency)이 여전히 핵심적인 한계로 지적되고 있다. 
+            본 연구에서는 이를 극복하기 위해 세 가지 정보를 결합하여 이러한 문제를 해결하고자 한다. 본 연구에서 제안하는 방법을 통해 3DGS의 렌더링 품질을 저하시키지 않으면서도 효과적으로 3차원 공간을 이해하고 편집할 수 있도록 기여하고자 한다.
 
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
@@ -63,15 +78,15 @@ content:
         title: ACV 2025 Term Project
         image: images/ACV_2025.png
         description: | # this will include new lines to allow paragraphs
-          - **Description** \
+          - **Abstract** \
             Advanced Computer Vision (Prof. Soonmin Hwang) term project which held a mini-conference during semester.
           - **Title** \
             Consistent 3D Scene Editing via Semantic Geometric Feature Fields in Gaussian Splatting
           - **Period** \
             Mar 2025 ~ Jun 2025
-          - **Abstract** \
-            This project addresses the view-inconsistency and over-segmentation issues in 3DGS-based editing caused by naive 2D mask lifting. \
-            We proposed a two-stage refinement pipeline—depth-aware hierarchical merging and cross-view mask matching—integrating DINOv2, LoG edges, and DPT depth. \
+          - **Description** \
+            This project addresses the view-inconsistency and over-segmentation issues in 3DGS-based editing caused by naive 2D mask lifting. 
+            We proposed a two-stage refinement pipeline—depth-aware hierarchical merging and cross-view mask matching—integrating DINOv2, LoG edges, and DPT depth. 
             Our approach transforms fragmented masks into semantically coherent global objects, enabling stable interactive editing (removal, inpainting) while maintaining high-fidelity rendering.
 
       - layout: left
@@ -90,7 +105,7 @@ content:
         title: Graduate Project
         link: https://github.com/Capstone-SW-Project/3D-Synthesized-Space-Reconstruction-using-3DGS
         link_text: Project page
-        image: images/project_result.jpg 
+        image: images/project_result.png 
         description: | # this will include new lines to allow paragraphs
           - **Title** \
             3D Synthesized Space Reconstruction using 3D Gaussian Splatting
@@ -175,7 +190,7 @@ content:
 
       - layout: left
         title: LG Aimers 7th
-        icon: images/lg.jpeg
+        icon: images/aimers.png
         link: https://lgaimers.ai/
         link_text: LG Aimers
         caption: 2025.7.1 - 2025.8.30
@@ -188,7 +203,7 @@ content:
 
       - layout: left
         title: LG Aimers 5th
-        icon: images/lg.jpeg
+        icon: images/aimers.png
         link: https://lgaimers.ai/
         link_text: LG Aimers
         caption: 2024.7.1 - 2024.8.30
