@@ -60,7 +60,7 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: 
+        title: ACV 2025 Term Project
         image: images/ACV_2025.png
         description: | # this will include new lines to allow paragraphs
           - **Description** \
@@ -70,19 +70,9 @@ content:
           - **Period** \
             Mar 2025 ~ Jun 2025
           - **Abstract** \
-            Recent advances in 3D Gaussian Splatting (3DGS) have enabled real-time photorealistic rendering and motivated research on semantic 3D scene editing. \
-            Contemporary approaches integrate 2D foundation models into the 3D domain; however, a critical bottleneck emerges when lifting SAM segmentations to 3D. \
-            SAM's automatic mask generation produces over-segmentation, fragmenting coherent objects into several disjoint regions per view. \
-            This stems from SAM's conservative boundary preservation strategy, which treats subtle texture variations identically to true object boundaries. \
-            When naively lifted to 3D through multi-view projection, this fragmentation yields view-inconsistent region assignments and semantically incoherent editing results. \
-            We present a feature field-based framework that resolves this challenge by integrating three complementary modalities: semantic embeddings from DINOv2, Laplacian-of-Gaussian edge detection, and monocular depth estimation via a Dense Prediction Transformer. \
-            Our core contribution is a two-stage refinement pipeline. \
-            First, depth-aware hierarchical merging consolidates per-view masks via a composite score balancing semantic affinity, edge strength, and depth consistency. \
-            Second, cross-view mask matching establishes globally consistent object identities by clustering masks across all views using DINO feature similarity, consolidating thousands of view-local masks into semantically meaningful global objects. \
-            Feature lifting to 3D Gaussians employs multiview voting with variance filtering for reliability. \
-            Joint optimization combines photometric reconstruction with semantic regularization, maintaining rendering quality on par with vanilla 3DGS while enforcing view-consistent object assignment. \
-            Our refined 3D masks enable robust interactive editing—object removal, isolation, and inpainting—that remains temporally stable across novel viewpoints, addressing the key limitation of existing view-local segmentation methods. \
-            The reduction in segmentation granularity transforms fragmented foundation model outputs into actionable editing primitives, without sacrificing photometric fidelity.
+            This project addresses the view-inconsistency and over-segmentation issues in 3DGS-based editing caused by naive 2D mask lifting. \
+            We proposed a two-stage refinement pipeline—depth-aware hierarchical merging and cross-view mask matching—integrating DINOv2, LoG edges, and DPT depth. \
+            Our approach transforms fragmented masks into semantically coherent global objects, enabling stable interactive editing (removal, inpainting) while maintaining high-fidelity rendering.
 
       - layout: left
         title: Music to Dance Video Generation
@@ -95,6 +85,7 @@ content:
             > Sungeun Hong (Sungkyunkwan University)
           - **Period** \
             Feb 2025 ~ 
+
       - layout: left
         title: Graduate Project
         link: https://github.com/Capstone-SW-Project/3D-Synthesized-Space-Reconstruction-using-3DGS
