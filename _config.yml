@@ -42,7 +42,7 @@ content:
         title: Consistent 3D Scene Understanding and Overcome Limitations of 2D SAM using 3DGS
         link: http://www.ipiu.or.kr/
         link_text: Site
-        image: 
+        image: images/poster_ipiu_2026.png
         description: |
           - **Title** \
             3DGS에서 2D SAM을 활용할 때 발생하는 한계점 극복 및 효과적인 3차원 공간 이해를 위한 방법에 관한 연구
@@ -58,7 +58,7 @@ content:
         title: 3D Synthesized Space Reconstruction using 3DGS
         link: http://www.ipiu.or.kr/
         link_text: Site
-        image: images/poster_ipiu.png
+        image: images/poster_ipiu_2025.png
         description: |
           - **Title** \
             3DGS를 활용한 Point Cloud 합성 및 3차원 합성 공간 복원에 대한 연구
