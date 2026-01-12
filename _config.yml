@@ -140,7 +140,7 @@ content:
     content:
       - layout : left
         title: Hanyang University
-        icon: images/hyu.jpeg
+        icon: images/hyu.png
         sub_title: Master's degree
         description: | # this will include new lines to allow paragraphs
           - **Major** \
@@ -151,7 +151,7 @@ content:
             Aug 2027
       - layout: left
         title: Hanyang University
-        icon: images/hyu.jpeg
+        icon: images/hyu.png
         sub_title: Bachelor's degree
         description: | # this will include new lines to allow paragraphs
           - **Major** \
