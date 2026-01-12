@@ -165,6 +165,13 @@ content:
             Computer Software Engineering
           - **Graduation** \
             Aug 2025
+      - layout: left
+        title: Hwanil High School
+        icon: images/hwanil.png
+        sub_title: High School Diploma
+        description: | 
+          - **Graduation** \
+            Feb 2018
   
   - title: Programs # 참석하거나 활동한 내역
     layout: list # Type of content section (list/text)
