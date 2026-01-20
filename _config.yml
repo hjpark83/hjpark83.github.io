@@ -35,28 +35,16 @@ about_content: | # this will include new lines to allow paragraphs
   **Office**: Room 503, IT/BT Building, 222, Wangsimni-ro, Seongdong-gu, Seoul, 04763, Korea.
 
 content:
-  # [Section 1] International Publications
-  - title: |
-      <span style="background: linear-gradient(to top, #e3f2fd 50%, transparent 50%); padding: 0 4px;">International</span>
-    layout: list
+  - title: Publications # Title for the section
+    layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: (Prepare for Submission)
-        description: |
-          Coming soon... Targeting CVPR/ICCV/ECCV.
-
-  # [Section 2] Domestic Publications
-  - title: |
-      <span style="background: linear-gradient(to top, #fff9c4 50%, transparent 50%); padding: 0 4px;">Domestic</span>
-    layout: list
-    content:
-      - layout: left
-        title: 3DGS에서 2D SAM을 활용할 때 발생하는 한계점 극복 및 효과적인 3차원 공간 이해를 위한 방법에 관한 연구
+        title: |
+          <span style="display:inline-block; background-color:#fff9c4; color:#fbc02d; padding:2px 8px; border-radius:4px; font-size:0.7em; font-weight:bold; vertical-align:middle; margin-right:8px;">Domestic</span>3DGS에서 2D SAM을 활용할 때 발생하는 한계점 극복 및 효과적인 3차원 공간 이해를 위한 방법에 관한 연구
         link: http://www.ipiu.or.kr/
         link_text: Site
         image: images/poster_ipiu_2026.png
         description: |
-
           - **Authors** \
             <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Donghyeon Cho (Hanyang University)
           - **Conference** \
