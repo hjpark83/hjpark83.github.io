@@ -120,9 +120,7 @@ content:
           - **Period** \
             Feb 2024 ~ Nov 2024
           - **Description** \
-            Synthesize a high-quality point cloud from multi-view images using 3D Gaussian Splatting (3DGS) and reconstruct the 3D synthesized space effectively using custom dataset.
-            We utilized statues in the Gwanghwamun Plaza and Hanyang University campus as our custom dataset.
-            Through this project, we explored the potential of 3DGS in 3D space reconstruction and its applications.
+            Synthesize a high-quality point cloud from multi-view images using 3D Gaussian Splatting (3DGS) and reconstruct the 3D synthesized space effectively.
 
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
@@ -135,8 +133,7 @@ content:
         sub_title: Undergraduate Intern
         caption: 2024.7.1 - 2025.8.31
         description: | # this will include new lines to allow paragraphs
-            I've experienced internship as an Undergraduate Intern at CVLab, Hanyang University under the supervision of Prof. Donghyeon Cho.
-            My research focus includes:
+            Undergraduate Intern at CVLab, Hanyang University under the supervision of Prof. Donghyeon Cho.
             - Research on 3D Vision especially 3D Gaussian Splatting and 3D Human Reconstruction
             - I've studied various human models such as SMPL, PIFu (Pixel-Aligned Implicit Function), and 3DGS based human reconstruction methods.
             - Currently, I'm working on 3D dance video generation aligned with music from a single reference image. This work is in collaboration with SK Telecom and Sungkyunkwan University.
