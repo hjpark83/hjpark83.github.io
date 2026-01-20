@@ -39,8 +39,7 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: |
-          <span style="display:inline-block; background-color:#fff9c4; color:#fbc02d; padding:2px 8px; border-radius:4px; font-size:0.7em; font-weight:bold; vertical-align:middle; margin-right:8px;">Domestic</span>3DGS에서 2D SAM을 활용할 때 발생하는 한계점 극복 및 효과적인 3차원 공간 이해를 위한 방법에 관한 연구
+        title: 3DGS에서 2D SAM을 활용할 때 발생하는 한계점 극복 및 효과적인 3차원 공간 이해를 위한 방법에 관한 연구
         link: http://www.ipiu.or.kr/
         link_text: Site
         image: images/poster_ipiu_2026.png
@@ -137,11 +136,10 @@ content:
         caption: 2024.7.1 - 2025.8.31
         description: | # this will include new lines to allow paragraphs
             I've experienced internship as an Undergraduate Intern at CVLab, Hanyang University under the supervision of Prof. Donghyeon Cho.
-            As an intern, I actively participated in various research projects and contributed to ongoing studies in the field of computer vision.
             My research focus includes:
             - Research on 3D Vision especially 3D Gaussian Splatting and 3D Human Reconstruction
             - I've studied various human models such as SMPL, PIFu (Pixel-Aligned Implicit Function), and 3DGS based human reconstruction methods.
-            - Currently, I'm working on conditional dance video generation aligned with music from a single reference image. This work is in collaboration with SK Telecom and Sungkyunkwan University.
+            - Currently, I'm working on 3D dance video generation aligned with music from a single reference image. This work is in collaboration with SK Telecom and Sungkyunkwan University.
 
   - title: Education # Title for the section
     layout: list # Type of content section (list/text)  
