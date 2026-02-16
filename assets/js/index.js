@@ -6,12 +6,12 @@ if (currentTheme) {
   document.body.classList.add("dark");
 }
 
-// Dark mode toggle functionality
+// Floating buttons functionality
 document.addEventListener('DOMContentLoaded', function() {
+  // Dark mode toggle
   const toggleButton = document.getElementById('darkmode-toggle');
   const icon = toggleButton.querySelector('i');
 
-  // Update icon based on current theme
   function updateIcon() {
     if (document.body.classList.contains('dark')) {
       icon.className = 'fas fa-sun';
@@ -24,12 +24,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
   toggleButton.addEventListener('click', function() {
     document.body.classList.toggle('dark');
-
-    // Save preference to localStorage
     const isDark = document.body.classList.contains('dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
-
     updateIcon();
+  });
+
+  // Scroll to top button
+  const scrollTopButton = document.getElementById('scroll-to-top');
+
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      scrollTopButton.classList.add('visible');
+    } else {
+      scrollTopButton.classList.remove('visible');
+    }
+  });
+
+  scrollTopButton.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // Print PDF button
+  const printButton = document.getElementById('print-pdf');
+
+  printButton.addEventListener('click', function() {
+    window.print();
   });
 });
 

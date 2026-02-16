@@ -295,11 +295,18 @@ button.collapsible.active h3::before {
 .main-nav a { text-decoration: none; font-weight: 500; font-size: 1.8rem; color: #555; }
 .main-nav a:hover { color: #1a73e8; }
 
-/* Dark Mode Toggle Button */
-.darkmode-toggle {
+/* Floating Action Buttons */
+.floating-buttons {
   position: fixed;
   bottom: 30px;
   right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.floating-btn {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -313,21 +320,31 @@ button.collapsible.active h3::before {
   font-size: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  z-index: 1000;
 }
 
-.darkmode-toggle:hover {
+.floating-btn:hover {
   background-color: #555;
   transform: scale(1.1);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
-.dark .darkmode-toggle {
+#scroll-to-top {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+#scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dark .floating-btn {
   background-color: #f5f5f5;
   color: #333;
 }
 
-.dark .darkmode-toggle:hover {
+.dark .floating-btn:hover {
   background-color: #e0e0e0;
 }
 
@@ -380,4 +397,21 @@ button.collapsible.active h3::before {
 
 .dark .abstract-content {
   border-left-color: #555;
+}
+
+/* Print styles for abstract */
+@media print {
+  .abstract-toggle {
+    display: none;
+  }
+
+  .abstract-content {
+    display: block !important;
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .abstract-section {
+    margin-top: 5px;
+  }
 }
