@@ -96,8 +96,6 @@ content:
         authors: <strong style="color:#1a73e8;">Hyunjoon Park</strong>
         venue: "Advanced Computer Vision (Prof. Soonmin Hwang) | _Mar 2025 - Jun 2025_"
         image: images/ACV_2025.png
-        link: https://github.com/hjpark83/ACV_2025_Project
-        link_text: GitHub
         additional_links:
           - title: GitHub
             icon: fab fa-github
@@ -124,9 +122,10 @@ content:
         authors: <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Dohyeon Lim
         venue: "Graduation Project (Supervisor: Prof. Sungyoon Lee) | _Feb 2024 - Nov 2024_"
         image: images/project_result.png
-        link: https://github.com/Capstone-SW-Project
-        link_text: Project Page
         additional_links:
+          - title: Project Page
+            icon: fas fa-globe
+            url: https://github.com/Capstone-SW-Project
           - title: GitHub
             icon: fab fa-github
             url: https://github.com/Capstone-SW-Project/3D-Synthesized-Space-Reconstruction-using-3DGS
