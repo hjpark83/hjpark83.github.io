@@ -199,13 +199,16 @@ p.quote {
   margin-top: 2.5rem;
   padding-top: 2rem;
   border-top: 1px solid #e0e0e0;
+  font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
 }
 
 .news-heading {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
   color: #333;
+  letter-spacing: 0.5px;
+  font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
 }
 
 .news-list {
@@ -216,8 +219,8 @@ p.quote {
 
 .news-item {
   display: flex;
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
 
   @media screen and (max-width: 767px) {
     flex-direction: column;
@@ -231,6 +234,7 @@ p.quote {
   margin-right: 1.5rem;
   flex-shrink: 0;
   font-size: 1.5rem;
+  font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
 
   @media screen and (max-width: 767px) {
     margin-bottom: 0.25rem;
@@ -240,7 +244,8 @@ p.quote {
 
 .news-content {
   flex: 1;
-  font-size: 1.5rem;
+  font-size: 1.55rem;
+  line-height: 1.7;
 
   p {
     margin: 0;

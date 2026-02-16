@@ -159,6 +159,21 @@
   color: #7b1fa2;
 }
 
+.badge-domestic {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.badge-workshop {
+  background-color: #e1f5fe;
+  color: #0277bd;
+}
+
+.badge-poster {
+  background-color: #e0f2f1;
+  color: #00695c;
+}
+
 // Authors
 .card-authors {
   font-size: 1.5rem;
@@ -183,13 +198,13 @@
 
 // Venue
 .card-venue {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-style: italic;
   color: #666;
   margin-bottom: 0.75rem;
 
   @media print {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   p {
@@ -332,6 +347,21 @@
   .badge-oral {
     background-color: #38006b;
     color: #ce93d8;
+  }
+
+  .badge-domestic {
+    background-color: #1a237e;
+    color: #90caf9;
+  }
+
+  .badge-workshop {
+    background-color: #01579b;
+    color: #64b5f6;
+  }
+
+  .badge-poster {
+    background-color: #004d40;
+    color: #80cbc4;
   }
 
   .card-authors {

@@ -25,7 +25,7 @@ about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
   Hi, my name is Hyunjoon Park and I'm researching in the field of Computer Vision \
   Currently, I am pursuing a Master's (MS) degree in Computer Software Engineering at Hanyang University. \
-  I am a member of <a href="https://sites.google.com/view/hyu-cv">CVLab</a> at Hanyang University, under the supervision of Prof. Donghyeon Cho
+  I am a member of <a href="https://sites.google.com/view/hyu-cv">HYU CVLab</a> at Hanyang University, under the supervision of Prof. Donghyeon Cho 
 
   **Research Interests:**
   - 3D Vision (3D Gaussian Splatting)
@@ -37,13 +37,15 @@ about_content: | # this will include new lines to allow paragraphs
 # News items (displayed latest first)
 news_items:
   - date: "2026-02"
-    content: "Started Master's program at Hanyang University under Prof. Donghyeon Cho"
-  - date: "2026-01"
-    content: "Paper accepted to **IPIU 2026** (38th Workshop on Image Processing and Image Understanding)"
-  - date: "2025-12"
-    content: "Awarded **Best Reviewer** at ACV 2025 Term Project Mini-Conference"
+    content: "Paper accepted to **IPIU 2026** (38th Workshop on Image Processing and Image Understanding) and presented poster at the conference"
+  - date: "2025-09"
+    content: "Started Master's degree at Hanyang University under the supervision of Prof. Donghyeon Cho"
   - date: "2025-08"
     content: "Completed Bachelor's degree at Hanyang University"
+  - date: "2025-02"
+    content: "Paper accepted to **IPIU 2025** (37th Workshop on Image Processing and Image Understanding) and presented poster at the conference"
+  - date: "2024-07"
+    content: "Start undergraduate internship at HYU CVLab under the supervision of Prof. Donghyeon Cho"
 
 content:
   - title: Publications # Title for the section
@@ -55,6 +57,13 @@ content:
         image: images/poster_ipiu_2026.png
         link: http://www.ipiu.or.kr/
         link_text: Site
+        badges:
+          - text: Domestic
+            type: domestic
+          - text: Workshop
+            type: workshop
+          - text: Poster
+            type: poster
         abstract: |
           본 연구에서는 3D Gaussian Splatting(3DGS) 환경에서 2D Foundation Model인 SAM을 활용할 때 발생하는 과분할(Over-segmentation) 및 시점 간 불일치 문제(View-Inconsistency)를 해결하기 위한 프레임워크를 제안하고자 한다.
           SAM의 보수적인 경계 인식으로 인해 발생하는 파편화된 마스크 문제를 극복하기 위해, 본 연구는 DINOv2의 semantic embedding, LoG(Laplacian-of-Gaussian) edge detection, 그리고 DepthAnythingv2의 monocular depth estimation을 결합한 2단계 refinement pipeline을 구축하였다.
@@ -68,6 +77,13 @@ content:
         image: images/poster_ipiu_2025.png
         link: http://www.ipiu.or.kr/
         link_text: Site
+        badges:
+          - text: Domestic
+            type: domestic
+          - text: Workshop
+            type: workshop
+          - text: Poster
+            type: poster
         abstract: |
           멀티 뷰 데이터셋으로부터 카메라 매개변수와 객체 위치를 추정하는 novel-view synthesis 기술인 3D Gaussian Splatting (3DGS)은 3차원 공간을 효과적으로 재구성하는 기술로 주목을 받고 있다.
           기존 연구들이 주로 novel-view synthesis에 초점이 맞춰져 있다면 Gaussian grouping에서는 SAM (Segment Anything)을 활용하여 마스크 이미지를 생성하고 이를 이용해 3DGS 학습 이후 3차원 정보에서 특정 객체를 분리할 수 있게 되어 주로 2차원 공간에서 진행이 되었던 영역을 3차원으로 확장을 시켰다는 점에서 의의가 있다.
