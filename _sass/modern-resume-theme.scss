@@ -3,6 +3,7 @@
 @import "type";
 @import "dark";
 @import "icons";
+@import "cards";
 
 .header-right p {
   margin-bottom: 3px;
@@ -192,3 +193,68 @@ p.quote {
     margin-top: 1rem;
   }
 }
+
+// News Section Styling
+.news-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.news-heading {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.news-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.news-item {
+  display: flex;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.news-date {
+  font-weight: 600;
+  color: #555;
+  min-width: 80px;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0.25rem;
+    margin-right: 0;
+  }
+}
+
+.news-content {
+  flex: 1;
+  font-size: 1.5rem;
+
+  p {
+    margin: 0;
+    display: inline;
+  }
+
+  strong {
+    color: #1a73e8;
+    font-weight: 600;
+  }
+}
+
+// Dark mode support
+.dark .news-section { border-top-color: #444; }
+.dark .news-heading { color: #e6e6e6; }
+.dark .news-date { color: #aaa; }
+.dark .news-content strong { color: #66a3ff; }

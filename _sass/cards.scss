@@ -1,0 +1,374 @@
+// Publication/Project Card Styling
+.publication-card {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @media print {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    page-break-inside: avoid;
+  }
+}
+
+.card-layout {
+  display: flex;
+  gap: 2rem;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+// Thumbnail Section
+.card-thumbnail {
+  flex-shrink: 0;
+  width: 200px;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media print {
+    width: 150px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: block;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    @media print {
+      box-shadow: none;
+      border: 1px solid #ddd;
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+}
+
+.card-thumbnail-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 3rem;
+    color: #ccc;
+  }
+}
+
+// Content Section
+.card-content {
+  flex: 1;
+  min-width: 0; // Prevents flex item overflow
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  color: #333;
+
+  @media print {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #1a73e8;
+    }
+  }
+}
+
+.card-badges {
+  margin-left: 0.75rem;
+  display: inline-block;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 12px;
+  background-color: #e3f2fd;
+  color: #1976d2;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-left: 0;
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  @media print {
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+.badge-award {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.badge-best {
+  background-color: #fce4ec;
+  color: #c2185b;
+}
+
+.badge-oral {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
+// Authors
+.card-authors {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: #555;
+
+  @media print {
+    font-size: 1.3rem;
+  }
+
+  p {
+    margin: 0;
+    display: inline;
+  }
+
+  strong {
+    color: #1a73e8;
+    font-weight: 500;
+  }
+}
+
+// Venue
+.card-venue {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 0.75rem;
+
+  @media print {
+    font-size: 1.3rem;
+  }
+
+  p {
+    margin: 0;
+    display: inline;
+  }
+}
+
+// Links
+.card-links {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  @media print {
+    gap: 0.5rem;
+  }
+}
+
+.card-link {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+    color: #000;
+  }
+
+  i {
+    margin-right: 0.25rem;
+  }
+
+  @media print {
+    padding: 0.25rem 0.5rem;
+    font-size: 1.2rem;
+    background-color: transparent;
+  }
+}
+
+// Abstract Toggle
+.card-abstract {
+  margin-top: 1rem;
+
+  summary {
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #666;
+    user-select: none;
+    padding: 0.5rem 0;
+
+    &:hover {
+      color: #1a73e8;
+    }
+
+    &::marker {
+      color: #999;
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+.abstract-content {
+  margin-top: 0.75rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-left: 3px solid #1a73e8;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #555;
+
+  p {
+    margin-bottom: 0.75rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Dark Mode Support
+.dark {
+  .publication-card {
+    border-bottom-color: #444;
+  }
+
+  .card-thumbnail img {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .card-thumbnail-placeholder {
+    background-color: #333;
+
+    i {
+      color: #555;
+    }
+  }
+
+  .card-title {
+    color: #e6e6e6;
+
+    a:hover {
+      color: #66a3ff;
+    }
+  }
+
+  .badge {
+    background-color: #2d4a7c;
+    color: #90caf9;
+  }
+
+  .badge-award {
+    background-color: #4d3800;
+    color: #ffb74d;
+  }
+
+  .badge-best {
+    background-color: #4a1942;
+    color: #f48fb1;
+  }
+
+  .badge-oral {
+    background-color: #38006b;
+    color: #ce93d8;
+  }
+
+  .card-authors {
+    color: #aaa;
+
+    strong {
+      color: #66a3ff;
+    }
+  }
+
+  .card-venue {
+    color: #999;
+  }
+
+  .card-link {
+    background-color: #333;
+    border-color: #555;
+    color: #e6e6e6;
+
+    &:hover {
+      background-color: #444;
+      border-color: #666;
+      color: #fff;
+    }
+  }
+
+  .card-abstract summary {
+    color: #aaa;
+
+    &:hover {
+      color: #66a3ff;
+    }
+  }
+
+  .abstract-content {
+    background-color: #2a2a2a;
+    border-left-color: #66a3ff;
+    color: #aaa;
+  }
+}
