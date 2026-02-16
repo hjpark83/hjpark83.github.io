@@ -34,7 +34,26 @@
       {%- if item.quote -%}
         <p class="quote">{{ item.quote }}</p>
       {%- endif -%}
-      {{ item.description | strip | markdownify }}
+
+      {%- assign description_parts = item.description | split: "- **Abstract**" -%}
+
+      {%- if description_parts.size > 1 -%}
+        {%- assign main_content = description_parts[0] | strip | markdownify -%}
+        {%- assign abstract_content = description_parts[1] | strip -%}
+
+        {{ main_content }}
+
+        <div class="abstract-section">
+          <button class="abstract-toggle" onclick="toggleAbstract(this)">
+            <span class="toggle-icon">▶</span> <strong>Abstract</strong>
+          </button>
+          <div class="abstract-content" style="display: none;">
+            {{ abstract_content | markdownify }}
+          </div>
+        </div>
+      {%- else -%}
+        {{ item.description | strip | markdownify }}
+      {%- endif -%}
     </div>
   </div>
 {% endfor %}

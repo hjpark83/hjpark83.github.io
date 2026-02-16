@@ -292,5 +292,92 @@ button.collapsible.active h3::before {
 /* Navigation Menu Styles */
 .main-nav { margin-top: 15px; }
 .main-nav ul { padding: 0; list-style: none; display: flex; gap: 20px; }
-.main-nav a { text-decoration: none; font-weight: 500; font-size: 1.2rem; color: #555; }
+.main-nav a { text-decoration: none; font-weight: 500; font-size: 1.8rem; color: #555; }
 .main-nav a:hover { color: #1a73e8; }
+
+/* Dark Mode Toggle Button */
+.darkmode-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.darkmode-toggle:hover {
+  background-color: #555;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.dark .darkmode-toggle {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.dark .darkmode-toggle:hover {
+  background-color: #e0e0e0;
+}
+
+/* Abstract Toggle Styles */
+.abstract-section {
+  margin-top: 10px;
+}
+
+.abstract-toggle {
+  background: none;
+  border: none;
+  padding: 8px 0;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #477dca;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.abstract-toggle:hover {
+  color: #355e98;
+}
+
+.abstract-toggle .toggle-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.abstract-toggle.active .toggle-icon {
+  transform: rotate(90deg);
+}
+
+.abstract-content {
+  margin-top: 10px;
+  padding-left: 20px;
+  border-left: 3px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.dark .abstract-toggle {
+  color: #6b9bd8;
+}
+
+.dark .abstract-toggle:hover {
+  color: #8fb4e0;
+}
+
+.dark .abstract-content {
+  border-left-color: #555;
+}
