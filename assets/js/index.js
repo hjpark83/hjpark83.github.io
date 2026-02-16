@@ -47,22 +47,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Print PDF button
+  // Download CV PDF button
   const printButton = document.getElementById('print-pdf');
 
   printButton.addEventListener('click', function() {
-    window.print();
+    const link = document.createElement('a');
+    link.href = '/assets/cv.pdf';
+    link.download = 'Hyunjoon_Park_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   });
 });
-
-// Abstract toggle functionality
-function toggleAbstract(button) {
-  button.classList.toggle('active');
-  const content = button.nextElementSibling;
-
-  if (content.style.display === 'none' || content.style.display === '') {
-    content.style.display = 'block';
-  } else {
-    content.style.display = 'none';
-  }
-}
