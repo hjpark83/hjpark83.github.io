@@ -143,6 +143,7 @@ content:
     content:
       - layout: left
         title: Creative Software Programming
+        icon: images/cpp.png
         sub_title: Teaching Assistant
         caption: 2025.9 - 2025.12
         description: | # this will include new lines to allow paragraphs
@@ -203,12 +204,27 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: Language Proficiency
+        title: Korean
+        icon: images/korea.png
+        sub_title: Native
         description: | # this will include new lines to allow paragraphs
-          Add your language skills here.
-          - **Korean**: Native
-          - **English**: Fluent (TOEIC 910)
-          - **Japanese**: Basic Communication Skills
+          Native speaker with full proficiency in reading, writing, speaking, and listening.
+
+      - layout: left
+        title: English
+        icon: images/english.png
+        sub_title: Fluent
+        description: | # this will include new lines to allow paragraphs
+          - **TOEIC**: 910
+          - Proficient in academic and professional communication
+          - Capable of reading research papers and technical documentation
+
+      - layout: left
+        title: Japanese
+        icon: images/japan.png
+        sub_title: Basic Communication Skills
+        description: | # this will include new lines to allow paragraphs
+          Basic conversational skills for everyday communication.
 
   - title: Programs # 참석하거나 활동한 내역
     layout: list # Type of content section (list/text)
