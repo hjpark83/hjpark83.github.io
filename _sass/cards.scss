@@ -108,14 +108,9 @@
 }
 
 .card-badges {
-  margin-left: 0.75rem;
-  display: inline-block;
-
-  @media screen and (max-width: 767px) {
-    display: block;
-    margin-left: 0;
-    margin-top: 0.5rem;
-  }
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .badge {
@@ -198,13 +193,13 @@
 
 // Venue
 .card-venue {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-style: italic;
   color: #666;
   margin-bottom: 0.75rem;
 
   @media print {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   p {

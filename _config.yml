@@ -113,7 +113,7 @@ content:
           Our approach transforms fragmented masks into semantically coherent global objects, enabling stable interactive editing (removal, inpainting) while maintaining high-fidelity rendering.
 
       - title: Music to Dance Video Generation
-        authors: Donghyeon Cho, <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Junha Kim, Nokap Park (SK Telecom), Sungeun Hong (Sungkyunkwan University)
+        authors: Donghyeon Cho, <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Junha Kim (Hanyang University), Nokap Park (SK Telecom), Sungeun Hong (Sungkyunkwan University)
         venue: "Industry-Academia Collaboration | _Feb 2025 - Present_"
         abstract: |
           3D Dance Video Generation Aligned with Music from a Single Reference Image.
@@ -123,7 +123,7 @@ content:
         authors: <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Dohyeon Lim
         venue: "Graduation Project (Supervisor: Prof. Sungyoon Lee) | _Feb 2024 - Nov 2024_"
         image: images/project_result.png
-        link: https://github.com/Capstone-SW-Project/3D-Synthesized-Space-Reconstruction-using-3DGS
+        link: https://github.com/Capstone-SW-Project
         link_text: Project Page
         additional_links:
           - title: GitHub
@@ -147,7 +147,6 @@ content:
             Undergraduate Intern at CVLab, Hanyang University under the supervision of Prof. Donghyeon Cho.
             - Research on 3D Vision especially 3D Gaussian Splatting and 3D Human Reconstruction
             - I've studied various human models such as SMPL, PIFu (Pixel-Aligned Implicit Function), and 3DGS based human reconstruction methods.
-            - Currently, I'm working on 3D dance video generation aligned with music from a single reference image. This work is in collaboration with SK Telecom and Sungkyunkwan University.
 
   # - title: Awards & Honors # Title for the section
   #   layout: list # Type of content section (list/text)
@@ -235,7 +234,7 @@ content:
         icon: images/japan.png
         sub_title: Basic Communication Skills
         description: | # this will include new lines to allow paragraphs
-          Basic conversational skills for everyday communication.
+          Basic conversational skills for communication.
 
   - title: Programs # 참석하거나 활동한 내역
     layout: list # Type of content section (list/text)

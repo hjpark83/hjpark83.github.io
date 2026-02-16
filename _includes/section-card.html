@@ -16,22 +16,23 @@
 
       <!-- Content Section (Right Side) -->
       <div class="card-content">
-        <!-- Title with optional badges -->
+        <!-- Title -->
         <h4 class="card-title">
           {%- if item.link -%}
             <a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a>
           {%- else -%}
             {{ item.title }}
           {%- endif -%}
-
-          {%- if item.badges -%}
-            <span class="card-badges">
-              {%- for badge in item.badges -%}
-                <span class="badge badge-{{ badge.type | default: 'default' }}">{{ badge.text }}</span>
-              {%- endfor -%}
-            </span>
-          {%- endif -%}
         </h4>
+
+        <!-- Badges (separate line) -->
+        {%- if item.badges -%}
+          <div class="card-badges">
+            {%- for badge in item.badges -%}
+              <span class="badge badge-{{ badge.type | default: 'default' }}">{{ badge.text }}</span>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
 
         <!-- Authors -->
         {%- if item.authors -%}
