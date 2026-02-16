@@ -25,7 +25,7 @@ about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
   Hi, my name is Hyunjoon Park and I'm researching in the field of Computer Vision \
   Currently, I am pursuing a Master's (MS) degree in Computer Software Engineering at Hanyang University. \
-  I am a member of <a href="https://sites.google.com/view/hyu-cv">HYU CVLab</a> at Hanyang University, under the supervision of Prof. Donghyeon Cho 
+  I am a member of <a href="https://sites.google.com/view/hyu-cv">HYU CVLab</a> at Hanyang University, under the supervision of <a href="https://scholar.google.com/citations?user=zj-NER4AAAAJ&hl=en">Prof. Donghyeon Cho</a>
 
   **Research Interests:**
   - 3D Vision (3D Gaussian Splatting)
@@ -115,6 +115,7 @@ content:
       - title: Music to Dance Video Generation
         authors: Donghyeon Cho, <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Junha Kim (Hanyang University), Nokap Park (SK Telecom), Sungeun Hong (Sungkyunkwan University)
         venue: "Industry-Academia Collaboration | _Feb 2025 - Present_"
+        image: images/grid_wguidance.gif
         abstract: |
           3D Dance Video Generation Aligned with Music from a Single Reference Image.
           This project is a collaboration between Hanyang University, SK Telecom, and Sungkyunkwan University.
