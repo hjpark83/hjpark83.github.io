@@ -138,6 +138,36 @@ content:
             - I've studied various human models such as SMPL, PIFu (Pixel-Aligned Implicit Function), and 3DGS based human reconstruction methods.
             - Currently, I'm working on 3D dance video generation aligned with music from a single reference image. This work is in collaboration with SK Telecom and Sungkyunkwan University.
 
+  - title: Teaching Experience # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: Creative Software Programming
+        sub_title: Teaching Assistant
+        caption: 2025.9 - 2025.12
+        description: | # this will include new lines to allow paragraphs
+          - **Course Description** \
+            This course is designed to foster creativity and problem-solving skills through c++ programming. 
+            It covers a wide range of topics, including algorithm design, data structures, software development methodologies, and creative coding projects. 
+            The course encourages students to think outside the box and apply programming concepts to real-world problems in innovative ways.
+          - **Responsibilities** \
+            > Assisting with lectures for weeks 13-15 and conducting practical sessions on STL (Standard Template Library)\
+            > Creating and grading assignments and exam questions\
+            > Providing feedback on students' code and helping them improve their programming skills
+
+  # - title: Awards & Honors # Title for the section
+  #   layout: list # Type of content section (list/text)
+  #   content:
+  #     - layout: left
+  #       title: Award Name
+  #       sub_title: Organization or Institution
+  #       caption: Date
+  #       description: | # this will include new lines to allow paragraphs
+  #         Description of the award or honor.
+  #         - What it was for
+  #         - Competition details or selection criteria
+  #         - Any notable achievements
+
   - title: Education # Title for the section
     layout: list # Type of content section (list/text)  
     content:
@@ -165,10 +195,21 @@ content:
         title: Hwanil High School
         icon: images/hwanil.png
         sub_title: High School Diploma
-        description: | 
+        description: |
           - **Graduation** \
             Feb 2018
-  
+
+  - title: Languages # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: Language Proficiency
+        description: | # this will include new lines to allow paragraphs
+          Add your language skills here.
+          - **Korean**: Native
+          - **English**: Fluent (TOEIC 910)
+          - **Japanese**: Basic Communication Skills
+
   - title: Programs # 참석하거나 활동한 내역
     layout: list # Type of content section (list/text)
     content:
