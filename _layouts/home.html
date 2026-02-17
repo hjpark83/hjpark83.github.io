@@ -20,6 +20,9 @@
         <!-- Left Section Navigation -->
         <nav class="section-nav no-print" id="section-nav">
           <ul>
+            <li>
+              <a href="#section-about-me" class="section-nav-link">About Me</a>
+            </li>
             {%- for section in site.content -%}
               <li>
                 <a href="#section-{{ section.title | slugify }}" class="section-nav-link">
