@@ -285,7 +285,7 @@ p.quote {
   .section-nav-link {
     display: block;
     padding: 4px 10px;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: #bbb;
     text-decoration: none;
     border-left: 2px solid transparent;
@@ -293,8 +293,8 @@ p.quote {
     white-space: nowrap;
 
     &:hover {
-      color: #555;
-      border-left-color: #aaa;
+      color: #7b1fa2;
+      border-left-color: #7b1fa2;
     }
 
     &.active {
@@ -315,8 +315,8 @@ p.quote {
     color: #555;
 
     &:hover {
-      color: #aaa;
-      border-left-color: #555;
+      color: #ce93d8;
+      border-left-color: #ce93d8;
     }
 
     &.active {
