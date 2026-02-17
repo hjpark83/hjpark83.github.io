@@ -30,17 +30,15 @@
 
 .profile-img {
   width: 250px;
-  height: 250px;
+  height: 330px;
   margin: 0 auto;
   margin-bottom: 20px;
   display: block;
-  border-radius: 125px;
+  border-radius: 16px;
   background-size: cover;
-  background-position: center;
-  background-repeat: repeat, no-repeat;
-  -moz-box-shadow: inset 0 0 20px #636161;
-  -webkit-box-shadow: inset 0 0 20px #636161;
-  box-shadow: inset 0 0 20px #636161;
+  background-position: center 55%;
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
 .list-container {

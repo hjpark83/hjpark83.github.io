@@ -21,7 +21,7 @@ linkedin_username: hyunjoon83
 
 # About Section
 # about_title: About Me
-about_profile_image: images/profile.jpg
+about_profile_image: images/me.jpg
 about_content: | # this will include new lines to allow paragraphs
   Hi, my name is Hyunjoon Park and I'm researching in the field of Computer Vision \
   Currently, I am pursuing a Master's (MS) degree in Computer Software Engineering at Hanyang University. \
