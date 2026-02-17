@@ -33,13 +33,14 @@
             </a>
           </li>
         {%- endif -%}
+        {%- if site.email -%}
+          <li>
+            <a href="mailto:{{ site.email }}" class="button button--sacnite button--round-l">
+              <i class="fas fa-envelope" title="Email"></i>
+            </a>
+          </li>
+        {%- endif -%}
       </ul>
-
-      {%- if site.email -%}
-        <p>
-          {{ site.email_title | default: "Email" }}: <a href="mailto:{{ site.email }}" target="_blank">{{ site.email | escape }}</a>
-        </p>
-      {%- endif -%}
     </div>
   </div>
 </div>

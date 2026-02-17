@@ -263,3 +263,65 @@ p.quote {
 .dark .news-heading { color: #e6e6e6; }
 .dark .news-date { color: #aaa; }
 .dark .news-content strong { color: #66a3ff; }
+
+// Left Section Navigation
+.section-nav {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 500;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  .section-nav-link {
+    display: block;
+    padding: 4px 10px;
+    font-size: 1.25rem;
+    color: #bbb;
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+
+    &:hover {
+      color: #555;
+      border-left-color: #aaa;
+    }
+
+    &.active {
+      color: #1a73e8;
+      border-left-color: #1a73e8;
+      font-weight: 600;
+    }
+  }
+
+  // 화면이 좁으면 숨김
+  @media screen and (max-width: 1280px) {
+    display: none;
+  }
+}
+
+.dark .section-nav {
+  .section-nav-link {
+    color: #555;
+
+    &:hover {
+      color: #aaa;
+      border-left-color: #555;
+    }
+
+    &.active {
+      color: #66a3ff;
+      border-left-color: #66a3ff;
+    }
+  }
+}
