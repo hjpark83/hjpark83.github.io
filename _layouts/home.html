@@ -111,6 +111,16 @@
         }
       });
     }
+
+    // Abstract <details> 토글 시 부모 컨테이너 max-height 업데이트
+    document.querySelectorAll("details.card-abstract").forEach(function(details) {
+      details.addEventListener("toggle", function() {
+        var content = this.closest(".collapsible-content");
+        if (content && content.style.maxHeight) {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
   </script>
 
 </body>
