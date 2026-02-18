@@ -7,6 +7,16 @@
   {%- seo title=false -%}
 
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  <script>
+    (function() {
+      function adjustZoom() {
+        var zoom = Math.min(1.25, 1.25 * window.innerWidth / (window.screen.availWidth || 1920));
+        document.documentElement.style.zoom = zoom;
+      }
+      adjustZoom();
+      window.addEventListener('resize', adjustZoom);
+    })();
+  </script>
   <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | default: '/assets/favicon.ico' | relative_url }}">
 
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
