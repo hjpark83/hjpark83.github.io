@@ -148,7 +148,7 @@ content:
             - Research on 3D Vision especially 3D Gaussian Splatting and 3D Human Reconstruction
             - I've studied various human models such as SMPL, PIFu (Pixel-Aligned Implicit Function), and 3DGS based human reconstruction methods.
 
-  - title: Teaching Experience # Title for the section
+  - title: TA Experience # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
