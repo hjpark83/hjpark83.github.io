@@ -192,6 +192,14 @@ content:
           - **Graduation** \
             Feb 2018
 
+      - layout: left
+        title: Ewha Womans University Keumlan Middle School
+        icon: images/keumlan.png
+        sub_title: Middle School Diploma
+        description: |
+          - **Graduation** \
+            Feb 2015
+
   - title: Teaching Experience # Title for the section
     layout: list # Type of content section (list/text)
     content:
