@@ -1,9 +1,10 @@
 <div class="container intro-container" id="section-about-me">
   <h3 id="{{ site.about_title | slugify | default: 'about-me' }}">{{ site.about_title | default:
-  "About Me" }}</h3>
+    "About Me" }}</h3>
   <div class="col-xs-12">
     {%- if site.about_profile_image -%}
-    <span class="profile-img no-print" style="background-image: url({{ site.about_profile_image | relative_url }})"></span>
+    <span class="profile-img no-print"
+      style="background-image: url({{ site.about_profile_image | relative_url }})"></span>
     {%- endif -%}
     {{ site.about_content | strip | markdownify }}
 
@@ -24,4 +25,3 @@
     <div class="clearfix"></div>
   </div>
 </div>
-
