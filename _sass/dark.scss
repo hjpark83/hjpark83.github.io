@@ -12,4 +12,44 @@
   a {
     color: #477dca;
   }
+
+  // Section heading divider
+  h3 {
+    border-bottom-color: #3a3a3a;
+    color: #e6e6e6;
+  }
+
+  // Horizontal dashed dividers
+  .border-weak {
+    border-bottom-color: #3a3a3a;
+  }
+
+  // Contact icon links
+  .contact a {
+    color: #888;
+  }
+
+  .contact a:hover {
+    color: #e0e0e0;
+  }
+
+  // Main nav (if present)
+  .main-nav a {
+    color: #aaa;
+  }
+
+  .main-nav a:hover {
+    color: #66a3ff;
+  }
+
+  // Footer
+  .footer-container p,
+  .footer-container a {
+    color: #888;
+  }
+
+  // Generic text fallbacks
+  p.quote {
+    color: #ccc;
+  }
 }
