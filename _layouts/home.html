@@ -11,54 +11,53 @@
     <div class="wrapper">
 
       {%- if jekyll.environment == 'production' and site.gtm -%}
-        {%- include gtm_body.html -%}
+      {%- include gtm_body.html -%}
       {%- endif -%}
 
       {%- include about.html -%}
 
       {%- if site.version == 2 -%}
-        <!-- Left Section Navigation -->
-        <nav class="section-nav no-print" id="section-nav">
-          <ul>
-            <li>
-              <a href="#section-about-me" class="section-nav-link">About Me</a>
-            </li>
-            {%- for section in site.content -%}
-              <li>
-                <a href="#section-{{ section.title | slugify }}" class="section-nav-link">
-                  {{ section.title }}
-                </a>
-              </li>
-            {%- endfor -%}
-          </ul>
-        </nav>
+      <!-- Left Section Navigation -->
+      <nav class="section-nav no-print" id="section-nav">
+        <ul>
+          <li>
+            <a href="#section-about-me" class="section-nav-link">About Me</a>
+          </li>
+          {%- for section in site.content -%}
+          <li>
+            <a href="#section-{{ section.title | slugify }}" class="section-nav-link">
+              {{ section.title }}
+            </a>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
 
-        {% for section in site.content %}
-          <div class="container {{ section.layout }}-container" id="section-{{ section.title | slugify }}">
-            <button class="collapsible">
-              <h3 id="{{ section.title | slugify }}">{{ section.title }}</h3>
-            </button>
-            <div class="collapsible-content">
-              {% include {{ section.layout | prepend: "section-" | append: ".html" }} content=section.content %}
-            </div>
-          </div>
-        {% endfor %}
+      {% for section in site.content %}
+      <div class="container {{ section.layout }}-container" id="section-{{ section.title | slugify }}">
+        <button class="collapsible">
+          <h3 id="{{ section.title | slugify }}">{{ section.title }}</h3>
+        </button>
+        <div class="collapsible-content">
+          {% include {{ section.layout | prepend: "section-" | append: ".html" }} content=section.content %}
+        </div>
+      </div>
+      {% endfor %}
       {% else %}
-        {%- include v1/default.html -%}
+      {%- include v1/default.html -%}
       {%- endif -%}
     </div>
   </main>
 
   {%- include footer.html -%}
   {% if site.darkmode == false %}
-    <script src="{{ '/assets/js/index.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/index.js' | relative_url }}"></script>
   {% endif %}
 
-  {# 섹션 네비게이션 스크립트 #}
   <script>
     // Smooth scroll for section nav links
-    document.querySelectorAll('.section-nav-link').forEach(function(link) {
-      link.addEventListener('click', function(e) {
+    document.querySelectorAll('.section-nav-link').forEach(function (link) {
+      link.addEventListener('click', function (e) {
         e.preventDefault();
         var targetId = this.getAttribute('href').substring(1);
         var target = document.getElementById(targetId);
@@ -72,10 +71,10 @@
     var navLinks = document.querySelectorAll('.section-nav-link');
     var sections = document.querySelectorAll('.container[id^="section-"]');
 
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          navLinks.forEach(function(link) {
+          navLinks.forEach(function (link) {
             link.classList.remove('active');
             if (link.getAttribute('href') === '#' + entry.target.id) {
               link.classList.add('active');
@@ -85,10 +84,9 @@
       });
     }, { threshold: 0.2, rootMargin: '-10% 0px -60% 0px' });
 
-    sections.forEach(function(section) { observer.observe(section); });
+    sections.forEach(function (section) { observer.observe(section); });
   </script>
 
-  {# 아코디언 기능을 위한 스크립트 #}
   <script>
     var coll = document.getElementsByClassName("collapsible");
 
@@ -101,10 +99,10 @@
 
     // 클릭 이벤트로 토글 기능
     for (var i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
+      coll[i].addEventListener("click", function () {
         this.classList.toggle("active");
         var content = this.nextElementSibling;
-        if (content.style.maxHeight){
+        if (content.style.maxHeight) {
           content.style.maxHeight = null;
         } else {
           content.style.maxHeight = content.scrollHeight + "px";
@@ -113,8 +111,8 @@
     }
 
     // Abstract <details> 토글 시 부모 컨테이너 max-height 업데이트
-    document.querySelectorAll("details.card-abstract").forEach(function(details) {
-      details.addEventListener("toggle", function() {
+    document.querySelectorAll("details.card-abstract").forEach(function (details) {
+      details.addEventListener("toggle", function () {
         var content = this.closest(".collapsible-content");
         if (content && content.style.maxHeight) {
           content.style.maxHeight = content.scrollHeight + "px";
@@ -124,4 +122,5 @@
   </script>
 
 </body>
+
 </html>

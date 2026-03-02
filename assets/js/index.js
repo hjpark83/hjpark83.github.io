@@ -169,6 +169,29 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
+    // Badge click inside cards → trigger tag filter (click again to deactivate)
+    cards.forEach(function(card) {
+      card.querySelectorAll('.badge').forEach(function(badge) {
+        badge.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var tagText = badge.textContent.trim();
+          var tagBtn = Array.from(filterEl.querySelectorAll('.tag-btn')).find(function(b) {
+            return b.dataset.tag === tagText;
+          });
+          if (activeTag === tagText) {
+            activeTag = '';
+            filterEl.querySelectorAll('.tag-btn').forEach(function(b) { b.classList.remove('active'); });
+            filterEl.querySelector('.tag-btn[data-tag=""]').classList.add('active');
+          } else {
+            activeTag = tagText;
+            filterEl.querySelectorAll('.tag-btn').forEach(function(b) { b.classList.remove('active'); });
+            if (tagBtn) tagBtn.classList.add('active');
+          }
+          applyFilters();
+        });
+      });
+    });
+
     filterEl.addEventListener('click', function(e) {
       var btn = e.target.closest('.filter-btn');
       if (!btn) return;

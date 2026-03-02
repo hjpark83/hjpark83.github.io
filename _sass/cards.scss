@@ -113,6 +113,16 @@
   margin-bottom: 0.5rem;
 }
 
+.publication-card .badge {
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+
+  &:hover {
+    opacity: 0.75;
+    transform: translateY(-1px);
+  }
+}
+
 .badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
