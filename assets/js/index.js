@@ -132,10 +132,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Build filter UI
     var html = '<div class="filter-bar">';
-    html += '<input type="text" class="filter-search" placeholder="검색 (제목, 저자, 학회...)">';
+    html += '<input type="text" class="filter-search" placeholder="Search (title, authors, venue...)">';
     if (years.size > 0) {
       html += '<div class="filter-group">';
-      html += '<button class="filter-btn year-btn active" data-year="">전체 연도</button>';
+      html += '<button class="filter-btn year-btn active" data-year="">All Years</button>';
       Array.from(years).sort().reverse().forEach(function(y) {
         html += '<button class="filter-btn year-btn" data-year="' + y + '">' + y + '</button>';
       });
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (tags.size > 0) {
       html += '<div class="filter-group">';
-      html += '<button class="filter-btn tag-btn active" data-tag="">전체 유형</button>';
+      html += '<button class="filter-btn tag-btn active" data-tag="">All Types</button>';
       Array.from(tags).forEach(function(t) {
         html += '<button class="filter-btn tag-btn" data-tag="' + t.replace(/"/g, '&quot;') + '">' + t + '</button>';
       });
