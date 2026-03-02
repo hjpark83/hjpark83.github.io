@@ -1,5 +1,7 @@
+<div class="section-filter" data-section-filter></div>
+
 {% for item in include.content %}
-<div class="publication-card">
+<div class="publication-card" data-year="{{ item.year | default: '' }}" data-tags="{% for badge in item.badges %}{{ badge.text }}{% unless forloop.last %},{% endunless %}{% endfor %}">
   <div class="card-layout">
     <!-- Thumbnail Section (Left Side - 200px) -->
     <div class="card-thumbnail">

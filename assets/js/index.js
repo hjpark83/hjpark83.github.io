@@ -104,4 +104,90 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeLightbox();
   });
+
+  // Section search & filter
+  document.querySelectorAll('[data-section-filter]').forEach(function(filterEl) {
+    var collapsibleContent = filterEl.closest('.collapsible-content');
+    var cards = Array.from(collapsibleContent.querySelectorAll('.publication-card'));
+    if (cards.length < 2) return;
+
+    // Collect years and tags from card data attributes / DOM
+    var years = new Set();
+    var tags = new Set();
+    cards.forEach(function(card) {
+      var year = card.dataset.year;
+      if (!year) {
+        var venueEl = card.querySelector('.card-venue');
+        if (venueEl) {
+          var m = venueEl.textContent.match(/\b(20\d\d)\b/);
+          if (m) year = m[1];
+        }
+        card.dataset.year = year || '';
+      }
+      if (year) years.add(year);
+      card.querySelectorAll('.badge').forEach(function(badge) {
+        tags.add(badge.textContent.trim());
+      });
+    });
+
+    // Build filter UI
+    var html = '<div class="filter-bar">';
+    html += '<input type="text" class="filter-search" placeholder="검색 (제목, 저자, 학회...)">';
+    if (years.size > 0) {
+      html += '<div class="filter-group">';
+      html += '<button class="filter-btn year-btn active" data-year="">전체 연도</button>';
+      Array.from(years).sort().reverse().forEach(function(y) {
+        html += '<button class="filter-btn year-btn" data-year="' + y + '">' + y + '</button>';
+      });
+      html += '</div>';
+    }
+    if (tags.size > 0) {
+      html += '<div class="filter-group">';
+      html += '<button class="filter-btn tag-btn active" data-tag="">전체 유형</button>';
+      Array.from(tags).forEach(function(t) {
+        html += '<button class="filter-btn tag-btn" data-tag="' + t.replace(/"/g, '&quot;') + '">' + t + '</button>';
+      });
+      html += '</div>';
+    }
+    html += '</div>';
+    filterEl.innerHTML = html;
+
+    var activeYear = '';
+    var activeTag = '';
+    var searchText = '';
+
+    function applyFilters() {
+      cards.forEach(function(card) {
+        var matchYear = !activeYear || card.dataset.year === activeYear;
+        var cardTags = Array.from(card.querySelectorAll('.badge')).map(function(b) { return b.textContent.trim(); });
+        var matchTag = !activeTag || cardTags.indexOf(activeTag) !== -1;
+        var matchSearch = !searchText || card.textContent.toLowerCase().indexOf(searchText) !== -1;
+        card.style.display = (matchYear && matchTag && matchSearch) ? '' : 'none';
+      });
+      if (collapsibleContent && collapsibleContent.style.maxHeight) {
+        collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + 'px';
+      }
+    }
+
+    filterEl.addEventListener('click', function(e) {
+      var btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      if (btn.classList.contains('year-btn')) {
+        activeYear = btn.dataset.year;
+        filterEl.querySelectorAll('.year-btn').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        applyFilters();
+      } else if (btn.classList.contains('tag-btn')) {
+        activeTag = btn.dataset.tag;
+        filterEl.querySelectorAll('.tag-btn').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        applyFilters();
+      }
+    });
+
+    filterEl.querySelector('.filter-search').addEventListener('input', function() {
+      searchText = this.value.trim().toLowerCase();
+      applyFilters();
+    });
+  });
 });
