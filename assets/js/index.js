@@ -111,9 +111,13 @@ document.addEventListener('DOMContentLoaded', function() {
     var cards = Array.from(collapsibleContent.querySelectorAll('.publication-card'));
     if (cards.length < 2) return;
 
-    // Collect years and tags from card data attributes / DOM
+    var sectionContainer = filterEl.closest('.container');
+    var isPublicationSection = sectionContainer && /publication/i.test(sectionContainer.id);
+
+    // Collect years, tags, and badge class map from card DOM
     var years = new Set();
     var tags = new Set();
+    var tagClassMap = {};
     cards.forEach(function(card) {
       var year = card.dataset.year;
       if (!year) {
@@ -126,13 +130,18 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       if (year) years.add(year);
       card.querySelectorAll('.badge').forEach(function(badge) {
-        tags.add(badge.textContent.trim());
+        var text = badge.textContent.trim();
+        tags.add(text);
+        if (!tagClassMap[text]) tagClassMap[text] = badge.className;
       });
     });
 
     // Build filter UI
     var html = '<div class="filter-bar">';
     html += '<input type="text" class="filter-search" placeholder="Search (title, authors, venue...)">';
+    if (isPublicationSection) {
+      html += '<div class="filter-chips"></div>';
+    }
     if (years.size > 0) {
       html += '<div class="filter-group">';
       html += '<button class="filter-btn year-btn active" data-year="">All Years</button>';
@@ -156,6 +165,26 @@ document.addEventListener('DOMContentLoaded', function() {
     var activeTag = '';
     var searchText = '';
 
+    function syncTagButtons(tag) {
+      filterEl.querySelectorAll('.tag-btn').forEach(function(b) { b.classList.remove('active'); });
+      var target = tag
+        ? Array.from(filterEl.querySelectorAll('.tag-btn')).find(function(b) { return b.dataset.tag === tag; })
+        : filterEl.querySelector('.tag-btn[data-tag=""]');
+      if (target) target.classList.add('active');
+    }
+
+    function updateChip(tag) {
+      var chipsEl = filterEl.querySelector('.filter-chips');
+      if (!chipsEl) return;
+      if (tag) {
+        var cls = tagClassMap[tag] || 'badge';
+        chipsEl.innerHTML = '<span class="filter-chip ' + cls + '">' + tag
+          + ' <button class="filter-chip-remove" aria-label="Remove filter">&times;</button></span>';
+      } else {
+        chipsEl.innerHTML = '';
+      }
+    }
+
     function applyFilters() {
       cards.forEach(function(card) {
         var matchYear = !activeYear || card.dataset.year === activeYear;
@@ -169,30 +198,37 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
-    // Badge click inside cards → trigger tag filter (click again to deactivate)
-    cards.forEach(function(card) {
-      card.querySelectorAll('.badge').forEach(function(badge) {
-        badge.addEventListener('click', function(e) {
-          e.stopPropagation();
-          var tagText = badge.textContent.trim();
-          var tagBtn = Array.from(filterEl.querySelectorAll('.tag-btn')).find(function(b) {
-            return b.dataset.tag === tagText;
+    // Badge click → chip filter (publication section only)
+    if (isPublicationSection) {
+      cards.forEach(function(card) {
+        card.querySelectorAll('.badge').forEach(function(badge) {
+          badge.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var tagText = badge.textContent.trim();
+            if (activeTag === tagText) {
+              activeTag = '';
+              syncTagButtons('');
+              updateChip('');
+            } else {
+              activeTag = tagText;
+              syncTagButtons(tagText);
+              updateChip(tagText);
+            }
+            applyFilters();
           });
-          if (activeTag === tagText) {
-            activeTag = '';
-            filterEl.querySelectorAll('.tag-btn').forEach(function(b) { b.classList.remove('active'); });
-            filterEl.querySelector('.tag-btn[data-tag=""]').classList.add('active');
-          } else {
-            activeTag = tagText;
-            filterEl.querySelectorAll('.tag-btn').forEach(function(b) { b.classList.remove('active'); });
-            if (tagBtn) tagBtn.classList.add('active');
-          }
-          applyFilters();
         });
       });
-    });
+    }
 
     filterEl.addEventListener('click', function(e) {
+      // Chip remove button
+      if (e.target.classList.contains('filter-chip-remove')) {
+        activeTag = '';
+        syncTagButtons('');
+        updateChip('');
+        applyFilters();
+        return;
+      }
       var btn = e.target.closest('.filter-btn');
       if (!btn) return;
       if (btn.classList.contains('year-btn')) {
@@ -202,8 +238,8 @@ document.addEventListener('DOMContentLoaded', function() {
         applyFilters();
       } else if (btn.classList.contains('tag-btn')) {
         activeTag = btn.dataset.tag;
-        filterEl.querySelectorAll('.tag-btn').forEach(function(b) { b.classList.remove('active'); });
-        btn.classList.add('active');
+        syncTagButtons(btn.dataset.tag);
+        if (isPublicationSection) updateChip(btn.dataset.tag);
         applyFilters();
       }
     });
