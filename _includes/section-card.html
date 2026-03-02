@@ -63,7 +63,24 @@
         </a>
         {%- endfor -%}
         {%- endif -%}
+
+        {%- if item.bibtex -%}
+        <button class="card-link cite-btn" aria-label="Show BibTeX citation">
+          <i class="fas fa-quote-right"></i> Cite
+        </button>
+        {%- endif -%}
       </div>
+
+      <!-- BibTeX panel (hidden by default) -->
+      {%- if item.bibtex -%}
+      <div class="bibtex-panel" style="display:none;">
+        <div class="bibtex-toolbar">
+          <span class="bibtex-label">BibTeX</span>
+          <button class="bibtex-copy-btn">📋 Copy</button>
+        </div>
+        <pre class="bibtex-content">{{ item.bibtex }}</pre>
+      </div>
+      {%- endif -%}
 
       <!-- Collapsible abstract -->
       {%- if item.abstract -%}

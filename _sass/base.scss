@@ -494,3 +494,40 @@ button.collapsible.active h3::before {
 .dark .floating-btn:hover {
   background-color: #e0e0e0;
 }
+
+// Scroll progress bar
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #1a73e8, #7b1fa2);
+  z-index: 10000;
+  transition: width 0.08s linear;
+
+  @media print {
+    display: none;
+  }
+}
+
+.dark #scroll-progress {
+  background: linear-gradient(90deg, #66a3ff, #ce93d8);
+}
+
+// Section entrance animation
+.section-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+
+  @media print {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+.section-animate.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -139,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Build filter UI
     var html = '<div class="filter-bar">';
     html += '<input type="text" class="filter-search" placeholder="Search (title, authors, venue...)">';
+    html += '<span class="filter-count"></span>';
     if (isPublicationSection) {
       html += '<div class="filter-chips"></div>';
     }
@@ -160,6 +161,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     html += '</div>';
     filterEl.innerHTML = html;
+
+    // Inject year separators (publication sections with year data only)
+    if (isPublicationSection && years.size > 0) {
+      Array.from(years).sort().reverse().forEach(function(year) {
+        var firstCard = cards.find(function(c) { return c.dataset.year === year; });
+        if (firstCard) {
+          var sep = document.createElement('div');
+          sep.className = 'year-separator';
+          sep.dataset.year = year;
+          sep.textContent = year;
+          firstCard.parentNode.insertBefore(sep, firstCard);
+        }
+      });
+    }
 
     var activeYear = '';
     var activeTag = '';
@@ -186,17 +201,41 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function applyFilters() {
+      var visibleCount = 0;
       cards.forEach(function(card) {
         var matchYear = !activeYear || card.dataset.year === activeYear;
         var cardTags = Array.from(card.querySelectorAll('.badge')).map(function(b) { return b.textContent.trim(); });
         var matchTag = !activeTag || cardTags.indexOf(activeTag) !== -1;
         var matchSearch = !searchText || card.textContent.toLowerCase().indexOf(searchText) !== -1;
-        card.style.display = (matchYear && matchTag && matchSearch) ? '' : 'none';
+        var show = matchYear && matchTag && matchSearch;
+        card.style.display = show ? '' : 'none';
+        if (show) visibleCount++;
       });
+
+      // Update result count
+      var countEl = filterEl.querySelector('.filter-count');
+      if (countEl) {
+        countEl.textContent = visibleCount < cards.length
+          ? 'Showing ' + visibleCount + ' of ' + cards.length
+          : cards.length + ' item' + (cards.length !== 1 ? 's' : '');
+      }
+
+      // Update year separator visibility
+      collapsibleContent.querySelectorAll('.year-separator').forEach(function(sep) {
+        var yr = sep.dataset.year;
+        var hasVisible = cards.some(function(c) {
+          return c.dataset.year === yr && c.style.display !== 'none';
+        });
+        sep.style.display = hasVisible ? '' : 'none';
+      });
+
       if (collapsibleContent && collapsibleContent.style.maxHeight) {
         collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + 'px';
       }
     }
+
+    // Show initial count
+    applyFilters();
 
     // Badge click → chip filter (publication section only)
     if (isPublicationSection) {
@@ -248,5 +287,48 @@ document.addEventListener('DOMContentLoaded', function() {
       searchText = this.value.trim().toLowerCase();
       applyFilters();
     });
+  });
+
+  // BibTeX panel: toggle on Cite button, copy to clipboard
+  document.addEventListener('click', function(e) {
+    var citeBtn = e.target.closest('.cite-btn');
+    if (citeBtn) {
+      var card = citeBtn.closest('.publication-card');
+      var panel = card && card.querySelector('.bibtex-panel');
+      if (panel) {
+        var isHidden = panel.style.display === 'none' || panel.style.display === '';
+        panel.style.display = isHidden ? 'block' : 'none';
+        var collapsibleContent = card.closest('.collapsible-content');
+        if (collapsibleContent && collapsibleContent.style.maxHeight) {
+          collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + 'px';
+        }
+      }
+      return;
+    }
+
+    var copyBtn = e.target.closest('.bibtex-copy-btn');
+    if (copyBtn) {
+      var panel = copyBtn.closest('.bibtex-panel');
+      var code = panel && panel.querySelector('.bibtex-content');
+      if (code) {
+        var text = code.textContent;
+        var btn = copyBtn;
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(text).then(function() {
+            btn.textContent = '✓ Copied!';
+            setTimeout(function() { btn.textContent = '📋 Copy'; }, 2000);
+          });
+        } else {
+          var range = document.createRange();
+          range.selectNode(code);
+          window.getSelection().removeAllRanges();
+          window.getSelection().addRange(range);
+          document.execCommand('copy');
+          window.getSelection().removeAllRanges();
+          btn.textContent = '✓ Copied!';
+          setTimeout(function() { btn.textContent = '📋 Copy'; }, 2000);
+        }
+      }
+    }
   });
 });

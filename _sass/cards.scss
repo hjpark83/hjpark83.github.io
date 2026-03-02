@@ -364,6 +364,83 @@
   }
 }
 
+// Filter result count
+.filter-count {
+  font-size: 1.2rem;
+  color: #999;
+  text-align: right;
+  padding: 0 0.1rem;
+}
+
+// Year separator
+.year-separator {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #aaa;
+  padding: 0.25rem 0 1rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+// BibTeX panel
+.bibtex-panel {
+  margin-top: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+
+  @media print {
+    display: none;
+  }
+}
+
+.bibtex-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.85rem;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.bibtex-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #666;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.3px;
+}
+
+.bibtex-copy-btn {
+  font-size: 1.2rem;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: Roboto, sans-serif;
+
+  &:hover {
+    background: #e8e8e8;
+    border-color: #aaa;
+  }
+}
+
+.bibtex-content {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  background: #fafafa;
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  line-height: 1.65;
+  color: #333;
+  white-space: pre;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
 // Filter Chip (active tag shown in search row)
 .filter-chips {
   display: flex;
@@ -624,5 +701,42 @@
     &:hover {
       background: rgba(255, 255, 255, 0.15);
     }
+  }
+
+  .filter-count {
+    color: #555;
+  }
+
+  .year-separator {
+    color: #555;
+  }
+
+  .bibtex-panel {
+    border-color: #444;
+  }
+
+  .bibtex-toolbar {
+    background: #2a2a2a;
+    border-bottom-color: #444;
+  }
+
+  .bibtex-label {
+    color: #aaa;
+  }
+
+  .bibtex-copy-btn {
+    background: #333;
+    border-color: #555;
+    color: #ccc;
+
+    &:hover {
+      background: #444;
+      border-color: #777;
+    }
+  }
+
+  .bibtex-content {
+    background: #1e1e1e;
+    color: #e6e6e6;
   }
 }
