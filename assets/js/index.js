@@ -58,4 +58,50 @@ document.addEventListener('DOMContentLoaded', function() {
     link.click();
     document.body.removeChild(link);
   });
+
+  // Lightbox
+  const overlay = document.createElement('div');
+  overlay.id = 'lightbox-overlay';
+  overlay.innerHTML = '<div class="lightbox-content"><img id="lightbox-img" src="" alt=""><button id="lightbox-close">&times;</button></div>';
+  document.body.appendChild(overlay);
+
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxContent = overlay.querySelector('.lightbox-content');
+  const lightboxClose = document.getElementById('lightbox-close');
+
+  // Copy protection: block right-click and drag on lightbox content
+  lightboxContent.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+  lightboxContent.addEventListener('dragstart', function(e) { e.preventDefault(); });
+
+  // Copy protection on card thumbnails
+  document.querySelectorAll('.card-thumbnail img').forEach(function(img) {
+    img.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+    img.addEventListener('dragstart', function(e) { e.preventDefault(); });
+  });
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    lightboxImg.src = '';
+  }
+
+  document.addEventListener('click', function(e) {
+    const trigger = e.target.closest('.lightbox-trigger');
+    if (trigger) openLightbox(trigger.dataset.src, trigger.dataset.alt);
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
 });

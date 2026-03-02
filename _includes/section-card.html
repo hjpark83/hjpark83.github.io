@@ -1,77 +1,78 @@
 {% for item in include.content %}
-  <div class="publication-card">
-    <div class="card-layout">
-      <!-- Thumbnail Section (Left Side - 200px) -->
-      <div class="card-thumbnail">
-        {%- if item.image -%}
-          <a href="{{ item.link }}" target="_blank" rel="noopener">
-            <img src="{{ item.image | relative_url }}" alt="{{ item.title }} thumbnail">
-          </a>
+<div class="publication-card">
+  <div class="card-layout">
+    <!-- Thumbnail Section (Left Side - 200px) -->
+    <div class="card-thumbnail">
+      {%- if item.image -%}
+      <button class="lightbox-trigger" data-src="{{ item.image | relative_url }}" data-alt="{{ item.title }} thumbnail"
+        aria-label="View larger image">
+        <img src="{{ item.image | relative_url }}" alt="{{ item.title }} thumbnail">
+      </button>
+      {%- else -%}
+      <div class="card-thumbnail-placeholder">
+        <i class="fas fa-file-alt"></i>
+      </div>
+      {%- endif -%}
+    </div>
+
+    <!-- Content Section (Right Side) -->
+    <div class="card-content">
+      <!-- Title -->
+      <h4 class="card-title">
+        {%- if item.link -%}
+        <a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a>
         {%- else -%}
-          <div class="card-thumbnail-placeholder">
-            <i class="fas fa-file-alt"></i>
-          </div>
+        {{ item.title }}
+        {%- endif -%}
+      </h4>
+
+      <!-- Badges (separate line) -->
+      {%- if item.badges -%}
+      <div class="card-badges">
+        {%- for badge in item.badges -%}
+        <span class="badge badge-{{ badge.type | default: 'default' }}">{{ badge.text }}</span>
+        {%- endfor -%}
+      </div>
+      {%- endif -%}
+
+      <!-- Authors -->
+      {%- if item.authors -%}
+      <p class="card-authors">{{ item.authors | markdownify | strip }}</p>
+      {%- endif -%}
+
+      <!-- Venue/Conference/Period -->
+      {%- if item.venue -%}
+      <p class="card-venue">{{ item.venue | markdownify | strip }}</p>
+      {%- endif -%}
+
+      <!-- Links Section -->
+      <div class="card-links">
+        {%- if item.link -%}
+        <a href="{{ item.link }}" target="_blank" rel="noopener" class="card-link">
+          {%- if item.link_text -%}{{ item.link_text }}{%- else -%}Website{%- endif -%}
+        </a>
+        {%- endif -%}
+
+        {%- if item.additional_links -%}
+        {%- for link in item.additional_links -%}
+        <a href="{{ link.url }}" target="_blank" rel="noopener" class="card-link">
+          {%- if link.icon -%}<i class="{{ link.icon }}"></i> {%- endif -%}
+          {{ link.title }}
+        </a>
+        {%- endfor -%}
         {%- endif -%}
       </div>
 
-      <!-- Content Section (Right Side) -->
-      <div class="card-content">
-        <!-- Title -->
-        <h4 class="card-title">
-          {%- if item.link -%}
-            <a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a>
-          {%- else -%}
-            {{ item.title }}
-          {%- endif -%}
-        </h4>
-
-        <!-- Badges (separate line) -->
-        {%- if item.badges -%}
-          <div class="card-badges">
-            {%- for badge in item.badges -%}
-              <span class="badge badge-{{ badge.type | default: 'default' }}">{{ badge.text }}</span>
-            {%- endfor -%}
-          </div>
-        {%- endif -%}
-
-        <!-- Authors -->
-        {%- if item.authors -%}
-          <p class="card-authors">{{ item.authors | markdownify | strip }}</p>
-        {%- endif -%}
-
-        <!-- Venue/Conference/Period -->
-        {%- if item.venue -%}
-          <p class="card-venue">{{ item.venue | markdownify | strip }}</p>
-        {%- endif -%}
-
-        <!-- Links Section -->
-        <div class="card-links">
-          {%- if item.link -%}
-            <a href="{{ item.link }}" target="_blank" rel="noopener" class="card-link">
-              {%- if item.link_text -%}{{ item.link_text }}{%- else -%}Website{%- endif -%}
-            </a>
-          {%- endif -%}
-
-          {%- if item.additional_links -%}
-            {%- for link in item.additional_links -%}
-              <a href="{{ link.url }}" target="_blank" rel="noopener" class="card-link">
-                {%- if link.icon -%}<i class="{{ link.icon }}"></i> {%- endif -%}
-                {{ link.title }}
-              </a>
-            {%- endfor -%}
-          {%- endif -%}
+      <!-- Collapsible abstract -->
+      {%- if item.abstract -%}
+      <details class="card-abstract">
+        <summary>Abstract</summary>
+        <div class="abstract-content">
+          {{ item.abstract | markdownify }}
         </div>
-
-        <!-- Collapsible abstract -->
-        {%- if item.abstract -%}
-          <details class="card-abstract">
-            <summary>Abstract</summary>
-            <div class="abstract-content">
-              {{ item.abstract | markdownify }}
-            </div>
-          </details>
-        {%- endif -%}
-      </div>
+      </details>
+      {%- endif -%}
     </div>
   </div>
+</div>
 {% endfor %}
