@@ -2,7 +2,6 @@
 layout: default
 title: Publications
 ---
-<div class="wrapper">
 {% for section in site.content %}
   {% if section.title == "Publications" %}
     <div class="container {{ section.layout }}-container">
@@ -13,4 +12,3 @@ title: Publications
     </div>
   {% endif %}
 {% endfor %}
-</div>
