@@ -31,14 +31,23 @@
 .profile-img {
   width: 250px;
   height: 330px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  display: block;
+  float: right;
+  margin: 0 0 1.5rem 2.5rem;
   border-radius: 16px;
   background-size: cover;
   background-position: center 55%;
   background-repeat: no-repeat;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+
+  @media screen and (max-width: 767px) {
+    float: none;
+    margin: 0 auto 1.5rem;
+    display: block;
+  }
+
+  @media print {
+    display: none;
+  }
 }
 
 .list-container {
