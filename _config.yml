@@ -81,7 +81,7 @@ content:
       - title: 3DGS에서 2D SAM을 활용할 때 발생하는 한계점 극복 및 효과적인 3차원 공간 이해를 위한 방법에 관한 연구
         authors: <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Donghyeon Cho
         venue: _IPIU 2026_ (38th Workshop on Image Processing and Image Understanding)
-        image: images/ipiu26.png
+        image: images/poster_ipiu_2026.png
         link: http://www.ipiu.or.kr/
         link_text: Site
         badges:
@@ -102,7 +102,7 @@ content:
       - title: 3DGS를 활용한 Point Cloud 합성 및 3차원 합성 공간 복원에 대한 연구
         authors: <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Donghyeon Cho
         venue: _IPIU 2025_ (37th Workshop on Image Processing and Image Understanding)
-        image: images/ipiu25.png
+        image: images/poster_ipiu_2025.png
         link: http://www.ipiu.or.kr/
         link_text: Site
         badges:
