@@ -37,7 +37,7 @@ about_content: | # this will include new lines to allow paragraphs
 # News items (displayed latest first)
 news_items:
   - date: "2026-04"
-    content: "First International Conference Publication! Paper accepted to <span style=\"color: #ff69b4;\">**ICPR 2026**</span> (International Conference on Pattern Recognition) and will be presented at the conference"
+    content: "First International Conference Publication! Paper accepted to <span style=\"color: #ff69b4;\">ICPR 2026</span> (International Conference on Pattern Recognition) and will be presented at the conference"
   - date: "2026-02"
     content: "Paper accepted to **IPIU 2026** (38th Workshop on Image Processing and Image Understanding) and presented poster at the conference"
   - date: "2025-09"
