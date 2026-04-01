@@ -53,6 +53,31 @@ content:
   - title: Publications # Title for the section
     layout: card # Type of content section (card layout)
     content:
+      - title: Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement
+        authors: <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Donghyeon Cho
+        venue: _ICPR 2026_ (28th International Conference on Pattern Recognition)
+        image: images/icpr26.png
+        link: https://icpr2026.org/
+        link_text: Site
+        badges:
+          - text: International
+            type: international
+          - text: Conference
+            type: conference
+          - text: Poster
+            type: poster
+        abstract: |
+          Reliable instance-level scene understanding is a fundamental prerequisite for object-level interactions and high-fidelity 3D representations.
+          While current methods often leverage 2D foundation models, such as the Segment Anything Model (SAM), to obtain these priors, 2D centric design of SAM typically yields fragmented masks and inconsistent predictions across different views. 
+          To address these issues, we propose a multi-cue mask refinement framework that produces consistent 2D instance masks to guide the optimization of 3D Gaussian Splatting (3DGS) feature fields.
+          Our framework consists of three main stages. (1) A Multi-Cue Extraction that generates synergistic semantic, geometric, and structural priors from input images. 
+          (2) A Multi-Cue-Guided Mask Merging process that consolidates fragmented masks using a composite merge score derived from semantic, depth, and edge cues. 
+          (3) A Cross-View Mask Matching that establishes globally consistent identity assignments across all viewpoints. 
+          By transforming viewpoint-specific segments into coherent 3D primitives, our approach enables stable 3D instance segmentation and effective downstream editing tasks. 
+          Experiments demonstrate that our method significantly improves cross-view consistency and segmentation stability over existing baselines while maintaining high-fidelity photometric reconstruction.
+        bibtex: |
+
+
       - title: 3DGS에서 2D SAM을 활용할 때 발생하는 한계점 극복 및 효과적인 3차원 공간 이해를 위한 방법에 관한 연구
         authors: <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Donghyeon Cho
         venue: _IPIU 2026_ (38th Workshop on Image Processing and Image Understanding)
