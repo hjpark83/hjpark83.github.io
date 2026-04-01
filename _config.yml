@@ -97,13 +97,7 @@ content:
           먼저, 1단계에서는 깊이 기반의 제약을 두어 잘못된 마스크 병합을 억제한 뒤 두 개의 후보군들의 semantic, edge, depth 정보의 가중합을 임계값과 비교하여 병합여부를 결정하였다.
           그 다음으로 2단계에서는 시점 간 특징 유사도 클러스터링을 통해 전역적으로 일관된 객체 특성과 아이덴티티를 확립하고자 하였다.
           이를 통해 기존 3DGS의 렌더링 품질을 유지하면서도, 시점 변화에 강건한 객체 제거 및 인페인팅 등 정교한 3D Scene Editing 기능을 실현할 수 있도록 정확성과 효율성을 높일 수 있었다.
-        bibtex: |
-          @inproceedings{park2026sam3dgs,
-            author    = {Hyunjoon Park and Donghyeon Cho},
-            title     = {3DGS에서 2D SAM을 활용할 때 발생하는 한계점 극복 및 효과적인 3차원 공간 이해를 위한 방법에 관한 연구},
-            booktitle = {Proceedings of the 38th Workshop on Image Processing and Image Understanding (IPIU)},
-            year      = {2026}
-          }
+
 
       - title: 3DGS를 활용한 Point Cloud 합성 및 3차원 합성 공간 복원에 대한 연구
         authors: <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Donghyeon Cho
@@ -122,13 +116,7 @@ content:
           멀티 뷰 데이터셋으로부터 카메라 매개변수와 객체 위치를 추정하는 novel-view synthesis 기술인 3D Gaussian Splatting (3DGS)은 3차원 공간을 효과적으로 재구성하는 기술로 주목을 받고 있다.
           기존 연구들이 주로 novel-view synthesis에 초점이 맞춰져 있다면 Gaussian grouping에서는 SAM (Segment Anything)을 활용하여 마스크 이미지를 생성하고 이를 이용해 3DGS 학습 이후 3차원 정보에서 특정 객체를 분리할 수 있게 되어 주로 2차원 공간에서 진행이 되었던 영역을 3차원으로 확장을 시켰다는 점에서 의의가 있다.
           따라서 본 연구에서는 Gaussian grouping을 활용하여 3차원 공간에서 객체를 분리하고 이것을 다른 배경에 합성하여 새로운 3차원 공간을 재구성하는 것을 목표로 설정하였고 이를 통해 재구성된 3차원 공간에서의 객체 조작 및 재구성 가능성을 탐색하고 결과를 통해 이러한 접근 방식의 효율성을 검증하고자 한다.
-        bibtex: |
-          @inproceedings{park2025pointcloud3dgs,
-            author    = {Hyunjoon Park and Donghyeon Cho},
-            title     = {3DGS를 활용한 Point Cloud 합성 및 3차원 합성 공간 복원에 대한 연구},
-            booktitle = {Proceedings of the 37th Workshop on Image Processing and Image Understanding (IPIU)},
-            year      = {2025}
-          }
+
 
   - title: Projects # Title for the section
     layout: card # Type of content section (card layout)
