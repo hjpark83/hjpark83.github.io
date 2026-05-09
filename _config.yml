@@ -57,8 +57,16 @@ content:
         authors: <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Donghyeon Cho
         venue: _ICPR 2026_ (28th International Conference on Pattern Recognition)
         image: images/icpr26.png
+        title_link: https://hjpark83.github.io/consisGS.github.io/
         link: https://icpr2026.org/
         link_text: Site
+        additional_links:
+          - title: Project page
+            icon: fas fa-globe
+            url: https://hjpark83.github.io/consisGS.github.io/
+          - title: GitHub
+            icon: fab fa-github
+            url: https://github.com/hjpark83/Consistent-Scene-Understanding-in-3DGS-via-MCM
         badges:
           - text: International
             type: international

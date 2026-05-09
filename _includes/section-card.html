@@ -21,8 +21,9 @@
     <div class="card-content">
       <!-- Title -->
       <h4 class="card-title">
-        {%- if item.link -%}
-        <a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a>
+        {%- assign title_href = item.title_link | default: item.link -%}
+        {%- if title_href -%}
+        <a href="{{ title_href }}" target="_blank" rel="noopener">{{ item.title }}</a>
         {%- else -%}
         {{ item.title }}
         {%- endif -%}
@@ -49,12 +50,6 @@
 
       <!-- Links Section -->
       <div class="card-links">
-        {%- if item.link -%}
-        <a href="{{ item.link }}" target="_blank" rel="noopener" class="card-link">
-          {%- if item.link_text -%}{{ item.link_text }}{%- else -%}Website{%- endif -%}
-        </a>
-        {%- endif -%}
-
         {%- if item.additional_links -%}
         {%- for link in item.additional_links -%}
         <a href="{{ link.url }}" target="_blank" rel="noopener" class="card-link">
@@ -62,6 +57,12 @@
           {{ link.title }}
         </a>
         {%- endfor -%}
+        {%- endif -%}
+
+        {%- if item.link -%}
+        <a href="{{ item.link }}" target="_blank" rel="noopener" class="card-link">
+          {%- if item.link_text -%}{{ item.link_text }}{%- else -%}Website{%- endif -%}
+        </a>
         {%- endif -%}
 
         {%- if item.bibtex -%}
