@@ -271,96 +271,96 @@ content:
           - **Graduation** \
             Feb 2015
 
-  - title: Languages # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left
-        title: Korean
-        icon: images/korea.png
-        sub_title: Native
-        description: | # this will include new lines to allow paragraphs
-          Native speaker with full proficiency in reading, writing, speaking, and listening.
+  # - title: Languages # Title for the section
+  #   layout: list # Type of content section (list/text)
+  #   content:
+  #     - layout: left
+  #       title: Korean
+  #       icon: images/korea.png
+  #       sub_title: Native
+  #       description: | # this will include new lines to allow paragraphs
+  #         Native speaker with full proficiency in reading, writing, speaking, and listening.
 
-      - layout: left
-        title: English
-        icon: images/english.png
-        sub_title: Fluent
-        description: | # this will include new lines to allow paragraphs
-          - Proficient in academic and professional communication
-          - Capable of reading research papers and technical documentation
+  #     - layout: left
+  #       title: English
+  #       icon: images/english.png
+  #       sub_title: Fluent
+  #       description: | # this will include new lines to allow paragraphs
+  #         - Proficient in academic and professional communication
+  #         - Capable of reading research papers and technical documentation
 
-      - layout: left
-        title: Japanese
-        icon: images/japan.png
-        sub_title: Basic Communication Skills
-        description: | # this will include new lines to allow paragraphs
-          Basic conversational skills for communication.
+  #     - layout: left
+  #       title: Japanese
+  #       icon: images/japan.png
+  #       sub_title: Basic Communication Skills
+  #       description: | # this will include new lines to allow paragraphs
+  #         Basic conversational skills for communication.
 
-  - title: Programs # 참석하거나 활동한 내역
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left
-        title: The AI Korea 2025
-        link: https://aisociety.kr/ai-korea-2025/
-        link_text: AI Korea 2025
-        caption: 2025.8.12 - 2025.8.13
-        description: | # this will include new lines to allow paragraphs
-          - **Description** \
-            한국 정보과학회 인공지능소사이어티 주관 AI 학술대회
-          - **Activities** \
-            > Session1 : Invited Talk - AI Experts and Emerging Researchers\
-            > Session2 : Industry Session\
-            > Session3 : Pattern Recognition and Machine Learning\
-            > Session4 : AI tutorials
+  # - title: Programs # 참석하거나 활동한 내역
+  #   layout: list # Type of content section (list/text)
+  #   content:
+  #     - layout: left
+  #       title: The AI Korea 2025
+  #       link: https://aisociety.kr/ai-korea-2025/
+  #       link_text: AI Korea 2025
+  #       caption: 2025.8.12 - 2025.8.13
+  #       description: | # this will include new lines to allow paragraphs
+  #         - **Description** \
+  #           한국 정보과학회 인공지능소사이어티 주관 AI 학술대회
+  #         - **Activities** \
+  #           > Session1 : Invited Talk - AI Experts and Emerging Researchers\
+  #           > Session2 : Industry Session\
+  #           > Session3 : Pattern Recognition and Machine Learning\
+  #           > Session4 : AI tutorials
       
-      - layout: left
-        title: 대한전자공학회 영상처리 여름학교
-        icon: images/ieie.png
-        link: https://www.theieie.org/events/?part=03&c_id=949
-        link_text: 영상처리 여름학교
-        caption: 2025.7.18 - 2025.7.18
-        description: | # this will include new lines to allow paragraphs
-          - **Description** \
-            영상이해/영상처리 연구회 합동 여름학교
-          - **Activities** \
-            > Lectures by Experts and Professors who research in the field of Image Processing and Computer Vision
+  #     - layout: left
+  #       title: 대한전자공학회 영상처리 여름학교
+  #       icon: images/ieie.png
+  #       link: https://www.theieie.org/events/?part=03&c_id=949
+  #       link_text: 영상처리 여름학교
+  #       caption: 2025.7.18 - 2025.7.18
+  #       description: | # this will include new lines to allow paragraphs
+  #         - **Description** \
+  #           영상이해/영상처리 연구회 합동 여름학교
+  #         - **Activities** \
+  #           > Lectures by Experts and Professors who research in the field of Image Processing and Computer Vision
 
-      - layout: left
-        title: LG Aimers 7th
-        icon: images/aimers.png
-        link: https://lgaimers.ai/
-        link_text: LG Aimers
-        caption: 2025.7.1 - 2025.8.30
-        description: | # this will include new lines to allow paragraphs
-          - **Description** \
-            LG 주관 AI 교육 프로그램
-          - **Activities** \
-            > AI Special Lectures by Experts \
-            > AI Hackerthon (Team-based) : 식음료 수요량 예측 AI 모델 개발
+  #     - layout: left
+  #       title: LG Aimers 7th
+  #       icon: images/aimers.png
+  #       link: https://lgaimers.ai/
+  #       link_text: LG Aimers
+  #       caption: 2025.7.1 - 2025.8.30
+  #       description: | # this will include new lines to allow paragraphs
+  #         - **Description** \
+  #           LG 주관 AI 교육 프로그램
+  #         - **Activities** \
+  #           > AI Special Lectures by Experts \
+  #           > AI Hackerthon (Team-based) : 식음료 수요량 예측 AI 모델 개발
 
-      - layout: left
-        title: LG Aimers 5th
-        icon: images/aimers.png
-        link: https://lgaimers.ai/
-        link_text: LG Aimers
-        caption: 2024.7.1 - 2024.8.30
-        description: | # this will include new lines to allow paragraphs
-          - **Description** \
-            LG 주관 AI 교육 프로그램
-          - **Activities** \
-            > AI Special Lectures by Experts \
-            > AI Hackerthon (Team-based) : 이상치 탐지 모델 개발
+  #     - layout: left
+  #       title: LG Aimers 5th
+  #       icon: images/aimers.png
+  #       link: https://lgaimers.ai/
+  #       link_text: LG Aimers
+  #       caption: 2024.7.1 - 2024.8.30
+  #       description: | # this will include new lines to allow paragraphs
+  #         - **Description** \
+  #           LG 주관 AI 교육 프로그램
+  #         - **Activities** \
+  #           > AI Special Lectures by Experts \
+  #           > AI Hackerthon (Team-based) : 이상치 탐지 모델 개발
 
-      - layout: left
-        title: NAVER Boostclass
-        icon: images/naver.png
-        link_text: NAVER AI Boostclass
-        caption: 2024.1.15 - 2024.2.27
-        description: | # this will include new lines to allow paragraphs
-          - **Description** \
-            NAVER Boostclass AI 엔지니어 기초 다지기
-          - **Activities** \
-            > AI Special Lectures by Experts
+  #     - layout: left
+  #       title: NAVER Boostclass
+  #       icon: images/naver.png
+  #       link_text: NAVER AI Boostclass
+  #       caption: 2024.1.15 - 2024.2.27
+  #       description: | # this will include new lines to allow paragraphs
+  #         - **Description** \
+  #           NAVER Boostclass AI 엔지니어 기초 다지기
+  #         - **Activities** \
+  #           > AI Special Lectures by Experts
 
 footer_show_references: true
 # references_title: References on request (Override references text)
