@@ -14,7 +14,7 @@
       <h4 class="news-heading">News</h4>
       <ul class="news-list">
         {%- for news in site.news_items -%}
-        <li class="news-item">
+        <li class="news-item{% if news.type %} news-{{ news.type }}{% endif %}">
           <span class="news-date">{{ news.date }}</span>
           <span class="news-content">{{ news.content | markdownify | strip }}</span>
         </li>

@@ -91,11 +91,14 @@
   <script>
     var coll = document.getElementsByClassName("collapsible");
 
-    // 페이지 로드 시 모든 섹션을 열린 상태로 초기화
+    // 페이지 로드 시 Publications 섹션만 열린 상태로 초기화
     for (var i = 0; i < coll.length; i++) {
-      coll[i].classList.add("active");
-      var content = coll[i].nextElementSibling;
-      content.style.maxHeight = content.scrollHeight + "px";
+      var h3 = coll[i].querySelector('h3');
+      if (h3 && /publication/i.test(h3.textContent)) {
+        coll[i].classList.add("active");
+        var content = coll[i].nextElementSibling;
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
     }
 
     // 클릭 이벤트로 토글 기능
