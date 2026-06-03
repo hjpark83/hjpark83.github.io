@@ -31,10 +31,13 @@
     </h3>
 
     <div class="publication-card__meta">
+      {% capture highlighted_name %}<strong class="publication-card__author--me">{{ site.author.name }}</strong>{% endcapture %}
       {% if post.authors %}
-        <p class="publication-card__authors">{{ post.authors }}</p>
+        {% assign authors_text = post.authors | replace: site.author.name, highlighted_name %}
+        <p class="publication-card__authors">{{ authors_text }}</p>
       {% elsif post.citation %}
-        <p class="publication-card__authors">{{ post.citation }}</p>
+        {% assign citation_text = post.citation | replace: site.author.name, highlighted_name %}
+        <p class="publication-card__authors">{{ citation_text }}</p>
       {% endif %}
 
       {% if post.venue or post.date %}
@@ -47,10 +50,6 @@
     </div>
 
     {% include publication-links.html entry=post %}
-
-    {% if post.excerpt %}
-      <p class="publication-card__excerpt">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>
-    {% endif %}
 
     {% if view == "detailed" %}
       <p class="publication-card__more">

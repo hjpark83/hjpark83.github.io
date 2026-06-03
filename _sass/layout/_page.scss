@@ -183,6 +183,8 @@
   margin: 0 0 0.4rem;
   font-size: $type-size-4;
   line-height: 1.25;
+  font-family: $serif;
+  font-weight: 600;
 
   a {
     color: inherit;
@@ -204,12 +206,14 @@
 .publication-card__authors {
   font-size: $type-size-6;
   line-height: 1.5;
+  font-family: $serif;
 }
 
 .publication-card__venue {
-  font-family: $sans-serif;
+  font-family: $sans-serif-narrow;
   font-size: $type-size-6;
-  color: var(--global-text-color-light);
+  color: #2458a6;
+  font-weight: 700;
 }
 
 .publication-card__excerpt {
@@ -218,9 +222,14 @@
 }
 
 .publication-card__more {
-  font-family: $sans-serif;
+  font-family: $sans-serif-narrow;
   font-size: $type-size-7;
   font-weight: bold;
+}
+
+.publication-card__author--me {
+  color: #173b72;
+  font-weight: 800;
 }
 
 .publication-card--compact {
