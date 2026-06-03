@@ -23,7 +23,7 @@ repository               : "hjpark83/hjpark83.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/me.jpg" # filename of avatar image placed in /images/ for author profile
+  avatar           : "me.jpg" # filename of avatar image placed in /images/ for author profile
   name             : "Hyunjoon Park"
   pronouns         : # example: "she/her"  
   bio              : "Eager to learn and grow as a Computer Vision researcher."
