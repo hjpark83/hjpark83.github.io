@@ -30,5 +30,3 @@ Recently, I have been particularly interested in **3D scene understanding** and 
 {% for post in featured_publications limit: 3 %}
   {% include publication-card.html post=post view="compact" %}
 {% endfor %}
-
-<p><a href="{{ base_path }}/publications/" class="btn btn--primary">View All Publications</a></p>

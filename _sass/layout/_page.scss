@@ -18,9 +18,9 @@
 
 .page {
   @include breakpoint($large) {
-    @include span(10 of 12 last);
+    @include span(10.5 of 12 last);
     @include prefix(0.5 of 12);
-    @include suffix(2 of 12);
+    @include suffix(1 of 12);
   }
 
   .page__inner-wrap {
@@ -150,8 +150,8 @@
 
 .publication-card {
   display: grid;
-  grid-template-columns: minmax(140px, 180px) minmax(0, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+  gap: 1.5rem;
   align-items: start;
   margin: 0 0 2.25rem;
   padding-bottom: 1.5rem;
@@ -224,7 +224,7 @@
 }
 
 .publication-card--compact {
-  grid-template-columns: minmax(120px, 160px) minmax(0, 1fr);
+  grid-template-columns: minmax(170px, 220px) minmax(0, 1fr);
 }
 
 .publication-card--compact .publication-card__title {
