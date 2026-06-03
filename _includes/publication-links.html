@@ -1,0 +1,18 @@
+{% assign entry = include.entry %}
+{% assign project_url = entry.project_page | default: entry.projecturl | default: entry.projectpage %}
+{% assign github_url = entry.github_url | default: entry.githuburl | default: entry.code_url %}
+{% assign paper_url = entry.paperurl | default: entry.paper_url %}
+
+{% if project_url or github_url or paper_url %}
+  <div class="publication__links">
+    {% if project_url %}
+      <a href="{{ project_url }}" class="publication__link" target="_blank" rel="noopener noreferrer">Project Page</a>
+    {% endif %}
+    {% if github_url %}
+      <a href="{{ github_url }}" class="publication__link" target="_blank" rel="noopener noreferrer">GitHub</a>
+    {% endif %}
+    {% if paper_url %}
+      <a href="{{ paper_url }}" class="publication__link" target="_blank" rel="noopener noreferrer">Paper</a>
+    {% endif %}
+  </div>
+{% endif %}

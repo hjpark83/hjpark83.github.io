@@ -3,13 +3,23 @@ title: "Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Ma
 collection: publications
 category: International Conference
 permalink: /publication/Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement
-# excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+excerpt: 'Multi-cue mask refinement for more consistent instance understanding in 3D Gaussian Splatting.'
 date: 2026-04-01
 venue: 'ICPR'
+project_page: 'https://hjpark83.github.io/consisGS.github.io/'
+github_url: 'https://github.com/hjpark83/Consistent-Scene-Understanding-in-3DGS-via-MCM'
 # slidesurl: 'https://academicpages.github.io/files/slides1.pdf'
-# paperurl: 'https://academicpages.github.io/files/paper1.pdf'
+# paperurl: 'https://your-paper-url'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: 'Hyunjoon Park, *Donghyeon Cho. (2026). &quot;Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement.&quot; <i>38th International Conference on Pattern Recognition (ICPR)</i>.'
+header:
+  teaser: "icpr_pipeline.png"
+paper_pipeline: "/images/icpr_pipeline.png"
+paper_pipeline_alt: "Pipeline overview for multi-cue mask refinement"
+paper_pipeline_caption: "Overview of the proposed multi-cue refinement pipeline."
+# paper_gif: "/images/publications/your-demo.gif"
+# paper_gif_alt: "Short qualitative demo"
+# paper_gif_caption: "Example qualitative results."
 ---
 Reliable instance-level scene understanding is a fundamental prerequisite for object-level interactions and high-fidelity 3D representations.
 While current methods often leverage 2D foundation models, such as the Segment Anything Model (SAM), to obtain these priors, 2D centric design of SAM typically yields fragmented masks and inconsistent predictions across different views.

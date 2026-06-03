@@ -44,6 +44,43 @@ layout: default
         </header>
       {% endunless %}
 
+      {% if page.collection == 'publications' %}
+        {% if page.paper_thumbnail or page.paper_pipeline or page.paper_gif %}
+        <div class="publication__media">
+          {% if page.paper_thumbnail %}
+            <figure class="publication__media-item">
+              <img
+                src="{% if page.paper_thumbnail contains '://' %}{{ page.paper_thumbnail }}{% else %}{{ page.paper_thumbnail | prepend: base_path }}{% endif %}"
+                alt="{{ page.paper_thumbnail_alt | default: page.title }}"
+                class="publication__media-image">
+              {% if page.paper_thumbnail_caption %}<figcaption>{{ page.paper_thumbnail_caption }}</figcaption>{% endif %}
+            </figure>
+          {% endif %}
+
+          {% if page.paper_pipeline %}
+            <figure class="publication__media-item">
+              <img
+                src="{% if page.paper_pipeline contains '://' %}{{ page.paper_pipeline }}{% else %}{{ page.paper_pipeline | prepend: base_path }}{% endif %}"
+                alt="{{ page.paper_pipeline_alt | default: 'Publication pipeline figure' }}"
+                class="publication__media-image">
+              {% if page.paper_pipeline_caption %}<figcaption>{{ page.paper_pipeline_caption }}</figcaption>{% endif %}
+            </figure>
+          {% endif %}
+
+          {% if page.paper_gif %}
+            <figure class="publication__media-item">
+              <img
+                src="{% if page.paper_gif contains '://' %}{{ page.paper_gif }}{% else %}{{ page.paper_gif | prepend: base_path }}{% endif %}"
+                alt="{{ page.paper_gif_alt | default: 'Publication demo GIF' }}"
+                class="publication__media-image">
+              {% if page.paper_gif_caption %}<figcaption>{{ page.paper_gif_caption }}</figcaption>{% endif %}
+            </figure>
+          {% endif %}
+        </div>
+        {% endif %}
+        {% include publication-links.html entry=page %}
+      {% endif %}
+
       <section class="page__content" itemprop="text">
         {{ content }}
 
