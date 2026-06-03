@@ -26,7 +26,7 @@ author:
   avatar           : "images/me.jpg" # filename of avatar image placed in /images/ for author profile
   name             : "Hyunjoon Park"
   pronouns         : # example: "she/her"  
-  bio              : "Eager to learn and grow as a Computer Vision researcher. Passionate about applying deep learning techniques to solve real-world problems. Always looking for new challenges and opportunities to expand my knowledge and skills in the field of AI."
+  bio              : "Eager to learn and grow as a Computer Vision researcher."
   location         : "Seoul, South Korea"
   employer         : "Hanyang University"
   uri              : # URL
