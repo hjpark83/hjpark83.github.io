@@ -11,11 +11,24 @@ I am a Master's student in Computer Software Engineering at Hanyang University a
 
 Recently, I have been particularly interested in **3D scene understanding** and **human video generation**.
 
+## News
+
+{% if site.data.news %}
+  <ul class="news-list">
+  {% for item in site.data.news limit: 5 %}
+    <li>
+      <strong>{{ item.date }}</strong>: {{ item.text }}
+      {% if item.link %}<a href="{{ item.link }}">{{ item.link_label | default: "Link" }}</a>{% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+{% endif %}
+
 ## Selected Publications
 
 {% assign featured_publications = site.publications | reverse %}
 {% for post in featured_publications limit: 3 %}
-  {% include archive-single.html %}
+  {% include publication-card.html post=post view="compact" %}
 {% endfor %}
 
 <p><a href="{{ base_path }}/publications/" class="btn btn--primary">View All Publications</a></p>

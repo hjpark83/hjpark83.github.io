@@ -1,9 +1,10 @@
 ---
 title: "Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement"
 collection: publications
-category: International Conference
+category: conferences
 permalink: /publication/Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement
 excerpt: 'Multi-cue mask refinement for more consistent instance understanding in 3D Gaussian Splatting.'
+authors: 'Hyunjoon Park, Donghyeon Cho'
 date: 2026-04-01
 venue: 'ICPR'
 project_page: 'https://hjpark83.github.io/consisGS.github.io/'
