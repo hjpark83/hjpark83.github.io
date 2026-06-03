@@ -127,64 +127,64 @@ content:
           따라서 본 연구에서는 Gaussian grouping을 활용하여 3차원 공간에서 객체를 분리하고 이것을 다른 배경에 합성하여 새로운 3차원 공간을 재구성하는 것을 목표로 설정하였고 이를 통해 재구성된 3차원 공간에서의 객체 조작 및 재구성 가능성을 탐색하고 결과를 통해 이러한 접근 방식의 효율성을 검증하고자 한다.
 
 
-  - title: Projects # Title for the section
-    layout: card # Type of content section (card layout)
-    content:
-      - title: Consistent 3D Scene Editing via Semantic Geometric Feature Fields in Gaussian Splatting
-        authors: <strong style="color:#1a73e8;">Hyunjoon Park</strong>
-        venue: "Advanced Computer Vision (Prof. Soonmin Hwang) | _Mar 2025 - Jun 2025_"
-        image: images/ACV_2025.png
-        additional_links:
-          - title: GitHub
-            icon: fab fa-github
-            url: https://github.com/hjpark83/ACV_2025_Project
-        badges:
-          - text: Best Reviewer
-            type: best
-          - text: Oral Presentation
-            type: oral
-        abstract: |
-          This project addresses the view-inconsistency and over-segmentation issues in 3DGS-based editing caused by naive 2D mask lifting.
-          We proposed a two-stage refinement pipeline—depth-aware hierarchical merging and cross-view mask matching—integrating DINOv2, LoG edges, and DPT depth.
-          Our approach transforms fragmented masks into semantically coherent global objects, enabling stable interactive editing (removal, inpainting) while maintaining high-fidelity rendering.
+  # - title: Projects # Title for the section
+  #   layout: card # Type of content section (card layout)
+  #   content:
+  #     - title: Consistent 3D Scene Editing via Semantic Geometric Feature Fields in Gaussian Splatting
+  #       authors: <strong style="color:#1a73e8;">Hyunjoon Park</strong>
+  #       venue: "Advanced Computer Vision (Prof. Soonmin Hwang) | _Mar 2025 - Jun 2025_"
+  #       image: images/ACV_2025.png
+  #       additional_links:
+  #         - title: GitHub
+  #           icon: fab fa-github
+  #           url: https://github.com/hjpark83/ACV_2025_Project
+  #       badges:
+  #         - text: Best Reviewer
+  #           type: best
+  #         - text: Oral Presentation
+  #           type: oral
+  #       abstract: |
+  #         This project addresses the view-inconsistency and over-segmentation issues in 3DGS-based editing caused by naive 2D mask lifting.
+  #         We proposed a two-stage refinement pipeline—depth-aware hierarchical merging and cross-view mask matching—integrating DINOv2, LoG edges, and DPT depth.
+  #         Our approach transforms fragmented masks into semantically coherent global objects, enabling stable interactive editing (removal, inpainting) while maintaining high-fidelity rendering.
 
-      - title: Music to Dance Video Generation
-        authors: Donghyeon Cho, <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Junha Kim (Hanyang University), Nokap Park (SK Telecom), Sungeun Hong (Sungkyunkwan University)
-        venue: "Industry-Academia Collaboration | _Feb 2025 - Present_"
-        image: images/grid_wguidance.gif
-        abstract: |
-          3D Dance Video Generation Aligned with Music from a Single Reference Image.
-          This project is a collaboration between Hanyang University, SK Telecom, and Sungkyunkwan University.
+  #     - title: Music to Dance Video Generation
+  #       authors: Donghyeon Cho, <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Junha Kim (Hanyang University), Nokap Park (SK Telecom), Sungeun Hong (Sungkyunkwan University)
+  #       venue: "Industry-Academia Collaboration | _Feb 2025 - Present_"
+  #       image: images/grid_wguidance.gif
+  #       abstract: |
+  #         3D Dance Video Generation Aligned with Music from a Single Reference Image.
+  #         This project is a collaboration between Hanyang University, SK Telecom, and Sungkyunkwan University.
 
-      - title: 3D Synthesized Space Reconstruction using 3D Gaussian Splatting
-        authors: <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Dohyeon Lim
-        venue: "Graduation Project (Supervisor: Prof. Sungyoon Lee) | _Feb 2024 - Nov 2024_"
-        image: images/project_result.png
-        additional_links:
-          - title: Project Page
-            icon: fas fa-globe
-            url: https://github.com/Capstone-SW-Project
-          - title: GitHub
-            icon: fab fa-github
-            url: https://github.com/Capstone-SW-Project/3D-Synthesized-Space-Reconstruction-using-3DGS
-        abstract: |
-          Synthesize a high-quality point cloud from multi-view images using 3D Gaussian Splatting (3DGS) and reconstruct the 3D synthesized space effectively.
-          This project explores the possibilities of object manipulation and reconstruction in reconstructed 3D spaces.
+  #     - title: 3D Synthesized Space Reconstruction using 3D Gaussian Splatting
+  #       authors: <strong style="color:#1a73e8;">Hyunjoon Park</strong>, Dohyeon Lim
+  #       venue: "Graduation Project (Supervisor: Prof. Sungyoon Lee) | _Feb 2024 - Nov 2024_"
+  #       image: images/project_result.png
+  #       additional_links:
+  #         - title: Project Page
+  #           icon: fas fa-globe
+  #           url: https://github.com/Capstone-SW-Project
+  #         - title: GitHub
+  #           icon: fab fa-github
+  #           url: https://github.com/Capstone-SW-Project/3D-Synthesized-Space-Reconstruction-using-3DGS
+  #       abstract: |
+  #         Synthesize a high-quality point cloud from multi-view images using 3D Gaussian Splatting (3DGS) and reconstruct the 3D synthesized space effectively.
+  #         This project explores the possibilities of object manipulation and reconstruction in reconstructed 3D spaces.
 
-  - title: Experience # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left
-        title: HYU CVLab
-        icon: images/cvlab.png
-        link: https://sites.google.com/view/hyu-cv
-        link_text: hyu-cvlab
-        sub_title: Undergraduate Intern
-        caption: 2024.7.1 - 2025.8.31
-        description: | # this will include new lines to allow paragraphs
-            Undergraduate Intern at CVLab, Hanyang University under the supervision of Prof. Donghyeon Cho.
-            - Research on 3D Vision especially 3D Gaussian Splatting and 3D Human Reconstruction
-            - I've studied various human models such as SMPL, PIFu (Pixel-Aligned Implicit Function), and 3DGS based human reconstruction methods.
+  # - title: Experience # Title for the section
+  #   layout: list # Type of content section (list/text)
+  #   content:
+  #     - layout: left
+  #       title: HYU CVLab
+  #       icon: images/cvlab.png
+  #       link: https://sites.google.com/view/hyu-cv
+  #       link_text: hyu-cvlab
+  #       sub_title: Undergraduate Intern
+  #       caption: 2024.7.1 - 2025.8.31
+  #       description: | # this will include new lines to allow paragraphs
+  #           Undergraduate Intern at CVLab, Hanyang University under the supervision of Prof. Donghyeon Cho.
+  #           - Research on 3D Vision especially 3D Gaussian Splatting and 3D Human Reconstruction
+  #           - I've studied various human models such as SMPL, PIFu (Pixel-Aligned Implicit Function), and 3DGS based human reconstruction methods.
 
   # - title: TA Experience # Title for the section
   #   layout: list # Type of content section (list/text)
