@@ -25,7 +25,7 @@
   }
 
   @include breakpoint($large) {
-    @include span(2 of 12);
+    @include span(2.4 of 12);
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
@@ -36,7 +36,7 @@
   }
 
   @include breakpoint($x-large) {
-    max-width: 285px;
+    max-width: 320px;
     padding-right: 0;
   }
 
@@ -211,6 +211,7 @@
 .author__bio {
   margin: 0;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 
   @include breakpoint($large) {
     margin-top: 10px;
