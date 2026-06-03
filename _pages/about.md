@@ -24,7 +24,7 @@ Recently, I have been particularly interested in **3D scene understanding** and 
   </ul>
 {% endif %}
 
-## Selected Publications
+## Publications
 
 {% assign featured_publications = site.publications | reverse %}
 {% for post in featured_publications limit: 3 %}
