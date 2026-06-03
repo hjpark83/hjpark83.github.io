@@ -17,7 +17,7 @@ Recently, I have been particularly interested in **3D scene understanding** and 
   <ul class="news-list">
   {% for item in site.data.news limit: 5 %}
     <li>
-      <strong>{{ item.date }}</strong>: {{ item.text }}
+      <strong>{{ item.date }}</strong>: {{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}
       {% if item.link %}<a href="{{ item.link }}">{{ item.link_label | default: "Link" }}</a>{% endif %}
     </li>
   {% endfor %}
