@@ -42,14 +42,17 @@
 
       {% if post.venue or post.date %}
         <p class="publication-card__venue">
-          {% if post.venue %}<span>{{ post.venue }}</span>{% endif %}
-          {% if post.venue and post.date %}<span>, </span>{% endif %}
-          {% if post.date %}<span>{{ post.date | date: "%Y" }}</span>{% endif %}
+          {% if post.venue %}<span class="publication-card__venue-badge">{{ post.venue }}</span>{% endif %}
+          {% if post.date %}<span class="publication-card__year">{{ post.date | date: "%Y" }}</span>{% endif %}
         </p>
       {% endif %}
     </div>
 
     {% include publication-links.html entry=post %}
+
+    {% if view == "detailed" and post.excerpt %}
+      <p class="publication-card__excerpt">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+    {% endif %}
 
     {% if view == "detailed" %}
       <p class="publication-card__more">

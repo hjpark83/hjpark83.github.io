@@ -45,6 +45,21 @@ layout: default
       {% endunless %}
 
       {% if page.collection == 'publications' %}
+        {% capture highlighted_name %}<strong class="publication-card__author--me">{{ site.author.name }}</strong>{% endcapture %}
+        {% if page.authors %}
+          {% assign detail_authors = page.authors | replace: site.author.name, highlighted_name %}
+          <p class="publication-page__authors">{{ detail_authors }}</p>
+        {% elsif page.citation %}
+          {% assign detail_citation = page.citation | replace: site.author.name, highlighted_name %}
+          <p class="publication-page__authors">{{ detail_citation }}</p>
+        {% endif %}
+
+        {% if page.excerpt %}
+          <p class="publication-page__lead">{{ page.excerpt }}</p>
+        {% endif %}
+
+        {% include publication-links.html entry=page %}
+
         {% if page.paper_thumbnail or page.paper_pipeline or page.paper_gif %}
         <div class="publication__media">
           {% if page.paper_thumbnail %}
@@ -78,11 +93,17 @@ layout: default
           {% endif %}
         </div>
         {% endif %}
-        {% include publication-links.html entry=page %}
       {% endif %}
 
       <section class="page__content" itemprop="text">
-        {{ content }}
+        {% if page.collection == 'publications' %}
+          <h2 class="publication-page__section-title">Abstract</h2>
+          <div class="publication-page__abstract">
+            {{ content }}
+          </div>
+        {% else %}
+          {{ content }}
+        {% endif %}
 
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
