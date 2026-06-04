@@ -15,14 +15,16 @@ You can view my CV below or open the PDF in a new tab.
   <a href="{{ base_path }}/files/cv_HyunJoonPark.pdf" class="btn btn--primary" target="_blank">Open CV PDF</a>
 </p>
 
-<object
-  data="{{ base_path }}/files/cv_HyunJoonPark.pdf"
-  type="application/pdf"
-  width="100%"
-  height="1100">
-  <p>
-    The PDF preview is not available yet. Add your file at
-    <code>files/cv_HyunJoonPark.pdf</code>, or
-    <a href="{{ base_path }}/files/cv_HyunJoonPark.pdf" target="_blank">open the PDF directly</a>.
-  </p>
-</object>
+<div style="width: 100%; height: 88vh; min-height: 900px; max-height: 1400px; overflow: hidden; border: 1px solid var(--global-border-color); border-radius: 8px;">
+  <iframe
+    src="{{ base_path }}/files/cv_HyunJoonPark.pdf"
+    title="CV PDF Preview"
+    width="100%"
+    height="100%"
+    style="border: 0;">
+    <p>
+      The PDF preview is not available yet. Open the file directly at
+      <a href="{{ base_path }}/files/cv_HyunJoonPark.pdf" target="_blank">cv_HyunJoonPark.pdf</a>.
+    </p>
+  </iframe>
+</div>
