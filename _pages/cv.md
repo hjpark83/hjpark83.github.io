@@ -15,7 +15,7 @@ You can view my CV below or open the PDF in a new tab.
   <a href="{{ base_path }}/files/cv_HyunJoonPark.pdf" class="btn btn--primary" target="_blank">Open CV PDF</a>
 </p>
 
-<div style="width: 100%; height: 88vh; min-height: 900px; max-height: 1400px; overflow: hidden; border: 1px solid var(--global-border-color); border-radius: 8px;">
+<div style="width: 100%; height: calc(100vh - 220px); min-height: 720px; max-height: 1100px; overflow: hidden; border: 1px solid var(--global-border-color); border-radius: 8px;">
   <iframe
     src="{{ base_path }}/files/cv_HyunJoonPark.pdf"
     title="CV PDF Preview"
