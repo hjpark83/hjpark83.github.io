@@ -12,17 +12,17 @@ redirect_from:
 You can view my CV below or open the PDF in a new tab.
 
 <p>
-  <a href="{{ base_path }}/files/cv.pdf" class="btn btn--primary" target="_blank">Open CV PDF</a>
+  <a href="{{ base_path }}/files/cv_HyunJoonPark.pdf" class="btn btn--primary" target="_blank">Open CV PDF</a>
 </p>
 
 <object
-  data="{{ base_path }}/files/cv.pdf"
+  data="{{ base_path }}/files/cv_HyunJoonPark.pdf"
   type="application/pdf"
   width="100%"
   height="1100">
   <p>
     The PDF preview is not available yet. Add your file at
-    <code>files/cv.pdf</code>, or
-    <a href="{{ base_path }}/files/cv.pdf" target="_blank">open the PDF directly</a>.
+    <code>files/cv_HyunJoonPark.pdf</code>, or
+    <a href="{{ base_path }}/files/cv_HyunJoonPark.pdf" target="_blank">open the PDF directly</a>.
   </p>
 </object>
