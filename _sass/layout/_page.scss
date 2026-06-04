@@ -317,11 +317,12 @@
   margin-right: 0.45rem;
   font-family: $sans-serif-narrow;
   font-weight: 700;
-  color: #2458a6;
+  color: #173b72;
 }
 
 .news-list__text {
   line-height: 1.6;
+  color: var(--global-text-color);
 }
 
 .publication__media-item figcaption {
