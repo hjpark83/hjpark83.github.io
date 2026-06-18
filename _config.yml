@@ -26,7 +26,7 @@ author:
   avatar           : "me.jpg" # filename of avatar image placed in /images/ for author profile
   name             : "Hyunjoon Park"
   pronouns         : # example: "she/her"  
-  bio              : "Master's student at Hanyang University working on computer vision and 3D scene understanding."
+  bio              : "Master's student at Hanyang University working on Computer Vision"
   location         : "Seoul, South Korea"
   employer         : "Hanyang University"
   uri              : # URL
