@@ -1,6 +1,5 @@
 ---
 permalink: /
-title: "Hyunjoon Park"
 author_profile: true
 redirect_from: 
   - /about/
