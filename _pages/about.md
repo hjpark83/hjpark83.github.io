@@ -34,3 +34,7 @@ Recently, I have been particularly interested in **3D Scene Understanding** and 
 {% for post in featured_publications limit: 3 %}
   {% include publication-card.html post=post view="compact" %}
 {% endfor %}
+
+## Patents
+
+- "**Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement (다중 단서 기반 3차원 장면 이해 장치 및 방법)**", KR Patent No. 10-2026-0105246
