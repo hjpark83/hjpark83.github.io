@@ -63,6 +63,9 @@ layout: default
         {% assign paper_thumbnail_src = page.paper_thumbnail %}
         {% assign paper_pipeline_src = page.paper_pipeline %}
         {% assign paper_gif_src = page.paper_gif %}
+        {% assign paper_thumbnail_src_downcase = paper_thumbnail_src | downcase %}
+        {% assign paper_pipeline_src_downcase = paper_pipeline_src | downcase %}
+        {% assign paper_gif_src_downcase = paper_gif_src | downcase %}
 
         {% assign paper_thumbnail_render_src = '' %}
         {% assign paper_pipeline_render_src = '' %}
@@ -72,10 +75,12 @@ layout: default
           {% if paper_thumbnail_src contains '://' %}
             {% assign paper_thumbnail_render_src = paper_thumbnail_src %}
           {% else %}
-            {% assign paper_thumbnail_static_file = site.static_files | where_exp: 'file', 'file.path | downcase == paper_thumbnail_src | downcase' | first %}
-            {% if paper_thumbnail_static_file %}
-              {% assign paper_thumbnail_render_src = paper_thumbnail_static_file.path | prepend: base_path %}
-            {% endif %}
+            {% for file in site.static_files %}
+              {% if file.path | downcase == paper_thumbnail_src_downcase %}
+                {% assign paper_thumbnail_render_src = file.path | prepend: base_path %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
           {% endif %}
         {% endif %}
 
@@ -83,10 +88,12 @@ layout: default
           {% if paper_pipeline_src contains '://' %}
             {% assign paper_pipeline_render_src = paper_pipeline_src %}
           {% else %}
-            {% assign paper_pipeline_static_file = site.static_files | where_exp: 'file', 'file.path | downcase == paper_pipeline_src | downcase' | first %}
-            {% if paper_pipeline_static_file %}
-              {% assign paper_pipeline_render_src = paper_pipeline_static_file.path | prepend: base_path %}
-            {% endif %}
+            {% for file in site.static_files %}
+              {% if file.path | downcase == paper_pipeline_src_downcase %}
+                {% assign paper_pipeline_render_src = file.path | prepend: base_path %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
           {% endif %}
         {% endif %}
 
@@ -94,10 +101,12 @@ layout: default
           {% if paper_gif_src contains '://' %}
             {% assign paper_gif_render_src = paper_gif_src %}
           {% else %}
-            {% assign paper_gif_static_file = site.static_files | where_exp: 'file', 'file.path | downcase == paper_gif_src | downcase' | first %}
-            {% if paper_gif_static_file %}
-              {% assign paper_gif_render_src = paper_gif_static_file.path | prepend: base_path %}
-            {% endif %}
+            {% for file in site.static_files %}
+              {% if file.path | downcase == paper_gif_src_downcase %}
+                {% assign paper_gif_render_src = file.path | prepend: base_path %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
           {% endif %}
         {% endif %}
 
@@ -169,26 +178,32 @@ layout: default
               {% assign qualitative_src = item.image | default: item.src | default: item.url | default: item %}
               {% assign qualitative_alt = item.alt | default: 'Qualitative result figure' %}
               {% assign qualitative_caption = item.caption %}
+              {% assign qualitative_src_downcase = qualitative_src | downcase %}
               {% assign qualitative_is_external = false %}
               {% assign qualitative_file_exists = false %}
+              {% assign qualitative_render_src = '' %}
 
-                {% if qualitative_src %}
-                  {% if qualitative_src contains '://' %}
-                    {% assign qualitative_is_external = true %}
-                  {% else %}
-                    {% assign qualitative_static_file = site.static_files | where_exp: 'file', 'file.path | downcase == qualitative_src | downcase' | first %}
-                    {% if qualitative_static_file %}
+              {% if qualitative_src %}
+                {% if qualitative_src contains '://' %}
+                  {% assign qualitative_is_external = true %}
+                  {% assign qualitative_render_src = qualitative_src %}
+                {% else %}
+                  {% for file in site.static_files %}
+                    {% if file.path | downcase == qualitative_src_downcase %}
                       {% assign qualitative_file_exists = true %}
+                      {% assign qualitative_render_src = file.path | prepend: base_path %}
+                      {% break %}
                     {% endif %}
-                  {% endif %}
+                  {% endfor %}
                 {% endif %}
+              {% endif %}
 
               {% if qualitative_is_external or qualitative_file_exists %}
                 {% capture qualitative_markup %}
                   {{ qualitative_markup }}
                   <figure class="publication__media-item publication__media-item--card">
                     <img
-                      src="{% if qualitative_is_external %}{{ qualitative_src }}{% else %}{{ qualitative_static_file.path | prepend: base_path }}{% endif %}"
+                      src="{{ qualitative_render_src }}"
                       alt="{{ qualitative_alt }}"
                       class="publication__media-image">
                     {% if qualitative_caption %}<figcaption>{{ qualitative_caption }}</figcaption>{% endif %}
