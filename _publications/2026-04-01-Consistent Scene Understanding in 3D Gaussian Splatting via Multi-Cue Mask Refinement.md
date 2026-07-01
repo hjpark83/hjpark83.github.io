@@ -13,7 +13,7 @@ github_url: 'https://github.com/hjpark83/Consistent-Scene-Understanding-in-3DGS-
 # paperurl: 'https://your-paper-url'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 header:
-  teaser: "images/ICPR/ICPR_pipeline.png"
+  teaser: "/images/ICPR/ICPR_pipeline.png"
 paper_pipeline: "/images/ICPR/ICPR_pipeline.png"
 paper_pipeline_alt: "Pipeline overview for multi-cue mask refinement"
 paper_pipeline_caption: "Overview of the proposed multi-cue refinement pipeline."

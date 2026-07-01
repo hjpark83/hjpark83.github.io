@@ -14,7 +14,7 @@ github_url: ''
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: ''
 header:
-  teaser: "images/ECCV/ECCV_pipeline.png"
+  teaser: "/images/ECCV/ECCV_pipeline.png"
 paper_pipeline: "/images/ECCV/ECCV_pipeline.png"
 paper_pipeline_alt: "Pipeline overview for High-Resolution Artwork Outpainting"
 paper_pipeline_caption: "Overview of the proposed outpainting framework"
