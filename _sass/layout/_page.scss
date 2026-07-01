@@ -326,6 +326,10 @@
   color: #173b72;
 }
 
+html[data-theme="dark"] .news-list__date {
+  color: #7fb8ff;
+}
+
 .news-list__content {
   display: block;
   min-width: 0;
