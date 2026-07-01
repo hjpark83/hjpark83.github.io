@@ -18,6 +18,22 @@ header:
 paper_pipeline: "/images/eccv_pipeline.png"
 paper_pipeline_alt: "Pipeline overview for High-Resolution Artwork Outpainting"
 paper_pipeline_caption: "Overview of the proposed outpainting framework"
+# contribution: "Your main personal contribution summary."
+contributions:
+  - "**Global Blueprint-Guided Planning**: We generate a low-resolution global blueprint prior to local synthesis, preventing error accumulation in sequential generation."
+  - "**Layout-Controllable Framework**: We propose a control mechanism that introduces a layout adapter during the planning stage to place objects at user-specified locations."
+  - "**Efficient Parallel Synthesis with Global Guidance**: We enable parallel patch generation for high-resolution artwork outpainting by utilizing the global blueprint and injecting local positional information."
+qualitative_results:
+  - image: "/images/ECCV_qualitative.png"
+    alt: "Qualitative results for artwork outpainting"
+    caption: "Representative qualitative results."
+bibtex: |
+  @inproceedings{kim2026highresolution,
+    title={High-Resolution Artwork Outpainting with Global Blueprint Guidance and Layout Control},
+    author={Kim, Junha and Park, Hyunjoon and Cho, Donghyeon},
+    booktitle={ECCV},
+    year={2026}
+  }
 # paper_gif: "/images/publications/your-demo.gif"
 # paper_gif_alt: "Short qualitative demo"
 # paper_gif_caption: "Example qualitative results."

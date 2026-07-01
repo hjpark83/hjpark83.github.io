@@ -14,10 +14,27 @@ github_url: 'https://github.com/hjpark83/Consistent-Scene-Understanding-in-3DGS-
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: 'Hyunjoon Park, *Donghyeon Cho. (2026). &quot;Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement.&quot; <i>38th International Conference on Pattern Recognition (ICPR)</i>.'
 header:
-  teaser: "icpr_pipeline.png"
-paper_pipeline: "/images/icpr_pipeline.png"
+  teaser: "ICPR_pipeline.png"
+paper_pipeline: "/images/ICPR_pipeline.png"
 paper_pipeline_alt: "Pipeline overview for multi-cue mask refinement"
 paper_pipeline_caption: "Overview of the proposed multi-cue refinement pipeline."
+# contribution: "Your main personal contribution summary."
+contributions:
+  - "A Multi-Cue Mask Refinement framework that mitigates SAM-induced over-segmentation based on multiple cues."
+  - "A cross-view mask matching method that establishes globally consistent object identities and suppresses view-dependent label inconsistencies across all viewpoints."
+  - "A multiview consensus lifting procedure that transfers 2D identities to 3D Gaussians while filtering unreliable assignments through majority voting and variance analysis."
+  - Extensive evaluation on LERF, Replica, and several real-world scenes, demonstrating substantial gains in correct object assignment and a significant reduction in over-segmented object counts.
+qualitative_results:
+  - image: "/images/ICPR_qualitative.png"
+    alt: "Qualitative results for multi-cue mask refinement"
+    caption: "This figure demonstrates how faithfully our refinement results represent the scene and maintain view consistency across different viewpoints."
+bibtex: |
+  @inproceedings{park2026consistent,
+    title={Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement},
+    author={Park, Hyunjoon and Cho, Donghyeon},
+    booktitle={ICPR},
+    year={2026}
+  }
 # paper_gif: "/images/publications/your-demo.gif"
 # paper_gif_alt: "Short qualitative demo"
 # paper_gif_caption: "Example qualitative results."

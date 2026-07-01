@@ -101,6 +101,93 @@ layout: default
           <div class="publication-page__abstract">
             {{ content }}
           </div>
+
+          {% if page.contribution or page.contributions %}
+            <h2 class="publication-page__section-title">Contribution</h2>
+            <div class="publication-page__contribution">
+              {% if page.contributions %}
+                <ul class="publication-page__contribution-list">
+                  {% for item in page.contributions %}
+                    <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                  {% endfor %}
+                </ul>
+              {% else %}
+                {{ page.contribution | markdownify }}
+              {% endif %}
+            </div>
+          {% endif %}
+
+          {% assign qualitative_items = page.qualitative_results %}
+          {% if qualitative_items == nil and page.qualitative_result %}
+            {% assign qualitative_items = page.qualitative_result | split: '|||' %}
+          {% endif %}
+
+          {% if qualitative_items %}
+            <h2 class="publication-page__section-title">Qualitative Results</h2>
+            <div class="publication__media publication__media--qualitative">
+              {% for item in qualitative_items %}
+                {% assign qualitative_src = item.image | default: item.src | default: item.url | default: item %}
+                {% assign qualitative_alt = item.alt | default: 'Qualitative result figure' %}
+                {% assign qualitative_caption = item.caption %}
+                {% if qualitative_src %}
+                  <figure class="publication__media-item">
+                    <img
+                      src="{% if qualitative_src contains '://' %}{{ qualitative_src }}{% else %}{{ qualitative_src | prepend: base_path }}{% endif %}"
+                      alt="{{ qualitative_alt }}"
+                      class="publication__media-image">
+                    {% if qualitative_caption %}<figcaption>{{ qualitative_caption }}</figcaption>{% endif %}
+                  </figure>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          {% if page.bibtex %}
+            {% assign bibtex_id = 'publication-bibtex-' | append: page.title | slugify %}
+            <h2 class="publication-page__section-title">BibTeX</h2>
+            <div class="publication-page__bibtex">
+              <div class="publication-page__bibtex-toolbar">
+                <button type="button" id="{{ bibtex_id }}-copy" class="publication-page__copy-button">Copy</button>
+              </div>
+              <textarea
+                id="{{ bibtex_id }}"
+                class="publication-page__bibtex-text"
+                readonly
+                spellcheck="false">{{ page.bibtex | strip }}</textarea>
+            </div>
+            <script>
+              (function () {
+                var textarea = document.getElementById('{{ bibtex_id }}');
+                var button = document.getElementById('{{ bibtex_id }}-copy');
+
+                if (!textarea || !button) return;
+
+                button.addEventListener('click', async function () {
+                  textarea.focus();
+                  textarea.select();
+                  textarea.setSelectionRange(0, textarea.value.length);
+
+                  try {
+                    if (navigator.clipboard && window.isSecureContext) {
+                      await navigator.clipboard.writeText(textarea.value);
+                    } else {
+                      document.execCommand('copy');
+                    }
+
+                    button.textContent = 'Copied';
+                    window.setTimeout(function () {
+                      button.textContent = 'Copy';
+                    }, 1800);
+                  } catch (error) {
+                    button.textContent = 'Select and copy';
+                    window.setTimeout(function () {
+                      button.textContent = 'Copy';
+                    }, 1800);
+                  }
+                });
+              })();
+            </script>
+          {% endif %}
         {% else %}
           {{ content }}
         {% endif %}
