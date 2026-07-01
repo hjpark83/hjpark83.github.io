@@ -10,17 +10,24 @@
   {% assign teaser = site.teaser %}
 {% endif %}
 
+{% assign teaser_render_src = '' %}
+{% if teaser %}
+  {% if teaser contains '://' %}
+    {% assign teaser_render_src = teaser %}
+  {% else %}
+    {% assign teaser_path = teaser | prepend: '/images/' %}
+    {% assign teaser_static_file = site.static_files | where_exp: 'file', 'file.path | downcase == teaser_path | downcase' | first %}
+    {% if teaser_static_file %}
+      {% assign teaser_render_src = teaser_static_file.path | prepend: base_path %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+
 <article class="{{ card_class }}" itemscope itemtype="http://schema.org/CreativeWork">
-  {% if teaser %}
+  {% if teaser_render_src != '' %}
     <div class="publication-card__thumb">
       <a href="{{ base_path }}{{ post.url }}" rel="permalink">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
-          alt="{{ post.title | escape }}">
+        <img src="{{ teaser_render_src }}" alt="{{ post.title | escape }}">
       </a>
     </div>
   {% endif %}

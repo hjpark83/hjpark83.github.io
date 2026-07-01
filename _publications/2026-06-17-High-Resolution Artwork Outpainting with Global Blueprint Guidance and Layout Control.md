@@ -14,8 +14,8 @@ github_url: ''
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: ''
 header:
-  teaser: "ECCV_pipeline.png"
-paper_pipeline: "/images/ECCV_pipeline.png"
+  teaser: "images/ECCV/ECCV_pipeline.png"
+paper_pipeline: "/images/ECCV/ECCV_pipeline.png"
 paper_pipeline_alt: "Pipeline overview for High-Resolution Artwork Outpainting"
 paper_pipeline_caption: "Overview of the proposed outpainting framework"
 # contribution: "Your main personal contribution summary."
@@ -24,10 +24,10 @@ contributions:
   - "**Layout-Controllable Framework**: We propose a control mechanism that introduces a layout adapter during the planning stage to place objects at user-specified locations."
   - "**Efficient Parallel Synthesis with Global Guidance**: We enable parallel patch generation for high-resolution artwork outpainting by utilizing the global blueprint and injecting local positional information."
 qualitative_results:
-  - image: "/images/ECCV_qualitative.png"
+  - image: "/images/ECCV/ECCV_qualitative.png"
     alt: "Qualitative results for artwork outpainting"
     caption: "The red dashed box in the GT indicates the source region. The area outside the box is masked during inference and serves as the target-region to be generated. PQDiff produces blurry results and SD-Inpainting creates visible seams, while PowerPaint and ProOut often introduce artificial frames or out-of-context. In contrast, out method synthesizes seamless, high-fidelity extensions that faithfully preserve the original style and global structure."
-  - image: "/images/ECCV_layout.png"
+  - image: "/images/ECCV/ECCV_layout.png"
     alt: "Qualitative results on Layout-guided Generation"
     caption: "Bounding boxes and object descriptions are provided as layout conditions to guide the generatin. Baselines rely solely on text prompts and thus struggle to control spatial placements, whereas our method accurately generates specified objects at designated locations."
 bibtex: |

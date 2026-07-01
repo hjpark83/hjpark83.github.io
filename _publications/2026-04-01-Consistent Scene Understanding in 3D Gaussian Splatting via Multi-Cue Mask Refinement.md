@@ -13,8 +13,8 @@ github_url: 'https://github.com/hjpark83/Consistent-Scene-Understanding-in-3DGS-
 # paperurl: 'https://your-paper-url'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 header:
-  teaser: "ICPR_pipeline.png"
-paper_pipeline: "/images/ICPR_pipeline.png"
+  teaser: "images/ICPR/ICPR_pipeline.png"
+paper_pipeline: "/images/ICPR/ICPR_pipeline.png"
 paper_pipeline_alt: "Pipeline overview for multi-cue mask refinement"
 paper_pipeline_caption: "Overview of the proposed multi-cue refinement pipeline."
 # contribution: "Your main personal contribution summary."
@@ -24,10 +24,10 @@ contributions:
   - "A multiview consensus lifting procedure that transfers 2D identities to 3D Gaussians while filtering unreliable assignments through majority voting and variance analysis."
   - Extensive evaluation on LERF, Replica, and several real-world scenes, demonstrating substantial gains in correct object assignment and a significant reduction in over-segmented object counts.
 qualitative_results:
-  - image: "/images/ICPR_qualitative.png"
+  - image: "/images/ICPR/ICPR_qualitative.png"
     alt: "Qualitative results for multi-cue mask refinement"
     caption: "This figure demonstrates how faithfully our refinement results represent the scene and maintain view consistency across different viewpoints."
-  - image: "/images/ICPR_consistency.png"
+  - image: "/images/ICPR/ICPR_consistency.png"
     alt: "Qualitative Comparison of View consistency"
     caption: "Compared to the baseline (GaussianGrouping), which exhibits over-segmentation and inconsistent object identities across different views, our approach successfully produces coherent, view-consistent object masks across changing viewpoints."
 bibtex: |

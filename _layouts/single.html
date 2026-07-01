@@ -60,32 +60,73 @@ layout: default
 
         {% include publication-links.html entry=page %}
 
-        {% if page.paper_thumbnail or page.paper_pipeline or page.paper_gif %}
+        {% assign paper_thumbnail_src = page.paper_thumbnail %}
+        {% assign paper_pipeline_src = page.paper_pipeline %}
+        {% assign paper_gif_src = page.paper_gif %}
+
+        {% assign paper_thumbnail_render_src = '' %}
+        {% assign paper_pipeline_render_src = '' %}
+        {% assign paper_gif_render_src = '' %}
+
+        {% if paper_thumbnail_src %}
+          {% if paper_thumbnail_src contains '://' %}
+            {% assign paper_thumbnail_render_src = paper_thumbnail_src %}
+          {% else %}
+            {% assign paper_thumbnail_static_file = site.static_files | where_exp: 'file', 'file.path | downcase == paper_thumbnail_src | downcase' | first %}
+            {% if paper_thumbnail_static_file %}
+              {% assign paper_thumbnail_render_src = paper_thumbnail_static_file.path | prepend: base_path %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+
+        {% if paper_pipeline_src %}
+          {% if paper_pipeline_src contains '://' %}
+            {% assign paper_pipeline_render_src = paper_pipeline_src %}
+          {% else %}
+            {% assign paper_pipeline_static_file = site.static_files | where_exp: 'file', 'file.path | downcase == paper_pipeline_src | downcase' | first %}
+            {% if paper_pipeline_static_file %}
+              {% assign paper_pipeline_render_src = paper_pipeline_static_file.path | prepend: base_path %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+
+        {% if paper_gif_src %}
+          {% if paper_gif_src contains '://' %}
+            {% assign paper_gif_render_src = paper_gif_src %}
+          {% else %}
+            {% assign paper_gif_static_file = site.static_files | where_exp: 'file', 'file.path | downcase == paper_gif_src | downcase' | first %}
+            {% if paper_gif_static_file %}
+              {% assign paper_gif_render_src = paper_gif_static_file.path | prepend: base_path %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+
+        {% if paper_thumbnail_render_src != '' or paper_pipeline_render_src != '' or paper_gif_render_src != '' %}
         <div class="publication__media">
-          {% if page.paper_thumbnail %}
+          {% if paper_thumbnail_render_src != '' %}
             <figure class="publication__media-item">
               <img
-                src="{% if page.paper_thumbnail contains '://' %}{{ page.paper_thumbnail }}{% else %}{{ page.paper_thumbnail | prepend: base_path }}{% endif %}"
+                src="{{ paper_thumbnail_render_src }}"
                 alt="{{ page.paper_thumbnail_alt | default: page.title }}"
                 class="publication__media-image">
               {% if page.paper_thumbnail_caption %}<figcaption>{{ page.paper_thumbnail_caption }}</figcaption>{% endif %}
             </figure>
           {% endif %}
 
-          {% if page.paper_pipeline %}
+          {% if paper_pipeline_render_src != '' %}
             <figure class="publication__media-item">
               <img
-                src="{% if page.paper_pipeline contains '://' %}{{ page.paper_pipeline }}{% else %}{{ page.paper_pipeline | prepend: base_path }}{% endif %}"
+                src="{{ paper_pipeline_render_src }}"
                 alt="{{ page.paper_pipeline_alt | default: 'Publication pipeline figure' }}"
                 class="publication__media-image">
               {% if page.paper_pipeline_caption %}<figcaption>{{ page.paper_pipeline_caption }}</figcaption>{% endif %}
             </figure>
           {% endif %}
 
-          {% if page.paper_gif %}
+          {% if paper_gif_render_src != '' %}
             <figure class="publication__media-item">
               <img
-                src="{% if page.paper_gif contains '://' %}{{ page.paper_gif }}{% else %}{{ page.paper_gif | prepend: base_path }}{% endif %}"
+                src="{{ paper_gif_render_src }}"
                 alt="{{ page.paper_gif_alt | default: 'Publication demo GIF' }}"
                 class="publication__media-image">
               {% if page.paper_gif_caption %}<figcaption>{{ page.paper_gif_caption }}</figcaption>{% endif %}
@@ -131,23 +172,23 @@ layout: default
               {% assign qualitative_is_external = false %}
               {% assign qualitative_file_exists = false %}
 
-              {% if qualitative_src %}
-                {% if qualitative_src contains '://' %}
-                  {% assign qualitative_is_external = true %}
-                {% else %}
-                  {% assign qualitative_static_file = site.static_files | where: 'path', qualitative_src | first %}
-                  {% if qualitative_static_file %}
-                    {% assign qualitative_file_exists = true %}
+                {% if qualitative_src %}
+                  {% if qualitative_src contains '://' %}
+                    {% assign qualitative_is_external = true %}
+                  {% else %}
+                    {% assign qualitative_static_file = site.static_files | where_exp: 'file', 'file.path | downcase == qualitative_src | downcase' | first %}
+                    {% if qualitative_static_file %}
+                      {% assign qualitative_file_exists = true %}
+                    {% endif %}
                   {% endif %}
                 {% endif %}
-              {% endif %}
 
               {% if qualitative_is_external or qualitative_file_exists %}
                 {% capture qualitative_markup %}
                   {{ qualitative_markup }}
                   <figure class="publication__media-item publication__media-item--card">
                     <img
-                      src="{% if qualitative_is_external %}{{ qualitative_src }}{% else %}{{ qualitative_src | prepend: base_path }}{% endif %}"
+                      src="{% if qualitative_is_external %}{{ qualitative_src }}{% else %}{{ qualitative_static_file.path | prepend: base_path }}{% endif %}"
                       alt="{{ qualitative_alt }}"
                       class="publication__media-image">
                     {% if qualitative_caption %}<figcaption>{{ qualitative_caption }}</figcaption>{% endif %}
