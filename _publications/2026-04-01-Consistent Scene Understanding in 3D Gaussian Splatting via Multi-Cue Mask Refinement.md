@@ -12,7 +12,6 @@ github_url: 'https://github.com/hjpark83/Consistent-Scene-Understanding-in-3DGS-
 # slidesurl: 'https://academicpages.github.io/files/slides1.pdf'
 # paperurl: 'https://your-paper-url'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
-citation: 'Hyunjoon Park, *Donghyeon Cho. (2026). &quot;Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement.&quot; <i>38th International Conference on Pattern Recognition (ICPR)</i>.'
 header:
   teaser: "ICPR_pipeline.png"
 paper_pipeline: "/images/ICPR_pipeline.png"
@@ -28,6 +27,9 @@ qualitative_results:
   - image: "/images/ICPR_qualitative.png"
     alt: "Qualitative results for multi-cue mask refinement"
     caption: "This figure demonstrates how faithfully our refinement results represent the scene and maintain view consistency across different viewpoints."
+  - image: "/images/ICPR_consistency.png"
+    alt: "Qualitative Comparison of View consistency"
+    caption: "Compared to the baseline (GaussianGrouping), which exhibits over-segmentation and inconsistent object identities across different views, our approach successfully produces coherent, view-consistent object masks across changing viewpoints."
 bibtex: |
   @inproceedings{park2026consistent,
     title={Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement},

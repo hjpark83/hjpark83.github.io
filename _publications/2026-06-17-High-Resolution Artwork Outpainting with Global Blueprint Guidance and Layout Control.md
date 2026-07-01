@@ -3,7 +3,7 @@ title: "High-Resolution Artwork Outpainting with Global Blueprint Guidance and L
 collection: publications
 category: conferences
 permalink: /publication/High-Resolution Artwork Outpainting with Global Blueprint Guidance and Layout Control
-excerpt: 'Multi-cue mask refinement for more consistent instance understanding in 3D Gaussian Splatting.'
+excerpt: 'High resolution artwork outpainting guided by global blueprint and layout'
 authors: 'Junha Kim, Hyunjoon Park, Donghyeon Cho'
 date: 2026-06-17
 venue: 'ECCV'
@@ -14,8 +14,8 @@ github_url: ''
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: ''
 header:
-  teaser: "eccv_pipeline.png"
-paper_pipeline: "/images/eccv_pipeline.png"
+  teaser: "ECCV_pipeline.png"
+paper_pipeline: "/images/ECCV_pipeline.png"
 paper_pipeline_alt: "Pipeline overview for High-Resolution Artwork Outpainting"
 paper_pipeline_caption: "Overview of the proposed outpainting framework"
 # contribution: "Your main personal contribution summary."
@@ -26,7 +26,10 @@ contributions:
 qualitative_results:
   - image: "/images/ECCV_qualitative.png"
     alt: "Qualitative results for artwork outpainting"
-    caption: "Representative qualitative results."
+    caption: "The red dashed box in the GT indicates the source region. The area outside the box is masked during inference and serves as the target-region to be generated. PQDiff produces blurry results and SD-Inpainting creates visible seams, while PowerPaint and ProOut often introduce artificial frames or out-of-context. In contrast, out method synthesizes seamless, high-fidelity extensions that faithfully preserve the original style and global structure."
+  - image: "/images/ECCV_layout.png"
+    alt: "Qualitative results on Layout-guided Generation"
+    caption: "Bounding boxes and object descriptions are provided as layout conditions to guide the generatin. Baselines rely solely on text prompts and thus struggle to control spatial placements, whereas our method accurately generates specified objects at designated locations."
 bibtex: |
   @inproceedings{kim2026highresolution,
     title={High-Resolution Artwork Outpainting with Global Blueprint Guidance and Layout Control},

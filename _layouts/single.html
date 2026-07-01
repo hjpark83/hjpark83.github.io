@@ -122,23 +122,45 @@ layout: default
             {% assign qualitative_items = page.qualitative_result | split: '|||' %}
           {% endif %}
 
+          {% assign qualitative_markup = '' %}
           {% if qualitative_items %}
-            <h2 class="publication-page__section-title">Qualitative Results</h2>
-            <div class="publication__media publication__media--qualitative">
-              {% for item in qualitative_items %}
-                {% assign qualitative_src = item.image | default: item.src | default: item.url | default: item %}
-                {% assign qualitative_alt = item.alt | default: 'Qualitative result figure' %}
-                {% assign qualitative_caption = item.caption %}
-                {% if qualitative_src %}
-                  <figure class="publication__media-item">
+            {% for item in qualitative_items %}
+              {% assign qualitative_src = item.image | default: item.src | default: item.url | default: item %}
+              {% assign qualitative_alt = item.alt | default: 'Qualitative result figure' %}
+              {% assign qualitative_caption = item.caption %}
+              {% assign qualitative_is_external = false %}
+              {% assign qualitative_file_exists = false %}
+
+              {% if qualitative_src %}
+                {% if qualitative_src contains '://' %}
+                  {% assign qualitative_is_external = true %}
+                {% else %}
+                  {% assign qualitative_static_file = site.static_files | where: 'path', qualitative_src | first %}
+                  {% if qualitative_static_file %}
+                    {% assign qualitative_file_exists = true %}
+                  {% endif %}
+                {% endif %}
+              {% endif %}
+
+              {% if qualitative_is_external or qualitative_file_exists %}
+                {% capture qualitative_markup %}
+                  {{ qualitative_markup }}
+                  <figure class="publication__media-item publication__media-item--card">
                     <img
-                      src="{% if qualitative_src contains '://' %}{{ qualitative_src }}{% else %}{{ qualitative_src | prepend: base_path }}{% endif %}"
+                      src="{% if qualitative_is_external %}{{ qualitative_src }}{% else %}{{ qualitative_src | prepend: base_path }}{% endif %}"
                       alt="{{ qualitative_alt }}"
                       class="publication__media-image">
                     {% if qualitative_caption %}<figcaption>{{ qualitative_caption }}</figcaption>{% endif %}
                   </figure>
-                {% endif %}
-              {% endfor %}
+                {% endcapture %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+
+          {% if qualitative_markup != '' %}
+            <h2 class="publication-page__section-title">Qualitative Results</h2>
+            <div class="publication__media publication__media--qualitative">
+              {{ qualitative_markup }}
             </div>
           {% endif %}
 
@@ -147,31 +169,32 @@ layout: default
             <h2 class="publication-page__section-title">BibTeX</h2>
             <div class="publication-page__bibtex">
               <div class="publication-page__bibtex-toolbar">
+                <span class="publication-page__bibtex-label">bibtex</span>
                 <button type="button" id="{{ bibtex_id }}-copy" class="publication-page__copy-button">Copy</button>
               </div>
-              <textarea
-                id="{{ bibtex_id }}"
-                class="publication-page__bibtex-text"
-                readonly
-                spellcheck="false">{{ page.bibtex | strip }}</textarea>
+              <pre id="{{ bibtex_id }}" class="publication-page__bibtex-block"><code>{{ page.bibtex | strip | escape }}</code></pre>
             </div>
             <script>
               (function () {
-                var textarea = document.getElementById('{{ bibtex_id }}');
+                var codeBlock = document.getElementById('{{ bibtex_id }}');
                 var button = document.getElementById('{{ bibtex_id }}-copy');
 
-                if (!textarea || !button) return;
+                if (!codeBlock || !button) return;
 
                 button.addEventListener('click', async function () {
-                  textarea.focus();
-                  textarea.select();
-                  textarea.setSelectionRange(0, textarea.value.length);
+                  var codeText = codeBlock.textContent;
 
                   try {
                     if (navigator.clipboard && window.isSecureContext) {
-                      await navigator.clipboard.writeText(textarea.value);
+                      await navigator.clipboard.writeText(codeText);
                     } else {
+                      var selection = window.getSelection();
+                      var range = document.createRange();
+                      range.selectNodeContents(codeBlock);
+                      selection.removeAllRanges();
+                      selection.addRange(range);
                       document.execCommand('copy');
+                      selection.removeAllRanges();
                     }
 
                     button.textContent = 'Copied';
