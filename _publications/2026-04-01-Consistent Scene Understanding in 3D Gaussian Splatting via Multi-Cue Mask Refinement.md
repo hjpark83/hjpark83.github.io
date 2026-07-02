@@ -31,9 +31,9 @@ qualitative_results:
     alt: "Qualitative Comparison of View consistency"
     caption: "Compared to the baseline (GaussianGrouping), which exhibits over-segmentation and inconsistent object identities across different views, our approach successfully produces coherent, view-consistent object masks across changing viewpoints."
 bibtex: |
-  @inproceedings{park2026consistent,
+  @inproceedings{TO DO,
     title={Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement},
-    author={Park, Hyunjoon and Cho, Donghyeon},
+    author={Hyunjoon Park, Donghyeon Cho},
     booktitle={ICPR},
     year={2026}
   }

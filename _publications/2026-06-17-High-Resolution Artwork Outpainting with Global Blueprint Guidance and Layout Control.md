@@ -31,9 +31,9 @@ qualitative_results:
     alt: "Qualitative results on Layout-guided Generation"
     caption: "Bounding boxes and object descriptions are provided as layout conditions to guide the generatin. Baselines rely solely on text prompts and thus struggle to control spatial placements, whereas our method accurately generates specified objects at designated locations."
 bibtex: |
-  @inproceedings{kim2026highresolution,
+  @inproceedings{TO DO,
     title={High-Resolution Artwork Outpainting with Global Blueprint Guidance and Layout Control},
-    author={Kim, Junha and Park, Hyunjoon and Cho, Donghyeon},
+    author={Junha Kim, Hyunjoon Park, and Donghyeon Cho},
     booktitle={ECCV},
     year={2026}
   }
