@@ -10,7 +10,7 @@ venue: 'ICPR'
 project_page: 'https://hjpark83.github.io/consisGS.github.io/'
 github_url: 'https://github.com/hjpark83/Consistent-Scene-Understanding-in-3DGS-via-MCM'
 # slidesurl: 'https://academicpages.github.io/files/slides1.pdf'
-# paperurl: 'https://your-paper-url'
+paperurl: 'https://arxiv.org/abs/2607.01708'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 header:
   teaser: "/images/ICPR/ICPR_pipeline.png"
