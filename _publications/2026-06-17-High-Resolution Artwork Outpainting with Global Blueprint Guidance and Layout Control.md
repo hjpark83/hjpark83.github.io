@@ -10,7 +10,7 @@ venue: 'ECCV'
 project_page: ''
 github_url: ''
 # slidesurl: 'https://academicpages.github.io/files/slides1.pdf'
-# paperurl: 'https://your-paper-url'
+paperurl: 'https://arxiv.org/abs/2607.06162'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: ''
 header:
