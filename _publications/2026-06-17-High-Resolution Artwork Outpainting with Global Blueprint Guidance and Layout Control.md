@@ -7,8 +7,8 @@ excerpt: 'High resolution artwork outpainting guided by global blueprint and lay
 authors: 'Junha Kim, Hyunjoon Park, Donghyeon Cho'
 date: 2026-06-17
 venue: 'ECCV'
-project_page: ''
-github_url: ''
+project_page: 'https://poohoh.github.io/BlueOut.github.io/'
+github_url: 'https://github.com/poohoh/BlueOut'
 # slidesurl: 'https://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://arxiv.org/abs/2607.06162'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
