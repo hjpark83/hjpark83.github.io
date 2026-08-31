@@ -9,6 +9,7 @@ date: 2026-06-17
 venue: 'ECCV'
 project_page: 'https://poohoh.github.io/BlueOut.github.io/'
 github_url: 'https://github.com/poohoh/BlueOut'
+video_url: 'https://www.youtube.com/watch?v=0_czRYLmRzs'
 # slidesurl: 'https://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://arxiv.org/abs/2607.06162'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
