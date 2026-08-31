@@ -14,10 +14,14 @@ paperurl: 'https://arxiv.org/abs/2607.06162'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 citation: ''
 header:
-  teaser: "/images/ECCV/ECCV_pipeline.png"
+  teaser: "/images/ECCV/ECCV_qualitative.png"
 paper_pipeline: "/images/ECCV/ECCV_pipeline.png"
 paper_pipeline_alt: "Pipeline overview for High-Resolution Artwork Outpainting"
 paper_pipeline_caption: "Overview of the proposed outpainting framework"
+paper_video: "/images/ECCV/ECCV_blueout.mp4"
+paper_video_type: "video/mp4"
+paper_video_poster: "/images/ECCV/ECCV_qualitative.png"
+paper_video_caption: "Demo video for BlueOut."
 # contribution: "Your main personal contribution summary."
 contributions:
   - "**Global Blueprint-Guided Planning**: We generate a low-resolution global blueprint prior to local synthesis, preventing error accumulation in sequential generation."

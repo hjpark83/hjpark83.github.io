@@ -126,6 +126,14 @@
   border-radius: $border-radius;
 }
 
+.publication__media-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: $border-radius;
+  background: #000;
+}
+
 .publication__links {
   display: flex;
   flex-wrap: wrap;

@@ -60,7 +60,7 @@ layout: default
 
         {% include publication-links.html entry=page %}
 
-        {% if page.paper_thumbnail or page.paper_pipeline or page.paper_gif %}
+        {% if page.paper_thumbnail or page.paper_pipeline or page.paper_gif or page.paper_video %}
         <div class="publication__media">
           {% if page.paper_thumbnail %}
             <figure class="publication__media-item">
@@ -79,6 +79,23 @@ layout: default
                 alt="{{ page.paper_pipeline_alt | default: 'Publication pipeline figure' }}"
                 class="publication__media-image">
               {% if page.paper_pipeline_caption %}<figcaption>{{ page.paper_pipeline_caption }}</figcaption>{% endif %}
+            </figure>
+          {% endif %}
+
+          {% if page.paper_video %}
+            <figure class="publication__media-item">
+              <video
+                class="publication__media-video"
+                controls
+                preload="metadata"
+                playsinline
+                {% if page.paper_video_poster %}poster="{% if page.paper_video_poster contains '://' %}{{ page.paper_video_poster }}{% else %}{{ page.paper_video_poster | prepend: base_path }}{% endif %}"{% endif %}>
+                <source
+                  src="{% if page.paper_video contains '://' %}{{ page.paper_video }}{% else %}{{ page.paper_video | prepend: base_path }}{% endif %}"
+                  type="{{ page.paper_video_type | default: 'video/mp4' }}">
+                Your browser does not support the video tag.
+              </video>
+              {% if page.paper_video_caption %}<figcaption>{{ page.paper_video_caption }}</figcaption>{% endif %}
             </figure>
           {% endif %}
 
