@@ -11,6 +11,35 @@ Hi! My name is Hyunjoon Park and I am a Master's student in Computer Software En
 Recently, I have been particularly interested in **3D Scene Understanding** and **Conditional Generative Models**. For the former, I work on resolving inconsistencies in lifting 2D masks into 3D space via 3D Gaussian Splatting. For the latter, I am collaborating with SKT Telecom on music-to-dance generation, aiming to generate choreography videos conditioned on music. My current focus is on identity-preserving generation to resolve identity shift in video synthesis.
 
 <style>
+  .home-sections {
+    counter-reset: section-num;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin: 2.25rem 0 1rem;
+  }
+
+  .section-title::before {
+    counter-increment: section-num;
+    content: counter(section-num, decimal-leading-zero);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+  }
+
   .edu-timeline {
     position: relative;
     display: flex;
@@ -144,7 +173,9 @@ Recently, I have been particularly interested in **3D Scene Understanding** and 
   }
 </style>
 
-## News
+<div class="home-sections">
+
+<h2 class="section-title">News</h2>
 
 {% if site.data.news %}
   <ul class="news-list">
@@ -162,14 +193,14 @@ Recently, I have been particularly interested in **3D Scene Understanding** and 
   </ul>
 {% endif %}
 
-## Publications
+<h2 class="section-title">Publications</h2>
 
 {% assign featured_publications = site.publications | reverse %}
 {% for post in featured_publications limit: 3 %}
   {% include publication-card.html post=post view="compact" %}
 {% endfor %}
 
-## Education
+<h2 class="section-title">Education</h2>
 
 <div class="edu-timeline">
   <div class="edu-timeline-item">
@@ -191,6 +222,8 @@ Recently, I have been particularly interested in **3D Scene Understanding** and 
   </div>
 </div>
 
-## Patents
+<h2 class="section-title">Patents</h2>
 
 - "**Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement (다중 단서 기반 3차원 장면 이해 장치 및 방법)**", KR Patent No. 10-2026-0105246
+
+</div>

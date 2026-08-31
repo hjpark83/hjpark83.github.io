@@ -242,7 +242,7 @@
         left: 0;
         bottom: 0;
         height: 4px;
-        background: var(--global-border-color);
+        background: linear-gradient(90deg, #667eea, #764ba2);
         width: 100%;
         -webkit-transition: $global-transition;
         transition: $global-transition;

@@ -151,15 +151,16 @@
   font-weight: bold;
   text-decoration: none !important;
   color: #fff !important;
-  background: #111;
-  border: 1px solid #111;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 1px solid transparent;
   border-radius: 999px;
+  box-shadow: 0 2px 6px -1px rgba(102, 126, 234, 0.45);
   transition: $global-transition;
 
   &:hover {
     color: #fff !important;
-    background: #2b2b2b;
-    border-color: #2b2b2b;
+    background: linear-gradient(135deg, #5a6fd6 0%, #683f92 100%);
+    box-shadow: 0 4px 10px -1px rgba(102, 126, 234, 0.6);
   }
 }
 
@@ -199,13 +200,18 @@
   grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
   gap: 1.5rem;
   align-items: start;
-  margin: 0 0 2.25rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--global-border-color);
+  margin: 0 0 1.75rem;
+  padding: 1.25rem;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   transition: $global-transition;
 
   &:hover {
-    border-color: mix(#fff, #173b72, 70%);
+    transform: translateY(-3px);
+    border-color: transparent;
+    box-shadow: 0 12px 24px -10px rgba(102, 126, 234, 0.45), 0 4px 10px -4px rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -290,10 +296,11 @@
 
 .publication-card__venue-badge {
   display: inline-block;
-  padding: 0.15rem 0.55rem;
+  padding: 0.15rem 0.6rem;
   border-radius: 999px;
-  background: rgba(36, 88, 166, 0.1);
-  color: #2458a6;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-weight: 700;
 }
 
 .publication-card__year {
