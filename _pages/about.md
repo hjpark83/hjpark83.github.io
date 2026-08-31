@@ -10,6 +10,131 @@ Hi! My name is Hyunjoon Park and I am a Master's student in Computer Software En
 
 Recently, I have been particularly interested in **3D Scene Understanding** and **Conditional Generative Models**. For the former, I work on resolving inconsistencies in lifting 2D masks into 3D space via 3D Gaussian Splatting. For the latter, I am collaborating with SKT Telecom on music-to-dance generation, aiming to generate choreography videos conditioned on music. My current focus is on identity-preserving generation to resolve identity shift in video synthesis.
 
+<style>
+  .edu-timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 1.75rem auto 2.25rem;
+    padding: 0;
+  }
+
+  .edu-timeline::before {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 6%;
+    right: 6%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--global-border-color), #667eea 25%, #764ba2 75%, var(--global-border-color));
+    z-index: 0;
+  }
+
+  .edu-timeline-item {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+
+  .edu-timeline-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 0.85rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background:
+      linear-gradient(#fff, #fff) padding-box,
+      linear-gradient(135deg, #667eea 0%, #764ba2 100%) border-box;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.25), 0 2px 4px -2px rgb(0 0 0 / 0.25);
+  }
+
+  .edu-timeline-logo img {
+    width: 76%;
+    height: 76%;
+    object-fit: contain;
+  }
+
+  .edu-timeline-item__title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--global-text-color);
+    margin-bottom: 0.2rem;
+  }
+
+  .edu-timeline-item__subtitle {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light, var(--global-text-color));
+  }
+
+  .edu-timeline-item__location {
+    font-size: 0.75rem;
+    color: var(--global-text-color-light, var(--global-text-color));
+    opacity: 0.75;
+  }
+
+  @media (max-width: 600px) {
+    .edu-timeline {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1.5rem;
+    }
+
+    .edu-timeline::before {
+      top: 0;
+      bottom: 0;
+      left: 19px;
+      right: auto;
+      width: 2px;
+      height: auto;
+      background: linear-gradient(180deg, var(--global-border-color), #667eea 25%, #764ba2 75%, var(--global-border-color));
+    }
+
+    .edu-timeline-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      text-align: left;
+      padding: 0;
+    }
+
+    .edu-timeline-logo {
+      margin: 0;
+      flex-shrink: 0;
+    }
+  }
+</style>
+
+## Education
+
+<div class="edu-timeline">
+  <div class="edu-timeline-item">
+    <span class="edu-timeline-logo"><img src="/images/hwanil.png" alt="Hwanil High School logo"></span>
+    <div class="edu-timeline-item__title">Hwanil High School</div>
+    <div class="edu-timeline-item__location">Seoul</div>
+  </div>
+  <div class="edu-timeline-item">
+    <span class="edu-timeline-logo"><img src="/images/hanyang.png" alt="Hanyang University logo"></span>
+    <div class="edu-timeline-item__title">B.S. in Computer Software Engineering</div>
+    <div class="edu-timeline-item__subtitle">Hanyang University</div>
+    <div class="edu-timeline-item__location">Seoul</div>
+  </div>
+  <div class="edu-timeline-item">
+    <span class="edu-timeline-logo"><img src="/images/hanyang.png" alt="Hanyang University logo"></span>
+    <div class="edu-timeline-item__title">M.S. in Computer Software Engineering (current)</div>
+    <div class="edu-timeline-item__subtitle">Hanyang University</div>
+    <div class="edu-timeline-item__location">Seoul</div>
+  </div>
+</div>
+
 ## News
 
 {% if site.data.news %}
