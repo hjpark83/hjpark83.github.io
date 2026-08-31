@@ -78,7 +78,6 @@ Recently, I have been particularly interested in **3D Scene Understanding** and 
   .edu-timeline-item__location {
     font-size: 0.75rem;
     color: var(--global-text-color-light, var(--global-text-color));
-    opacity: 0.75;
   }
 
   @media (max-width: 600px) {
@@ -111,29 +110,39 @@ Recently, I have been particularly interested in **3D Scene Understanding** and 
       flex-shrink: 0;
     }
   }
+
+  .news-list {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .news-list::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    background: linear-gradient(180deg, #667eea, #764ba2);
+  }
+
+  .news-list li {
+    position: relative;
+  }
+
+  .news-list li::before {
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: 2px solid var(--global-bg-color);
+    box-shadow: 0 0 0 1px var(--global-border-color);
+  }
 </style>
-
-## Education
-
-<div class="edu-timeline">
-  <div class="edu-timeline-item">
-    <span class="edu-timeline-logo"><img src="/images/hwanil.png" alt="Hwanil High School logo"></span>
-    <div class="edu-timeline-item__title">Hwanil High School</div>
-    <div class="edu-timeline-item__location">Seoul</div>
-  </div>
-  <div class="edu-timeline-item">
-    <span class="edu-timeline-logo"><img src="/images/hanyang.png" alt="Hanyang University logo"></span>
-    <div class="edu-timeline-item__title">B.S. in Computer Software Engineering</div>
-    <div class="edu-timeline-item__subtitle">Hanyang University</div>
-    <div class="edu-timeline-item__location">Seoul</div>
-  </div>
-  <div class="edu-timeline-item">
-    <span class="edu-timeline-logo"><img src="/images/hanyang.png" alt="Hanyang University logo"></span>
-    <div class="edu-timeline-item__title">M.S. in Computer Software Engineering (current)</div>
-    <div class="edu-timeline-item__subtitle">Hanyang University</div>
-    <div class="edu-timeline-item__location">Seoul</div>
-  </div>
-</div>
 
 ## News
 
@@ -159,6 +168,28 @@ Recently, I have been particularly interested in **3D Scene Understanding** and 
 {% for post in featured_publications limit: 3 %}
   {% include publication-card.html post=post view="compact" %}
 {% endfor %}
+
+## Education
+
+<div class="edu-timeline">
+  <div class="edu-timeline-item">
+    <span class="edu-timeline-logo"><img src="/images/hwanil.png" alt="Hwanil High School logo"></span>
+    <div class="edu-timeline-item__title">Hwanil High School</div>
+    <div class="edu-timeline-item__location">Seoul</div>
+  </div>
+  <div class="edu-timeline-item">
+    <span class="edu-timeline-logo"><img src="/images/hanyang.png" alt="Hanyang University logo"></span>
+    <div class="edu-timeline-item__title">Hanyang University</div>
+    <div class="edu-timeline-item__subtitle">B.S. in Computer Software Engineering</div>
+    <div class="edu-timeline-item__location">Seoul</div>
+  </div>
+  <div class="edu-timeline-item">
+    <span class="edu-timeline-logo"><img src="/images/hanyang.png" alt="Hanyang University logo"></span>
+    <div class="edu-timeline-item__title">Hanyang University</div>
+    <div class="edu-timeline-item__subtitle">M.S. in Computer Software Engineering (~ing)</div>
+    <div class="edu-timeline-item__location">Seoul</div>
+  </div>
+</div>
 
 ## Patents
 
