@@ -44,7 +44,7 @@
 
       {% if post.venue or post.date %}
         <p class="publication-card__venue">
-          {% if post.venue %}<span class="publication-card__venue-badge">{{ post.venue }}</span>{% endif %}
+          {% if post.venue %}{% assign venue_slug = post.venue | slugify %}<span class="publication-card__venue-badge publication-card__venue-badge--{{ venue_slug }}">{{ post.venue }}</span>{% endif %}
           {% if post.date %}<span class="publication-card__year">{{ post.date | date: "%Y" }}</span>{% endif %}
         </p>
       {% endif %}
