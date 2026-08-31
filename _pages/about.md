@@ -173,7 +173,7 @@ Recently, I have been particularly interested in **3D Scene Understanding** and 
   }
 </style>
 
-<div class="home-sections">
+<div class="home-sections" markdown="1">
 
 <h2 class="section-title">News</h2>
 
