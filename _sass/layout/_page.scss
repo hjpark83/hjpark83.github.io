@@ -163,6 +163,18 @@
   }
 }
 
+html[data-theme="dark"] .publication__link {
+  color: #111 !important;
+  background: #fff;
+  border-color: #fff;
+
+  &:hover {
+    color: #111 !important;
+    background: #d6d6d6;
+    border-color: #d6d6d6;
+  }
+}
+
 .publication__link::before {
   display: inline-block;
   font-family: "Font Awesome 6 Free";
@@ -262,7 +274,7 @@
 .publication-card__authors {
   font-size: $type-size-6;
   line-height: 1.5;
-  font-family: $serif;
+  font-family: $sans-serif;
 }
 
 .publication-card__venue {
@@ -293,6 +305,10 @@
   font-weight: 800;
 }
 
+html[data-theme="dark"] .publication-card__author--me {
+  color: #7fb8ff;
+}
+
 .publication-card__venue-badge {
   display: inline-block;
   padding: 0.15rem 0.6rem;
@@ -308,6 +324,12 @@
 
 .publication-card__venue-badge--icpr {
   background: #5b21b6;
+}
+
+html[data-theme="dark"] .publication-card__venue-badge,
+html[data-theme="dark"] .publication-card__venue-badge--eccv {
+  background: #7fb8ff;
+  color: #0b1f3f;
 }
 
 .publication-card__year {
@@ -332,14 +354,14 @@
 
 .publication-page__authors {
   margin: 0 0 0.75rem;
-  font-family: $serif;
+  font-family: $sans-serif;
   font-size: $type-size-5;
   line-height: 1.5;
 }
 
 .publication-page__lead {
   margin: 0 0 1.25rem;
-  font-family: $serif;
+  font-family: $sans-serif;
   font-size: $type-size-5;
   line-height: 1.65;
   color: var(--global-text-color);
