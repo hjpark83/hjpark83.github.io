@@ -67,7 +67,10 @@ audio:not([controls]) {
 }
 
 a {
-  color: var(--global-link-color);
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--global-border-color);
+  text-underline-offset: 0.15em;
 }
 
 /* Apply focus state */
@@ -81,6 +84,11 @@ a:focus {
 a:hover,
 a:active {
   outline: 0;
+}
+
+a:hover {
+  color: var(--global-link-color-hover);
+  text-decoration-color: currentColor;
 }
 
 /* Prevent sub and sup affecting line-height in all browsers */

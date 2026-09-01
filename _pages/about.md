@@ -8,45 +8,21 @@ redirect_from:
 
 <style>
   .home-hero {
-    margin: 0 0 1.75rem;
-  }
-
-  .home-hero__eyebrow {
-    display: inline-block;
-    margin: 0 0 0.5rem;
-    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #667eea;
-  }
-
-  @supports (background-clip: text) or (-webkit-background-clip: text) {
-    .home-hero__eyebrow {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-    }
+    margin: 0 0 1.5rem;
   }
 
   .home-hero__name {
-    margin: 0 0 0.4rem;
+    margin: 0 0 0.25rem;
     font-family: "Newsreader", Georgia, serif;
     font-weight: 600;
-    font-size: clamp(2.1rem, 5vw, 3rem);
-    line-height: 1.05;
-    letter-spacing: -0.01em;
+    font-size: 1.85rem;
+    line-height: 1.2;
     color: var(--global-text-color);
   }
 
   .home-hero__tagline {
     margin: 0;
-    font-family: "Newsreader", Georgia, serif;
-    font-style: italic;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     color: var(--global-text-color-light, var(--global-text-color));
   }
 
@@ -184,14 +160,11 @@ redirect_from:
 </style>
 
 <div class="home-hero">
-  <p class="home-hero__eyebrow">Computer Vision Researcher</p>
   <h1 class="home-hero__name">Hyunjoon Park</h1>
-  <p class="home-hero__tagline">3D Scene Understanding &amp; Conditional Generative Models</p>
+  <p class="home-hero__tagline">Computer Vision Researcher &middot; 3D Scene Understanding &amp; Conditional Generative Models</p>
 </div>
 
-Hi! My name is Hyunjoon Park and I am a Master's student in Computer Software Engineering at Hanyang University and a member of [HYU CVLab](http://cvlab.hanyang.ac.kr/), advised by [Prof. Donghyeon Cho](https://scholar.google.com/citations?user=zj-NER4AAAAJ&hl=en). My research focuses on computer vision, with interests spanning 3D computer vision, conditional generative models, and video understanding.
-
-Recently, I have been particularly interested in **3D Scene Understanding** and **Conditional Generative Models**. For the former, I work on resolving inconsistencies in lifting 2D masks into 3D space via 3D Gaussian Splatting. For the latter, I am collaborating with SKT Telecom on music-to-dance generation, aiming to generate choreography videos conditioned on music. My current focus is on identity-preserving generation to resolve identity shift in video synthesis.
+Hi! My name is Hyunjoon Park and I am a Master's student in Computer Software Engineering at Hanyang University and a member of [HYU CVLab](http://cvlab.hanyang.ac.kr/), advised by [Prof. Donghyeon Cho](https://scholar.google.com/citations?user=zj-NER4AAAAJ&hl=en). My research focuses on computer vision, particularly **3D Scene Understanding** and **Conditional Generative Models**, with a current focus on identity-preserving generation for video synthesis.
 
 <div class="home-sections" markdown="1">
 
