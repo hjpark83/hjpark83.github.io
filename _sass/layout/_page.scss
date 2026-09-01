@@ -410,10 +410,12 @@ html[data-theme="dark"] .news-list__date {
   color: var(--global-text-color-light);
 }
 
-.publication-page__section-title {
-  margin-top: 2rem;
-  padding-bottom: 0.45rem;
-  border-bottom: 1px solid var(--global-border-color);
+.publication-page__section-title,
+.section-title {
+  margin: 2.25rem 0 1rem;
+  padding-left: 0.9rem;
+  border-left: 4px solid;
+  border-image: linear-gradient(180deg, #667eea, #764ba2) 1;
   font-size: $type-size-4;
 }
 
