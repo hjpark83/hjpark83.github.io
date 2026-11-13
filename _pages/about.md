@@ -164,7 +164,7 @@ redirect_from:
   <p class="home-hero__tagline">Computer Vision Researcher</p>
 </div>
 
-Hi! My name is Hyunjoon Park and I am a Master's student in Computer Software Engineering at Hanyang University and a member of [HYU CVLab](http://cvlab.hanyang.ac.kr/), advised by [Prof. Donghyeon Cho](https://scholar.google.com/citations?user=zj-NER4AAAAJ&hl=en). My research focuses on computer vision, particularly **3D Scene Understanding** and **Conditional Generative Models**, with a current focus on identity-preserving generation for video synthesis.
+Hi! My name is Hyunjoon Park and I am a Master's student in Computer Software Engineering at Hanyang University and a member of [HYU CVLab](http://cvlab.hanyang.ac.kr/), advised by [Prof. Donghyeon Cho](https://scholar.google.com/citations?user=zj-NER4AAAAJ&hl=en). My research focuses on computer vision, particularly **3D Scene Understanding**, **Open-vocabulary Scene Graph Generation**, and **Conditional Generative Models**, with a current focus on identity-preserving human video generation.
 
 <div class="home-sections" markdown="1">
 
